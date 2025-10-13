@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #f7f1e6;
+  --surface: #ffffff;
+  --ink: #1f2933;
+  --muted-ink: #5a646f;
+  --brand: #d6a86a;
+  --brand-ink: #2b2116;
+  --accent: #9db7b2;
+  --chip: #f2ebe0;
+  --chip-active: #e8decd;
+  --ring: #8c6f48;
+  --pill-bg: rgba(0, 0, 0, 0.04);
+  --pill-text: #27303a;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply min-h-full bg-bg text-ink font-sans antialiased;
+  }
+
+  body {
+    background-image: radial-gradient(circle at 20% 20%, rgba(214, 168, 106, 0.2), transparent 45%),
+      radial-gradient(circle at 80% 10%, rgba(157, 183, 178, 0.18), transparent 55%);
+  }
+
+  ::selection {
+    background: rgba(214, 168, 106, 0.35);
+    color: var(--brand-ink);
+  }
+
+  img {
+    @apply max-w-full;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+  }
+}
