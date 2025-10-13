@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: '.',
-  base: '/kuzog/',
+  base: '/',
   plugins: [react()],
   build: {
     outDir: 'dist',

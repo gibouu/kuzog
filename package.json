@@ -2,6 +2,7 @@
   "name": "kuzog-site",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://kuzog.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -13,7 +13,7 @@ if (!rootElement) {
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <BrowserRouter basename="/kuzog">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/agri" element={<AgriPage />} />
