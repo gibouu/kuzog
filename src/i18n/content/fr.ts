@@ -8,8 +8,8 @@ export const fr: SiteContent = {
 
   findSolution: {
     title: 'Trouvez Votre Solution',
-    description: 'KUZOG est un réseau international de résolveurs de problèmes qui relie les marchés d\'Amérique du Nord et d\'Europe au Moyen-Orient.',
-    subtitle: 'Sélectionnez votre profil pour découvrir des solutions adaptées de KUZOG',
+    description: 'KUZOG est un réseau international d\'experts qui relie les marchés d\'Amérique du Nord, d\'Europe et du Moyen-Orient.',
+    subtitle: 'Sélectionnez votre profil pour découvrir des solutions professionnelles adaptées',
   },
 
   audiences: [
@@ -33,7 +33,7 @@ export const fr: SiteContent = {
         },
         {
           id: 'optimization',
-          title: 'Excellence de la Chaîne Logistique',
+          title: 'Chaîne Logistique',
           content: 'Maximisez l\'efficacité grâce à l\'optimisation de bout en bout de la chaîne logistique. Nos consultants analysent vos opérations, identifient les goulets d\'étranglement et mettent en œuvre des solutions qui réduisent les coûts et améliorent les délais de livraison.',
         },
         {
@@ -69,7 +69,7 @@ export const fr: SiteContent = {
         {
           id: 'intelligence',
           title: 'Intelligence de Marché',
-          content: 'Prenez des décisions éclairées avec des données d\'intelligence de marché et de tarification en temps réel. Notre réseau fournit des informations sur les tendances de la demande, les prix compétitifs et les opportunités émergentes.',
+          content: 'Prenez des décisions éclairées avec des données d\'intelligence de marché et de tarification en temps réel. Notre réseau fournit des informations sur les tendances de la demande, les prix compétitifs et les opportunités émergentes. Nous accompagnons votre entrée sur les marchés locaux et élaborons des plans d\'affaires complets.',
         },
       ],
     },
@@ -89,17 +89,17 @@ export const fr: SiteContent = {
         {
           id: 'inputs',
           title: 'Semences et Solutions de Sol',
-          content: 'Transformez les terrains difficiles avec nos programmes spécialisés d\'amélioration des sols. Nous donnons accès à des semences de qualité supérieure, de la bentonite pour la rétention d\'eau, des mycorhizes pour la santé des racines et des solutions d\'engrais complètes.',
+          content: 'Transformez les terrains difficiles avec nos programmes spécialisés d\'amélioration des sols. Nous donnons accès à des semences de qualité supérieure, des amendements organiques minéraux pour les sols et des solutions d\'engrais complètes.',
         },
         {
           id: 'infrastructure',
           title: 'Infrastructure Durable',
-          content: 'Construisez pour l\'avenir avec irrigation solaire, logements agricoles modulaires et systèmes de gestion de l\'eau conçus pour l\'efficacité. Nous vous aidons à mettre en œuvre une infrastructure qui réduit les coûts tout en augmentant la productivité.',
+          content: 'Construisez pour l\'avenir avec irrigation solaire, hydroponie, logements agricoles modulaires et systèmes de gestion de l\'eau conçus pour l\'efficacité. Nous vous aidons à mettre en œuvre une infrastructure qui réduit les coûts tout en augmentant la productivité.',
         },
         {
           id: 'financing',
-          title: 'Financement et Soutien',
-          content: 'Surmontez les obstacles financiers avec des options de location flexibles et un financement d\'équipement adapté aux cycles agricoles. Notre réseau comprend des partenaires financiers qui comprennent la saisonnalité agricole.',
+          title: 'Stress Hydrique et Solutions pour Sols',
+          content: 'Nous proposons des solutions pour résoudre les défis de stress hydrique, salinité et sols infertiles. Nos programmes vous aident à surmonter les barrières environnementales avec des technologies éprouvées adaptées aux conditions arides et difficiles.',
         },
       ],
     },
@@ -147,29 +147,29 @@ export const fr: SiteContent = {
     contactButton: 'Contactez-nous',
     exploreButton: 'Explorer les industries',
     operatorsFocus: {
-      title: 'Focus des opérateurs',
+      title: 'Excellence Opérationnelle',
       description: 'Des praticiens multiculturels intégrés dans chaque région apportent gouvernance, maîtrise du capital et opérations sur le terrain à chaque mandat.',
     },
     deliveryNotes: {
-      title: 'Notes de livraison',
-      description: 'Utilisez cette carte pour capturer les initiatives à venir, les fenêtres de lancement ou les capacités d\'opérateur sur mesure que vous souhaitez mettre en avant.',
+      title: 'Approche',
+      description: 'Nous identifions les initiatives à venir, les fenêtres de lancement et les capacités opérationnelles sur mesure adaptées à vos besoins.',
     },
   },
 
   regionalDelivery: {
-    title: 'Livraison Régionale',
-    sectionLabel: 'Section 02',
+    title: 'Projets Réalisés',
+    sectionLabel: '',
     regions: {
-      'Europe': 'Nous acquérons des actifs en difficulté, restructurons les opérations et développons les entreprises agricoles sur les marchés européens.',
+      'Europe': 'Nous avons acquis des actifs en difficulté, restructuré les opérations et développé les entreprises agricoles sur les marchés européens.',
       'North America': 'Gestion des relations, lobbying et conseil juridique pour les entreprises nord-américaines cherchant à exporter ou à opérer à l\'étranger.',
       'Middle East': 'Les opérateurs sur le marché coordonnent les partenariats, la livraison de projets et la conformité dans le Golfe et le paysage ME plus large.',
-      'Africa': 'Nous créons des entreprises, commandons des usines et gérons des programmes agricoles et technologiques à travers le continent.',
+      'Africa': 'Nous avons créé des entreprises, commissionné des usines et géré des programmes agricoles et technologiques à travers le continent.',
     },
   },
 
   services: {
     title: 'Services',
-    sectionLabel: 'Section 03',
+    sectionLabel: '',
     items: [
       {
         title: 'Exécution privée et sur mesure',
@@ -177,7 +177,7 @@ export const fr: SiteContent = {
       },
       {
         title: 'Gouvernance axée sur les opérateurs',
-        body: 'Les sprints hebdomadaires sur le terrain fusionnent avec des rapports prêts pour le conseil d\'administration, maintenant les feuilles de route, la conformité et la livraison liées partout où nous opérons.',
+        body: 'Les opérations sur le terrain s\'intègrent avec des rapports prêts pour le conseil d\'administration, maintenant les feuilles de route, la conformité et la livraison alignées dans toutes les régions.',
       },
       {
         title: 'Maîtrise du capital',
@@ -185,14 +185,14 @@ export const fr: SiteContent = {
       },
       {
         title: 'Commerce International',
-        body: 'Depuis plus de 10 ans, KUZOG aide les opérateurs africains à sécuriser des biens et services internationaux grâce à un approvisionnement privé et sur mesure, un financement et une logistique.',
+        body: 'Depuis plus de 10 ans, KUZOG aide les opérateurs africains à sécuriser des biens et services internationaux grâce à un approvisionnement privé et public, sur mesure, un financement et une logistique.',
       },
     ],
   },
 
   operations: {
     title: 'Opérations et Éthique',
-    sectionLabel: 'Section 04',
+    sectionLabel: '',
     description: 'Nous opérons sous une politique de tolérance zéro sur la corruption. Notre code interne s\'aligne sur les exigences de Sapin II, FCPA et UK Bribery Act, structurant chaque mandat avec des lignes de reporting transparentes et une documentation prête pour l\'audit.',
     commitmentsTitle: 'Engagements de gouvernance',
     commitments: [
@@ -205,10 +205,10 @@ export const fr: SiteContent = {
 
   otherProjects: {
     title: 'Autres Projets',
-    sectionLabel: 'Section 05',
+    sectionLabel: '',
     kuzogConsulting: {
       title: 'KUZOG Consulting Inc.',
-      description: 'Gestion de programme et soutien à la conformité en Amérique du Nord, basés à Toronto avec livraison à travers le Canada et les États-Unis.',
+      description: 'Gestion de programme et soutien à la conformité en Amérique du Nord, basés à Toronto avec livraison à travers le Canada et les États-Unis. Partenariat avec de nombreuses entreprises d\'entreposage et d\'équipement logistique.',
       button: 'Visiter kuzog.ca',
     },
     blog: {
@@ -217,8 +217,8 @@ export const fr: SiteContent = {
       button: 'Lire notre blog',
     },
     kuzogAgri: {
-      title: 'KUZOG AGRI Inc.',
-      description: 'Les microstructures minérales HYDROBIO améliorent l\'eau disponible pour les plantes, la tamponisation des nutriments et les habitats microbiens dans les sols sableux et dégradés—soutenant des zones racinaires résilientes avec une irrigation réduite.',
+      title: 'KUZOG Agriculture',
+      description: 'Projets agricoles spécialisés incluant la régénération des sols, les systèmes d\'irrigation de précision et les solutions agricoles durables. Nous accompagnons les agriculteurs avec des technologies éprouvées pour des conditions environnementales difficiles.',
       button: 'Visiter KUZOG AGRI',
     },
   },
@@ -261,5 +261,99 @@ export const fr: SiteContent = {
     errorEmail: 'Entrez une adresse e-mail valide.',
     errorSubmit: 'Nous n\'avons pas pu envoyer votre message. Veuillez réessayer.',
     successMessage: 'Message envoyé. Nous répondrons sous peu.',
+  },
+
+  agriPage: {
+    header: {
+      contactButton: 'Contactez-nous',
+    },
+    about: {
+      badge: 'À propos de KUZOG AGRI',
+      title: 'Systèmes Agricoles pour une Planète en Mutation',
+      description: 'KUZOG AGRI est un innovateur et fournisseur de services agricoles dédiés à la régénération des sols et à l\'optimisation de l\'utilisation de l\'eau dans les environnements les plus difficiles au monde. Nous travaillons à l\'intersection de la science, de la technologie et de la durabilité, déployant des solutions qui rendent les terres dégradées ou souffrant de stress hydrique à nouveau productives.',
+      contactButton: 'Contactez-nous',
+      cards: {
+        fullCycle: {
+          title: 'Partenaire Complet',
+          description: 'De la semence au sol aux systèmes, nous fournissons du matériel végétal de haute qualité, concevons des technologies de sol avancées pour l\'efficacité hydrique et des systèmes agricoles adaptatifs alimentés par des énergies renouvelables.',
+        },
+        globalReach: {
+          title: 'Portée Mondiale',
+          description: 'Nos projets couvrent l\'Afrique, le Moyen-Orient et l\'Europe — ciblant les zones arides souffrant de désertification et les régions tempérées confrontées aux stress climatiques tels que les inondations, la salinité et l\'épuisement des sols.',
+        },
+        partnership: {
+          title: 'Approche Partenariale',
+          description: 'Nous nous associons avec les agriculteurs, les agro-industries, les agences de développement et les gouvernements pour construire la résilience agricole à partir de la base.',
+        },
+      },
+    },
+    services: {
+      badge: 'Nos Services',
+      title: 'Services Agricoles',
+      items: [
+        {
+          title: 'Propagation Végétale et Multiplication Génétique',
+          body: 'KUZOG AGRI exploite et s\'associe avec des laboratoires de sélection et de propagation végétale capables de produire des millions de plants de haute qualité chaque année. Notre expertise couvre la production en culture tissulaire, la gestion des pépinières et l\'acclimatation sur le terrain, garantissant que chaque plante que nous livrons est génétiquement pure, exempte de maladies et adaptée au climat.',
+          details: [
+            'Plants de bananiers, palmiers dattiers et plants d\'ananas',
+            'Plants de légumes et espèces horticoles',
+            'Plants à cycle rapide (par ex., 45–60 jours) pour programmes de plantation précoce ou commerciale',
+          ],
+        },
+        {
+          title: 'Régénération des Sols et Technologies d\'Économie d\'Eau',
+          body: 'Nous nous spécialisons dans la transformation de sols de faible fertilité et soumis au stress hydrique en terres productives grâce à des innovations minérales et microbiennes naturelles. Notre plateforme technologique propriétaire combine des microstructures conçues avec des champignons bénéfiques pour optimiser les performances du sol.',
+          details: [
+            'Utilisation de l\'eau réduite jusqu\'à 50%',
+            'Efficacité des engrais améliorée de 15 à 20%',
+            'Rendements des cultures augmentés de 20 à 30%, même dans les sols marginaux',
+          ],
+        },
+        {
+          title: 'Systèmes Agricoles Contrôlés et Intelligents',
+          body: 'Nous concevons et mettons en œuvre des systèmes agricoles à environnement contrôlé et de précision adaptés à divers contextes — des petites exploitations aux projets commerciaux. Nos systèmes sont conçus pour l\'efficacité des ressources, combinant énergie renouvelable et contrôle basé sur les données pour obtenir un rendement maximal avec un apport minimal.',
+          details: [
+            'Systèmes hydroponiques et aquaponiques',
+            'Irrigation et surveillance alimentées par l\'énergie solaire',
+            'Systèmes de serre et de plein champ semi-aride',
+            'Gestion des cultures assistée par IA et fertigation de précision',
+          ],
+        },
+        {
+          title: 'Partenariat et Opérations de Projet',
+          body: 'KUZOG AGRI fonctionne par le biais de modèles de partenariat qui alignent l\'innovation scientifique avec l\'exécution sur le terrain. Nous co-développons des "Playbooks Opérationnels" avec nos partenaires locaux, guidant chaque étape du projet pour assurer le transfert de connaissances, le contrôle qualité et la durabilité à long terme de chaque déploiement.',
+          details: [
+            'Approvisionnement et gestion de la chaîne logistique',
+            'Mise en service du système et essais sur le terrain',
+            'Formation des équipes locales',
+            'Déploiement commercial et expansion',
+          ],
+        },
+      ],
+    },
+    soilTech: {
+      badge: 'Technologie du Sol',
+      title: 'Notre Solution Propriétaire',
+      subtitle: 'Microstructures de Sol Conçues pour les Environnements Soumis au Stress Hydrique',
+      description: 'La plateforme technologique propriétaire de KUZOG AGRI est conçue pour restaurer les sols dégradés, augmenter l\'efficacité hydrique et améliorer la dynamique des nutriments. Elle est le produit d\'années de recherche combinant l\'ingénierie minérale, la microbiologie du sol et l\'agronomie de terrain.',
+      features: [
+        {
+          title: 'Rétention d\'Eau',
+          body: 'Nos microstructures minérales propriétaires agissent comme des réservoirs d\'eau. Elles stockent l\'humidité près de la zone racinaire, la libérant progressivement aux plantes en cas de stress de sécheresse — augmentant la capacité d\'eau disponible pour les plantes (AWC) et réduisant la fréquence d\'irrigation.',
+        },
+        {
+          title: 'Tamponnage des Nutriments',
+          body: 'Notre cadre minéral adaptatif cultive des microhabitats qui stabilisent l\'échange de nutriments (N, P, K) et de composés carbonés. Le système encourage la colonisation par des champignons bénéfiques et des bactéries du sol, améliorant la biodisponibilité des éléments essentiels et favorisant la fertilité du sol à long terme.',
+        },
+        {
+          title: 'Régénération du Sol',
+          body: 'Notre technologie du sol est utilisée non seulement comme amendement du sol mais aussi dans le cadre de programmes de reforestation, de cultures de couverture et de restauration. En reconstruisant la matière organique, elle améliore l\'agrégation, la structure du sol et la séquestration du carbone, régénérant des écosystèmes autrefois considérés comme irrécupérables.',
+        },
+        {
+          title: 'Playbooks Opérationnels',
+          body: 'Chaque programme est livré avec un playbook de déploiement — un guide de terrain détaillé co-créé avec nos partenaires. Il couvre les diagnostics de site, les ajustements de formulation, les protocoles de mélange et d\'application, et la surveillance post-application pour assurer des résultats cohérents à toutes les échelles.',
+        },
+      ],
+    },
   },
 };

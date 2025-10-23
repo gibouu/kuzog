@@ -35,23 +35,16 @@ export function CallToActionCard() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="w-full px-4 py-8 sm:px-6 md:py-12"
+      className="w-full px-4 py-4 sm:px-6 md:py-6"
     >
       <div className="mx-auto max-w-6xl">
-        {/* Title */}
-        <div className="mb-6 flex justify-center md:mb-8">
-          <MainTitlePill size="lg" tone="primary">
-            {content.findSolution.title}
-          </MainTitlePill>
-        </div>
-
-        {/* Company Description */}
-        <p className="mx-auto mb-8 max-w-3xl text-center text-base font-semibold uppercase tracking-[0.3em] text-[var(--muted-ink)] sm:text-sm md:mb-12 md:tracking-[0.4em]">
+        {/* Company Description - Now at the top */}
+        <p className="mx-auto mb-4 max-w-3xl text-center text-base font-semibold uppercase tracking-[0.3em] text-[var(--muted-ink)] sm:text-sm md:mb-6 md:tracking-[0.4em]">
           {content.findSolution.description}
         </p>
 
         {/* Audience Cards Grid - Reordered */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:gap-5">
           {content.audiences.map((audience) => {
             const IconComponent = AUDIENCE_ICONS[audience.id];
 
@@ -62,24 +55,24 @@ export function CallToActionCard() {
                 whileHover={{ scale: 1.02, y: -4 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                className="group relative flex flex-col items-center gap-4 rounded-[28px] border border-[var(--ink)]/10 bg-white/60 p-8 text-center shadow-sm backdrop-blur-2xl transition-all duration-300 hover:border-[var(--brand)]/30 hover:bg-white/80 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2 sm:p-10 md:gap-6 md:rounded-[42px] md:p-12"
+                className="group relative flex flex-col items-center gap-3 rounded-[28px] border border-[var(--ink)]/10 bg-white/60 p-6 text-center shadow-sm backdrop-blur-2xl transition-all duration-300 hover:border-[var(--brand)]/30 hover:bg-white/80 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[var(--ring)] focus:ring-offset-2 sm:p-7 md:gap-4 md:rounded-[42px] md:p-8"
                 aria-label={`Select ${audience.label}`}
               >
                 {/* Icon Circle */}
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--brand)]/10 transition-colors duration-300 group-hover:bg-[var(--brand)]/20 md:h-20 md:w-20">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--brand)]/10 transition-colors duration-300 group-hover:bg-[var(--brand)]/20 md:h-16 md:w-16">
                   <IconComponent
-                    className="h-8 w-8 text-[var(--brand)] md:h-10 md:w-10"
+                    className="h-7 w-7 text-[var(--brand)] md:h-8 md:w-8"
                     strokeWidth={1.5}
                   />
                 </div>
 
                 {/* Label */}
-                <h3 className="text-xl font-semibold text-[var(--ink)] transition-colors duration-300 group-hover:text-[var(--brand)] sm:text-2xl md:text-3xl">
+                <h3 className="text-lg font-semibold text-[var(--ink)] transition-colors duration-300 group-hover:text-[var(--brand)] sm:text-xl md:text-2xl">
                   {audience.label}
                 </h3>
 
                 {/* Tagline */}
-                <p className="text-sm leading-relaxed text-[var(--muted-ink)] sm:text-base">
+                <p className="text-xs leading-relaxed text-[var(--muted-ink)] sm:text-sm">
                   {audience.tagline}
                 </p>
 
@@ -105,7 +98,7 @@ export function CallToActionCard() {
         </div>
 
         {/* Subtitle hint */}
-        <p className="mt-8 text-center text-sm text-[var(--muted-ink)] md:mt-12">
+        <p className="mt-4 text-center text-sm text-[var(--muted-ink)] md:mt-6">
           {content.findSolution.subtitle}
         </p>
       </div>

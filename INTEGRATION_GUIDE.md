@@ -126,7 +126,7 @@ Insert the new components **right after the hero section** (before the "Strategi
 3. **Clicks an audience** (e.g., "I'm a Farmer") → CallToActionCard fades out, SolutionsCard slides in
 4. **SolutionsCard displays**:
    - Header with audience icon and tagline
-   - 4 sub-section tabs (e.g., "Equipment & Technology", "Seeds & Soil Solutions", etc.)
+  - 4 sub-section tabs (e.g., "Equipment & Technology", "Seeds & Fertilizers", etc.)
    - Content area with smooth CSS fade transitions between tabs
    - "Contact Us" button at bottom
 5. **Clicks Contact Us** → Modal opens with Industry field pre-populated as "Agriculture"

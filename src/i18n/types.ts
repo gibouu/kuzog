@@ -157,4 +157,50 @@ export interface SiteContent {
     errorSubmit: string;
     successMessage: string;
   };
+
+  // AGRI Page
+  agriPage: {
+    header: {
+      contactButton: string;
+    };
+    about: {
+      badge: string;
+      title: string;
+      description: string;
+      contactButton: string;
+      cards: {
+        fullCycle: {
+          title: string;
+          description: string;
+        };
+        globalReach: {
+          title: string;
+          description: string;
+        };
+        partnership: {
+          title: string;
+          description: string;
+        };
+      };
+    };
+    services: {
+      badge: string;
+      title: string;
+      items: Array<{
+        title: string;
+        body: string;
+        details: string[];
+      }>;
+    };
+    soilTech: {
+      badge: string;
+      title: string;
+      subtitle: string;
+      description: string;
+      features: Array<{
+        title: string;
+        body: string;
+      }>;
+    };
+  };
 }

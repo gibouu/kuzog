@@ -8,7 +8,7 @@ export const en: SiteContent = {
 
   findSolution: {
     title: 'Find Your Solution',
-    description: 'KUZOG is an international network of problem-solvers bridging markets from North America and Europe to the Middle East.',
+    description: 'KUZOG is an international network of problem-solvers bridging markets from North America and Europe and the Middle East.',
     subtitle: 'Select your profile to discover tailored solutions from KUZOG',
   },
 
@@ -33,7 +33,7 @@ export const en: SiteContent = {
         },
         {
           id: 'optimization',
-          title: 'Supply Chain Excellence',
+          title: 'Supply Chain',
           content: 'Maximize efficiency through end-to-end supply chain optimization. Our consultants analyze your operations, identify bottlenecks, and implement solutions that reduce costs and improve delivery times.',
         },
         {
@@ -69,7 +69,7 @@ export const en: SiteContent = {
         {
           id: 'intelligence',
           title: 'Market Intelligence',
-          content: 'Make informed decisions with real-time market intelligence and pricing data. Our network provides insights on demand trends, competitive pricing, and emerging opportunities.',
+          content: 'Make informed decisions with real-time market intelligence and pricing data. Our network provides insights on demand trends, competitive pricing, and emerging opportunities. We support your local market entry and help create comprehensive business plans.',
         },
       ],
     },
@@ -88,18 +88,18 @@ export const en: SiteContent = {
         },
         {
           id: 'inputs',
-          title: 'Seeds & Soil Solutions',
-          content: 'Transform challenging terrain with our specialized soil enhancement programs. We provide access to premium seeds, bentonite for water retention, mycorrhiza for root health, and comprehensive fertilizer solutions.',
+          title: 'Seeds & Fertilizers',
+          content: 'Transform challenging terrain with our specialized soil enhancement programs. We provide access to premium seeds, mineral organic soil amendments, and comprehensive fertilizer solutions.',
         },
         {
           id: 'infrastructure',
           title: 'Sustainable Infrastructure',
-          content: 'Build for the future with solar-powered irrigation, modular farm housing, and water management systems designed for efficiency. We help you implement infrastructure that reduces costs while increasing productivity.',
+          content: 'Build for the future with solar-powered irrigation, hydroponics, modular farm housing, and water management systems designed for efficiency. We help you implement infrastructure that reduces costs while increasing productivity.',
         },
         {
           id: 'financing',
-          title: 'Financing & Support',
-          content: 'Overcome financial barriers with flexible leasing options and equipment financing tailored to agricultural cycles. Our network includes financial partners who understand farming seasonality.',
+          title: 'Water Stress & Soil Solutions',
+          content: 'We provide solutions to solve water stress, salinity, and infertile soil challenges. Our programs help you overcome environmental barriers with proven technologies adapted to arid and challenging conditions.',
         },
       ],
     },
@@ -147,29 +147,29 @@ export const en: SiteContent = {
     contactButton: 'Contact us',
     exploreButton: 'Explore industries',
     operatorsFocus: {
-      title: "Operators' focus",
+      title: "Operator Excellence",
       description: 'Multicultural practitioners embedded in each region bring governance, capital fluency, and on-the-ground operatorship to every mandate.',
     },
     deliveryNotes: {
-      title: 'Delivery notes',
-      description: 'Use this card to capture upcoming initiatives, launch windows, or bespoke operator capabilities you want to highlight.',
+      title: 'Approach',
+      description: 'We capture upcoming initiatives, launch windows, and bespoke operator capabilities tailored to your needs.',
     },
   },
 
   regionalDelivery: {
-    title: 'Regional Delivery',
-    sectionLabel: 'Section 02',
+    title: 'Past Projects',
+    sectionLabel: '',
     regions: {
-      'Europe': 'We acquire distressed assets, restructure operations, and scale agricultural ventures across European markets.',
+      'Europe': 'We acquired distressed assets, restructured operations, and scaled agricultural ventures across European markets.',
       'North America': 'Relationship management, lobbying, and legal advisory for North American companies seeking to export or operate abroad.',
       'Middle East': 'In-market operators coordinate partnerships, project delivery, and compliance across the Gulf and wider ME landscape.',
-      'Africa': 'We create companies, commission factories, and steward agricultural and technology programmes throughout the continent.',
+      'Africa': 'We created companies, commissioned factories, and stewarded agricultural and technology programmes throughout the continent.',
     },
   },
 
   services: {
     title: 'Services',
-    sectionLabel: 'Section 03',
+    sectionLabel: '',
     items: [
       {
         title: 'Private & tailor-made execution',
@@ -177,7 +177,7 @@ export const en: SiteContent = {
       },
       {
         title: 'Operator-first governance',
-        body: 'Weekly field sprints merge with board-ready reporting, keeping roadmaps, compliance, and delivery tied together everywhere we operate.',
+        body: 'Field operations integrate with board-ready reporting, keeping roadmaps, compliance, and delivery aligned across all regions.',
       },
       {
         title: 'Capital fluency',
@@ -185,14 +185,14 @@ export const en: SiteContent = {
       },
       {
         title: 'International Trade',
-        body: 'For 10+ years KUZOG has helped African operators secure international goods and services through private, tailored sourcing, financing, and logistics.',
+        body: 'For 10+ years KUZOG has helped African operators secure international goods and services through private and public, tailored sourcing, financing, and logistics.',
       },
     ],
   },
 
   operations: {
     title: 'Operations & Ethics',
-    sectionLabel: 'Section 04',
+    sectionLabel: '',
     description: 'We operate under a zero-tolerance policy on corruption. Our internal code aligns with Sapin II, FCPA, and UK Bribery Act requirements, structuring every mandate with transparent reporting lines and audit-ready documentation.',
     commitmentsTitle: 'Governance commitments',
     commitments: [
@@ -205,10 +205,10 @@ export const en: SiteContent = {
 
   otherProjects: {
     title: 'Other Projects',
-    sectionLabel: 'Section 05',
+    sectionLabel: '',
     kuzogConsulting: {
       title: 'KUZOG Consulting Inc.',
-      description: 'North American programme management and compliance support, headquartered in Toronto with delivery across Canada and USA.',
+      description: 'North American programme management and compliance support, headquartered in Toronto with delivery across Canada and USA. Partnered with numerous warehouse and logistics equipment companies.',
       button: 'Visit kuzog.ca',
     },
     blog: {
@@ -217,8 +217,8 @@ export const en: SiteContent = {
       button: 'Read our blog',
     },
     kuzogAgri: {
-      title: 'KUZOG AGRI Inc.',
-      description: 'HYDROBIO mineral microstructures improve plant-available water, nutrient buffering, and microbial habitats in sandy and degraded soils—supporting resilient root zones with reduced irrigation.',
+      title: 'KUZOG Agriculture',
+      description: 'Specialized agriculture projects including soil regeneration, precision irrigation systems, and sustainable farming solutions. We support farmers with proven technologies for challenging environmental conditions.',
       button: 'Visit KUZOG AGRI',
     },
   },
@@ -261,5 +261,99 @@ export const en: SiteContent = {
     errorEmail: 'Enter a valid email address.',
     errorSubmit: 'We could not send your message. Please try again.',
     successMessage: 'Message sent. We will respond shortly.',
+  },
+
+  agriPage: {
+    header: {
+      contactButton: 'Contact us',
+    },
+    about: {
+      badge: 'About KUZOG AGRI',
+      title: 'Agricultural Systems for a Changing Planet',
+      description: 'KUZOG AGRI is an agricultural innovation and service provider dedicated to regenerating soils and optimizing water use in the world\'s most challenging environments. We work at the intersection of science, technology, and sustainability, deploying solutions that make degraded or water-stressed lands productive again.',
+      contactButton: 'Contact us',
+      cards: {
+        fullCycle: {
+          title: 'Full-Cycle Partner',
+          description: 'From seed to soil to systems, we supply high-quality plant material, engineer advanced soil technologies for water efficiency, and design adaptive farming systems powered by renewable energy.',
+        },
+        globalReach: {
+          title: 'Global Reach',
+          description: 'Our projects span Africa, the Middle East, and Europe — targeting arid zones suffering from desertification and temperate regions facing climate stresses such as floods, salinity, and soil exhaustion.',
+        },
+        partnership: {
+          title: 'Partnership Approach',
+          description: 'We partner with farmers, agri-industries, development agencies, and governments to build agricultural resilience from the ground up.',
+        },
+      },
+    },
+    services: {
+      badge: 'Our Services',
+      title: 'Agricultural Services',
+      items: [
+        {
+          title: 'Plant Propagation & Genetic Multiplication',
+          body: 'KUZOG AGRI operates and partners with plant breeding and propagation laboratories capable of producing millions of high-quality seedlings annually. Our expertise covers tissue-culture production, nursery management, and field acclimatization, ensuring that every plant we deliver is genetically pure, disease-free, and climate-adapted.',
+          details: [
+            'Banana plants, date palms, and pineapple plants',
+            'Vegetable seedlings and horticultural species',
+            'Rapid-cycle seedlings (e.g., 45–60 days) for early-stage or commercial planting programs',
+          ],
+        },
+        {
+          title: 'Soil Regeneration & Water-Saving Technologies',
+          body: 'We specialize in transforming low-fertility and water-stressed soils into productive land through natural mineral and microbial innovations. Our proprietary soil technology platform combines engineered microstructures with beneficial fungi to optimize soil performance.',
+          details: [
+            'Water use is reduced by up to 50%',
+            'Fertilizer efficiency improves by 15–20%',
+            'Crop yields increase by 20–30%, even in marginal soils',
+          ],
+        },
+        {
+          title: 'Controlled & Smart Farming Systems',
+          body: 'We design and implement controlled-environment and precision farming systems adapted to diverse contexts — from smallholder farms to commercial projects. Our systems are built for resource efficiency, combining renewable energy and data-driven control to achieve maximum yield with minimal input.',
+          details: [
+            'Hydroponic and aquaponic systems',
+            'Solar-powered irrigation and monitoring',
+            'Greenhouse and semi-arid open-field systems',
+            'AI-assisted crop management and precision fertigation',
+          ],
+        },
+        {
+          title: 'Partnership & Project Operations',
+          body: 'KUZOG AGRI works through partnership models that align scientific innovation with on-the-ground execution. We co-develop "Operator Playbooks" with local partners, guiding each stage of the project to ensure knowledge transfer, quality control, and long-term sustainability of each deployment.',
+          details: [
+            'Sourcing and supply chain management',
+            'System commissioning and field trials',
+            'Training of local teams',
+            'Commercial rollout and scale-up',
+          ],
+        },
+      ],
+    },
+    soilTech: {
+      badge: 'Soil Technology',
+      title: 'Our Proprietary Solution',
+      subtitle: 'Engineered Soil Microstructures for Water-Stressed Environments',
+      description: 'KUZOG AGRI\'s proprietary soil technology platform is designed to restore degraded soils, increase water efficiency, and enhance nutrient dynamics. It is the product of years of research combining mineral engineering, soil microbiology, and field agronomy.',
+      features: [
+        {
+          title: 'Water Retention',
+          body: 'Our proprietary mineral microstructures act as water reservoirs. They store moisture near the root zone, releasing it gradually to plants under drought stress — increasing plant-available water capacity (AWC) and reducing irrigation frequency.',
+        },
+        {
+          title: 'Nutrient Buffering',
+          body: 'Our adaptive mineral framework cultivates microhabitats that stabilize the exchange of nutrients (N, P, K) and carbon compounds. The system encourages colonization by beneficial fungi and soil bacteria, improving the bioavailability of essential elements and promoting long-term soil fertility.',
+        },
+        {
+          title: 'Soil Regeneration',
+          body: 'Our soil technology is used not only as a soil amendment but also as part of reforestation, cover-crop, and restoration programs. By rebuilding organic matter, it enhances soil aggregation, structure, and carbon sequestration, regenerating ecosystems that were once considered beyond recovery.',
+        },
+        {
+          title: 'Operator Playbooks',
+          body: 'Each program is delivered with a deployment playbook — a detailed field guide co-created with our partners. It covers site diagnostics, formulation adjustments, mixing and application protocols, and post-application monitoring to ensure consistent results across scales.',
+        },
+      ],
+    },
   },
 };

@@ -167,7 +167,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="mt-14 flex-1 space-y-16 md:space-y-20">
+      <main className="mt-8 flex-1 space-y-12 md:space-y-16">
         {/* Audience Selection - "Find Your Solution" - ALWAYS SHOW FIRST */}
         {!showSolutions && <CallToActionCard />}
 
@@ -182,7 +182,7 @@ export default function App() {
         {showSolutions && (
           <>
             <section id="hero" className="px-6">
-              <div className="mx-auto grid w-full max-w-6xl gap-8 rounded-[42px] border border-white/45 bg-white/60 px-6 py-10 shadow-[0_40px_90px_rgba(31,41,51,0.18)] backdrop-blur-2xl md:grid-cols-[1.1fr_0.9fr] md:items-center md:px-9 md:py-12">
+              <div className="mx-auto grid w-full max-w-6xl gap-6 rounded-[42px] border border-white/45 bg-white/60 px-6 py-8 shadow-[0_40px_90px_rgba(31,41,51,0.18)] backdrop-blur-2xl md:grid-cols-[1.1fr_0.9fr] md:items-center md:px-8 md:py-10">
                 <div className="space-y-6 text-ink">
                   <div className="inline-flex items-center rounded-full bg-white/70 px-4 py-1.5 text-sm font-semibold text-[var(--pill-text)] shadow-inner">
                     {content.hero.badge}
