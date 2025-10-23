@@ -31,7 +31,7 @@ export function LanguageSelector() {
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative z-40" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="inline-flex h-11 items-center justify-center gap-1.5 rounded-full border border-white/60 bg-white/70 px-4 text-xs font-semibold text-ink shadow-sm transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:h-12 sm:text-sm"
@@ -45,7 +45,7 @@ export function LanguageSelector() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-48 overflow-hidden rounded-2xl border border-white/60 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div className="absolute right-0 top-full z-50 mt-2 w-48 overflow-hidden rounded-2xl border border-white/60 bg-white/95 shadow-lg backdrop-blur-sm">
           {SUPPORTED_LANGUAGES.map((lang) => (
             <button
               key={lang.code}
