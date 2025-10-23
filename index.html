@@ -34,10 +34,15 @@
     <script>
       // GitHub Pages SPA redirect handler
       (function() {
-        var redirect = sessionStorage.getItem('redirect');
-        if (redirect) {
-          sessionStorage.removeItem('redirect');
-          history.replaceState(null, null, redirect);
+        try {
+          var redirect = window.sessionStorage ? sessionStorage.getItem('redirect') : null;
+          if (redirect) {
+            sessionStorage.removeItem('redirect');
+            history.replaceState(null, null, redirect);
+          }
+        } catch (error) {
+          // sessionStorage can throw in privacy-restricted contexts; ignore and continue rendering.
+          console.warn('SPA redirect storage unavailable', error);
         }
       })();
     </script>

@@ -14,21 +14,42 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const LANGUAGE_STORAGE_KEY = 'kuzog_language';
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Initialize language from localStorage or default
-  const [language, setLanguageState] = useState<Language>(() => {
-    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+function getStoredLanguage(): Language {
+  if (typeof window === 'undefined') {
+    return DEFAULT_LANGUAGE;
+  }
+
+  try {
+    const stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
     return (stored && ['en', 'fr', 'ar'].includes(stored) ? stored : DEFAULT_LANGUAGE) as Language;
-  });
+  } catch {
+    return DEFAULT_LANGUAGE;
+  }
+}
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  // Initialize language from resilient localStorage access or default
+  const [language, setLanguageState] = useState<Language>(getStoredLanguage);
 
   const content = getContent(language);
   const direction = SUPPORTED_LANGUAGES.find((l) => l.code === language)?.dir || 'ltr';
 
   // Persist language choice and update document direction
   useEffect(() => {
-    localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
-    document.documentElement.setAttribute('lang', language);
-    document.documentElement.setAttribute('dir', direction);
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    } catch {
+      // Ignore storage errors (e.g., Safari private mode)
+    }
+
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('lang', language);
+      document.documentElement.setAttribute('dir', direction);
+    }
   }, [language, direction]);
 
   const setLanguage = (lang: Language) => {

@@ -7,8 +7,15 @@
     <script>
       // GitHub Pages SPA redirect solution
       // Store the path and redirect to index.html
-      sessionStorage.setItem('redirect', window.location.pathname + window.location.search);
-      window.location.replace('/');
+      try {
+        if (window.sessionStorage) {
+          sessionStorage.setItem('redirect', window.location.pathname + window.location.search);
+        }
+      } catch (error) {
+        console.warn('SPA redirect storage unavailable', error);
+      } finally {
+        window.location.replace('/');
+      }
     </script>
   </head>
   <body>
