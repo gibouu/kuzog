@@ -8,7 +8,7 @@ node_modules
 
 # Production
 /build
-/dist
+# /dist - Keep dist committed for deployment
 
 # Misc
 .DS_Store
