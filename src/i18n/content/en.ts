@@ -141,7 +141,7 @@ export const en: SiteContent = {
   },
 
   hero: {
-    badge: 'Strategic Precision',
+    badge: 'Strategic Focus',
     title: 'We acquire, operationalize, and scale ventures across continents.',
     description: 'KUZOG deploys practitioner-led teams to stabilise distressed assets, revive stalled projects, and build international operating models that withstand scrutiny.',
     contactButton: 'Contact us',

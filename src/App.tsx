@@ -316,14 +316,12 @@ export default function App() {
                   <p>
                     {content.otherProjects.blog.description}
                   </p>
-                  <a
-                    href="https://kuzog.com/blog"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/blog"
                     className="mt-auto inline-flex h-11 w-44 items-center justify-center rounded-full border border-white/60 bg-white/70 text-sm font-semibold text-ink shadow-sm transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   >
                     {content.otherProjects.blog.button}
-                  </a>
+                  </Link>
                 </SubCard>
 
                 {/* KUZOG AGRI */}

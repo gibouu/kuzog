@@ -141,7 +141,7 @@ export const fr: SiteContent = {
   },
 
   hero: {
-    badge: 'Précision Stratégique',
+    badge: 'Focus Stratégique',
     title: 'Nous acquérons, opérationnalisons et développons des entreprises sur tous les continents.',
     description: 'KUZOG déploie des équipes dirigées par des praticiens pour stabiliser les actifs en difficulté, relancer les projets bloqués et construire des modèles opérationnels internationaux qui résistent à l\'examen.',
     contactButton: 'Contactez-nous',
