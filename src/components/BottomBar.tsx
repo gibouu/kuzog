@@ -19,7 +19,7 @@ type BottomBarProps = {
 
 function Item({ item, isActive }: { item: BottomBarItem; isActive: boolean }) {
   const className = clsx(
-    'flex h-11 min-w-[60px] items-center justify-center rounded-full px-2.5 text-xs font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white md:h-13 md:min-w-[74px] md:px-3.5 md:text-sm',
+    'flex h-11 min-w-[44px] items-center justify-center rounded-full px-2 text-xs font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:min-w-[60px] sm:px-2.5 md:h-13 md:min-w-[74px] md:px-3.5 md:text-sm',
     isActive
       ? 'bg-brand/80 text-brand-ink shadow-[0_12px_30px_rgba(31,41,51,0.22)]'
       : 'text-muted-ink bg-white/30 hover:bg-white/45'
@@ -33,8 +33,8 @@ function Item({ item, isActive }: { item: BottomBarItem; isActive: boolean }) {
 
   const content = (
     <div className="flex flex-col items-center justify-center gap-0.5 md:flex-row md:gap-1">
-      <item.icon className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" />
-      <span className="text-[10px] font-semibold tracking-[0.01em] md:text-sm md:tracking-[0.02em] md:uppercase">
+      <item.icon className="h-5 w-5" aria-hidden="true" />
+      <span className="hidden sm:inline text-[10px] font-semibold tracking-[0.01em] md:text-sm md:tracking-[0.02em] md:uppercase">
         {item.label}
       </span>
     </div>

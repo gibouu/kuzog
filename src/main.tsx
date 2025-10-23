@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
+import { NavigationProvider } from './contexts/NavigationContext';
 import App from './App';
 import AgriPage from './pages/AgriPage';
 import './index.css';
@@ -13,11 +15,15 @@ if (!rootElement) {
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/agri" element={<AgriPage />} />
-      </Routes>
-    </BrowserRouter>
+    <LanguageProvider>
+      <NavigationProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/agri" element={<AgriPage />} />
+          </Routes>
+        </BrowserRouter>
+      </NavigationProvider>
+    </LanguageProvider>
   </React.StrictMode>
 );

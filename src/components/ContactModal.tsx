@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import { Mail, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
 import { submitContact } from '../lib/contact';
+import { useLanguage } from '../contexts/LanguageContext';
+import { useNavigation } from '../contexts/NavigationContext';
 
 type ContactModalProps = {
   open: boolean;
@@ -13,20 +15,34 @@ type FormState = {
   name: string;
   email: string;
   message: string;
+  industry: string;
 };
 
 const initialState: FormState = {
   name: '',
   email: '',
-  message: ''
+  message: '',
+  industry: ''
 };
 
 export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const firstFieldRef = useRef<HTMLInputElement>(null);
+  const { content } = useLanguage();
+  const { selectedAudience } = useNavigation();
   const [formState, setFormState] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Pre-populate industry based on selected audience
+  useEffect(() => {
+    if (selectedAudience) {
+      const audienceContent = content.audiences.find((a) => a.id === selectedAudience);
+      if (audienceContent) {
+        setFormState((prev) => ({ ...prev, industry: audienceContent.industry }));
+      }
+    }
+  }, [selectedAudience, content]);
 
   useEffect(() => {
     if (!open) {
@@ -93,17 +109,18 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
     const trimmed = {
       name: formState.name.trim(),
       email: formState.email.trim(),
-      message: formState.message.trim()
+      message: formState.message.trim(),
+      industry: formState.industry.trim()
     };
 
-    if (!trimmed.name || !trimmed.email || !trimmed.message) {
-      setError('Please complete every field before sending.');
+    if (!trimmed.name || !trimmed.email || !trimmed.message || !trimmed.industry) {
+      setError(content.contactModal.errorRequired);
       return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(trimmed.email)) {
-      setError('Enter a valid email address.');
+      setError(content.contactModal.errorEmail);
       return;
     }
 
@@ -116,7 +133,7 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
     } catch (submissionError) {
       console.error(submissionError);
       setSubmitting(false);
-      setError('We could not send your message. Please try again.');
+      setError(content.contactModal.errorSubmit);
     }
   };
 
@@ -151,16 +168,16 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
         <div className="pr-10 text-neutral-900">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-ink">Contact</p>
           <h2 id="contact-modal-title" className="mt-2 text-2xl font-semibold text-ink">
-            Let’s get your project moving
+            {content.contactModal.title}
           </h2>
           <p className="mt-2 text-sm text-muted-ink">
-            Share a few details and our team will respond within one business day.
+            {content.contactModal.subtitle}
           </p>
         </div>
 
         <form className="mt-6 grid gap-4" onSubmit={handleSubmit}>
           <label className="grid gap-2 text-sm font-medium text-ink">
-            Full name
+            {content.contactModal.nameLabel}
             <input
               ref={firstFieldRef}
               value={formState.name}
@@ -171,7 +188,7 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
             />
           </label>
           <label className="grid gap-2 text-sm font-medium text-ink">
-            Email
+            {content.contactModal.emailLabel}
             <input
               type="email"
               value={formState.email}
@@ -182,7 +199,24 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
             />
           </label>
           <label className="grid gap-2 text-sm font-medium text-ink">
-            Message
+            {content.contactModal.industryLabel}
+            <select
+              value={formState.industry}
+              onChange={(e) => setFormState((prev) => ({ ...prev, industry: e.target.value }))}
+              required
+              className="h-12 rounded-2xl border border-border bg-chip px-4 text-base text-ink shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            >
+              <option value="">{content.contactModal.industryOptions.placeholder}</option>
+              <option value="Agriculture">{content.contactModal.industryOptions.agriculture}</option>
+              <option value="Manufacturing">{content.contactModal.industryOptions.manufacturing}</option>
+              <option value="Import / Export">{content.contactModal.industryOptions.importExport}</option>
+              <option value="Technology / Startups">{content.contactModal.industryOptions.technology}</option>
+              <option value="Renewable Energy">{content.contactModal.industryOptions.renewableEnergy}</option>
+              <option value="Other">{content.contactModal.industryOptions.other}</option>
+            </select>
+          </label>
+          <label className="grid gap-2 text-sm font-medium text-ink">
+            {content.contactModal.messageLabel}
             <textarea
               value={formState.message}
               onChange={handleChange('message')}
@@ -203,14 +237,14 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
               disabled={submitting}
               className="inline-flex h-12 min-w-[140px] items-center justify-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-brand-ink transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:opacity-60"
             >
-              {submitting ? 'Sending…' : 'Submit'}
+              {submitting ? content.contactModal.submittingButton : content.contactModal.submitButton}
             </button>
             <a
               href="mailto:management@kuzog.com"
               className="inline-flex h-12 min-w-[140px] items-center justify-center gap-2 rounded-full border border-border bg-chip px-6 text-sm font-semibold text-ink transition hover:bg-chip-active focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               <Mail className="h-5 w-5" aria-hidden="true" />
-              Email us
+              {content.contactModal.emailButton}
             </a>
           </div>
         </form>
