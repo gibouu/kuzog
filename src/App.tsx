@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Briefcase, Building2, Home as HomeIcon, Mail, Sprout, Factory, Ship, Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -27,7 +27,7 @@ const OBSERVER_OPTIONS: IntersectionObserverInit = {
 
 export default function App() {
   const { content } = useLanguage();
-  const { showSolutions, setSelectedAudience, setShowSolutions } = useNavigation();
+  const { showSolutions, setSelectedAudience, setShowSolutions, resetNavigation } = useNavigation();
   const [activeNav, setActiveNav] = useState<'home' | 'manufacturing' | 'trade' | 'startup' | 'services' | 'contact'>('home');
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
@@ -64,16 +64,32 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
+  const handleReturnToStart = useCallback(() => {
+    resetNavigation();
+    setActiveNav('home');
+
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      const headerSection = document.getElementById('home');
+      if (headerSection) {
+        headerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }, [resetNavigation, setActiveNav]);
+
   const navItems = useMemo(
     () => [
       {
         key: 'home',
         label: content.navigation.home,
         icon: HomeIcon,
-        onSelect: () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          setActiveNav('home');
-        }
+        onSelect: handleReturnToStart
       },
       {
         key: 'manufacturing',
@@ -133,7 +149,7 @@ export default function App() {
         }
       }
     ],
-    [content, setSelectedAudience, setShowSolutions]
+    [content, handleReturnToStart, setSelectedAudience, setShowSolutions]
   );
 
   return (
@@ -145,7 +161,11 @@ export default function App() {
 
       <header className="px-6 pt-10" id="home">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3">
-          <Link to="/" className="flex items-center gap-3 no-underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <Link
+            to="/"
+            className="flex items-center gap-3 no-underline"
+            onClick={handleReturnToStart}
+          >
             <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-3xl bg-ink text-2xl font-semibold text-white shadow-lg sm:h-16 sm:w-16 sm:text-3xl">K</div>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-ink sm:text-sm sm:tracking-[0.4em]">{content.header.logoText}</span>
           </Link>
@@ -184,13 +204,13 @@ export default function App() {
             <section id="hero" className="px-6">
               <div className="mx-auto grid w-full max-w-6xl gap-6 rounded-[42px] border border-white/45 bg-white/60 px-6 py-8 shadow-[0_40px_90px_rgba(31,41,51,0.18)] backdrop-blur-2xl md:grid-cols-[1.1fr_0.9fr] md:items-center md:px-8 md:py-10">
                 <div className="space-y-6 text-ink">
-                  <div className="inline-flex items-center rounded-full bg-white/70 px-4 py-1.5 text-sm font-semibold text-[var(--pill-text)] shadow-inner">
+                  <div className="inline-flex items-center rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold text-[var(--pill-text)] shadow-inner sm:text-sm">
                     {content.hero.badge}
                   </div>
-                  <h1 className="text-5xl font-semibold tracking-tight md:text-6xl">
+                  <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
                     {content.hero.title}
                   </h1>
-                  <p className="text-base leading-relaxed text-muted-ink md:text-lg">
+                  <p className="text-sm leading-relaxed text-muted-ink sm:text-base md:text-lg">
                     {content.hero.description}
                   </p>
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -218,18 +238,18 @@ export default function App() {
                 </div>
                 <div className="grid gap-4">
                   <SubCard className="items-start text-left">
-                    <SubTitlePill as="h3" className="mb-2 text-base md:text-lg">
+                    <SubTitlePill as="h3" className="mb-2 text-sm sm:text-base md:text-lg">
                       {content.hero.operatorsFocus.title}
                     </SubTitlePill>
-                    <p className="text-sm text-muted-ink md:text-base">
+                    <p className="text-xs text-muted-ink sm:text-sm md:text-base">
                       {content.hero.operatorsFocus.description}
                     </p>
                   </SubCard>
                   <SubCard className="items-start text-left">
-                    <SubTitlePill as="h3" className="mb-2 text-base md:text-lg">
+                    <SubTitlePill as="h3" className="mb-2 text-sm sm:text-base md:text-lg">
                       {content.hero.deliveryNotes.title}
                     </SubTitlePill>
-                    <p className="text-sm text-muted-ink md:text-base">
+                    <p className="text-xs text-muted-ink sm:text-sm md:text-base">
                       {content.hero.deliveryNotes.description}
                     </p>
                   </SubCard>

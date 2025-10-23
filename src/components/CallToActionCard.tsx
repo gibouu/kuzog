@@ -39,7 +39,7 @@ export function CallToActionCard() {
     >
       <div className="mx-auto max-w-6xl">
         {/* Company Description - Now at the top */}
-        <p className="mx-auto mb-4 max-w-3xl text-center text-base font-semibold uppercase tracking-[0.3em] text-[var(--muted-ink)] sm:text-sm md:mb-6 md:tracking-[0.4em]">
+        <p className="mx-auto mb-4 max-w-3xl text-center text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-ink)] sm:text-sm sm:tracking-[0.3em] md:mb-6 md:tracking-[0.4em]">
           {content.findSolution.description}
         </p>
 
@@ -67,7 +67,7 @@ export function CallToActionCard() {
                 </div>
 
                 {/* Label */}
-                <h3 className="text-lg font-semibold text-[var(--ink)] transition-colors duration-300 group-hover:text-[var(--brand)] sm:text-xl md:text-2xl">
+                <h3 className="text-base font-semibold text-[var(--ink)] transition-colors duration-300 group-hover:text-[var(--brand)] sm:text-lg md:text-xl">
                   {audience.label}
                 </h3>
 
@@ -98,7 +98,7 @@ export function CallToActionCard() {
         </div>
 
         {/* Subtitle hint */}
-        <p className="mt-4 text-center text-sm text-[var(--muted-ink)] md:mt-6">
+        <p className="mt-4 text-center text-xs text-[var(--muted-ink)] sm:text-sm md:mt-6">
           {content.findSolution.subtitle}
         </p>
       </div>
