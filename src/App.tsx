@@ -28,7 +28,7 @@ const OBSERVER_OPTIONS: IntersectionObserverInit = {
 export default function App() {
   const { content } = useLanguage();
   const { showSolutions, setSelectedAudience, setShowSolutions, resetNavigation } = useNavigation();
-  const [activeNav, setActiveNav] = useState<'home' | 'manufacturing' | 'trade' | 'startup' | 'services' | 'contact'>('home');
+  const [activeNav, setActiveNav] = useState<'home' | 'manufacturing' | 'trade' | 'startup' | 'services' | 'contact' | 'industries'>('home');
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
   const [toastOpen, setToastOpen] = useState(false);

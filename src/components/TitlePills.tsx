@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { type HTMLAttributes, type ReactNode } from 'react';
 
-type PillProps = HTMLAttributes<HTMLElement> & {
+type PillProps = Omit<HTMLAttributes<HTMLElement>, 'as'> & {
   as?: keyof JSX.IntrinsicElements;
   children: ReactNode;
   size?: 'lg' | 'md' | 'sm';
@@ -23,7 +23,7 @@ function Pill({ as: Tag = 'div', children, className, size = 'md', tone = 'prima
   return (
     <Tag
       className={clsx(base, sizes[size], tones[tone], className)}
-      {...rest}
+      {...(rest as any)}
     >
       {children}
     </Tag>
