@@ -157,31 +157,6 @@ export interface MicroplantesPartnershipPillar {
   detail: string;
 }
 
-export interface MicroplantesMarketSegment {
-  name: string;
-  share: string;
-  volume: string;
-  caption: string;
-}
-
-export interface MicroplantesCompetitor {
-  name: string;
-  capacity: string;
-  positioning: string;
-}
-
-export interface MicroplantesRampStep {
-  year: string;
-  capacity: string;
-  workforce: string;
-  caption?: string;
-}
-
-export interface MicroplantesFinancialRow {
-  label: string;
-  values: string[];
-}
-
 export interface MicroplantesTeamMember {
   name: string;
   role: string;
@@ -199,8 +174,8 @@ export interface MicroplantesContent {
   opportunity: {
     eyebrow: string;
     title: string;
+    body: string;
     stats: MicroplantesStat[];
-    framingLine: string;
   };
   method: {
     eyebrow: string;
@@ -227,46 +202,10 @@ export interface MicroplantesContent {
     partnerName: string;
     partnerCredentials: string;
   };
-  market: {
-    eyebrow: string;
-    title: string;
-    segments: MicroplantesMarketSegment[];
-    totalLine: string;
-  };
-  competition: {
-    eyebrow: string;
-    title: string;
-    competitors: MicroplantesCompetitor[];
-    positioningLine: string;
-  };
-  operations: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    rampHeading: string;
-    rampSteps: MicroplantesRampStep[];
-  };
-  financials: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    years: string[];
-    rows: MicroplantesFinancialRow[];
-    capitalStructureHeading: string;
-    capitalStructureLine: string;
-    roiLine: string;
-  };
   team: {
     eyebrow: string;
     title: string;
     members: MicroplantesTeamMember[];
-  };
-  successFactors: {
-    eyebrow: string;
-    title: string;
-    intro: string;
-    factors: string[];
-    closing: string;
   };
   contactCTA: {
     title: string;
