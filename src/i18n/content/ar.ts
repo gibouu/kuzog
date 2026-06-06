@@ -10,19 +10,19 @@ export const ar: SiteContent = {
     cards: {
       hydrobio: {
         name: 'Hydrobio',
-        slogan: 'مُحسِّن تربة هجين معدني-بيولوجي يعيد الحياة والماء والمحصول.',
+        slogan: 'مُحسِّن تربة هجين معدني-بيولوجي في انتظار براءة اختراع، يعيد الحياة والماء والمحصول.',
         cta: 'اكتشف',
         accent: 'hydrobio',
       },
       microplantes: {
         name: 'Microplantes',
-        slogan: 'إكثار نباتي صناعي مصنوع في فرنسا.',
+        slogan: 'في طريقها لتكون أكبر منشأة إكثار نباتي في فرنسا.',
         cta: 'اكتشف',
         accent: 'microplantes',
       },
       group: {
         name: 'المجموعة',
-        slogan: 'مشاريع صناعية، رأس مال، استشارات — أنشطتنا الأخرى من باريس.',
+        slogan: 'استثمارات، تشغيل صناعي، استشارات.',
         cta: 'استكشف',
         accent: 'group',
       },

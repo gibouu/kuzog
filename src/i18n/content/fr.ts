@@ -10,19 +10,19 @@ export const fr: SiteContent = {
     cards: {
       hydrobio: {
         name: 'Hydrobio',
-        slogan: 'Un amendement de sol hybride minéral-biologique qui restaure vie, eau et rendement.',
+        slogan: 'Un amendement de sol hybride minéral-biologique en attente de brevet, qui restaure vie, eau et rendement.',
         cta: 'Découvrir',
         accent: 'hydrobio',
       },
       microplantes: {
         name: 'Microplantes',
-        slogan: 'Micropropagation végétale industrielle, conçue en France.',
+        slogan: 'Bientôt la plus grande installation de micropropagation végétale de France.',
         cta: 'Découvrir',
         accent: 'microplantes',
       },
       group: {
         name: 'Groupe',
-        slogan: 'Aventures industrielles, capital, conseil — nos autres activités depuis Paris.',
+        slogan: 'Investissements, commissionnement industriel, conseil.',
         cta: 'Explorer',
         accent: 'group',
       },

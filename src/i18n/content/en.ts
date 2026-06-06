@@ -10,19 +10,19 @@ export const en: SiteContent = {
     cards: {
       hydrobio: {
         name: 'Hydrobio',
-        slogan: 'A hybrid mineral-biological soil amendment that restores life, water, and yield.',
+        slogan: 'A patent-pending hybrid mineral-biological soil amendment that restores life, water, and yield.',
         cta: 'Discover',
         accent: 'hydrobio',
       },
       microplantes: {
         name: 'Microplantes',
-        slogan: 'Industrial vegetal micropropagation, built in France.',
+        slogan: 'Set to be France\'s largest plant micropropagation facility.',
         cta: 'Discover',
         accent: 'microplantes',
       },
       group: {
         name: 'Group',
-        slogan: 'Industrial ventures, capital, advisory — what else we do from Paris.',
+        slogan: 'Investments, commissioning, industrial advisory.',
         cta: 'Explore',
         accent: 'group',
       },
