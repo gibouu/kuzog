@@ -166,7 +166,7 @@ export default function App() {
             className="flex items-center gap-3 no-underline"
             onClick={handleReturnToStart}
           >
-            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-3xl bg-ink text-2xl font-semibold text-white shadow-lg sm:h-16 sm:w-16 sm:text-3xl">K</div>
+            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-3xl bg-brand text-2xl font-semibold text-brand-ink shadow-card sm:h-16 sm:w-16 sm:text-3xl">K</div>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-ink sm:text-sm sm:tracking-[0.4em]">{content.header.logoText}</span>
           </Link>
 
