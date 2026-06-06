@@ -42,14 +42,10 @@ export const fr: SiteContent = {
       ],
     },
     problem: {
-      eyebrow: 'Le problème que nous traitons',
-      title: 'Le sol s\'effondre sous le stress climatique et l\'agriculture intensive.',
-      body: 'La superficie touchée par la sécheresse a doublé en 40 ans. Un tiers des sols mondiaux sont modérément ou fortement dégradés. L\'agriculture absorbe 70 % des prélèvements d\'eau douce mondiaux. Nous avons lancé Hydrobio parce que la boîte à outils conventionnelle traite une dimension à la fois — physique, chimique ou biologique — mais jamais les trois ensemble.',
-      stats: [
-        { value: '×2', label: 'Sécheresse doublée en 40 ans', source: 'FAO' },
-        { value: '33%', label: 'Sols mondiaux dégradés', source: 'FAO/ITPS, 2015' },
-        { value: '70%', label: 'Eau douce vers l\'agriculture', source: 'UNESCO WWAP, 2024' },
-      ],
+      eyebrow: 'Pourquoi maintenant',
+      title: 'Le sol s\'effondre — et les outils conventionnels ne traitent qu\'une dimension à la fois.',
+      body: 'Un tiers des sols mondiaux sont dégradés, la superficie touchée par la sécheresse a doublé en 40 ans, et 70 % de toute l\'eau douce part dans l\'agriculture. Les intrants existants traitent une dimension — physique, chimique ou biologique — mais jamais les trois ensemble. Hydrobio les combine en une seule application.',
+      stats: [],
     },
     solution: {
       eyebrow: 'La science',
@@ -83,12 +79,12 @@ export const fr: SiteContent = {
         { value: '−20–30%', label: 'Intrants chimiques éliminés', caption: 'Moins d\'engrais et de pesticides de synthèse' },
       ],
       footnote: 'Essais contrôlés, à confirmer en essais de terrain indépendants.',
-      roadmapHeading: 'Où nous en sommes',
+      roadmapHeading: 'Notre chemin vers le lancement commercial',
       roadmapSteps: [
-        { phase: 'Fait', label: 'Tests laboratoire interne', detail: 'Validés en interne' },
-        { phase: 'En cours', label: 'Tests laboratoire indépendants', detail: 'Pilotes semi-industriels (FarmInnLab)' },
-        { phase: '2027', label: 'Essais de terrain', detail: 'Occitanie' },
-        { phase: '2028', label: 'Homologation UE', detail: 'Biostimulant hybride — Règl. UE 2019/1009' },
+        { phase: 'Étape 1', label: 'Validation en laboratoire interne', detail: 'Complète — formulation figée, mécanisme caractérisé.' },
+        { phase: 'Étape 2', label: 'Pilotes semi-industriels', detail: 'FarmInnLab — en cours, résultats attendus en 2026.' },
+        { phase: 'Étape 3', label: 'Essais de terrain indépendants', detail: 'Occitanie — T2 2027.' },
+        { phase: 'Étape 4', label: 'Homologation UE', detail: 'Biostimulant hybride — Règl. UE 2019/1009, cible 2028.' },
       ],
     },
     team: {

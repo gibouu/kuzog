@@ -46,18 +46,20 @@ export default function HydrobioPage() {
 
         {/* Problem */}
         <StoryBeat id="problem" eyebrow={h.problem.eyebrow} title={h.problem.title} accent="hydrobio" bleed>
-          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{h.problem.body}</p>
-          <StatGrid columns={3}>
-            {h.problem.stats.map((stat) => (
-              <BigStat
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-                caption={stat.caption}
-                source={stat.source && <Citation text={stat.source} />}
-              />
-            ))}
-          </StatGrid>
+          <p className="text-base text-muted-ink md:text-lg md:max-w-4xl">{h.problem.body}</p>
+          {h.problem.stats.length > 0 && (
+            <StatGrid columns={3}>
+              {h.problem.stats.map((stat) => (
+                <BigStat
+                  key={stat.label}
+                  value={stat.value}
+                  label={stat.label}
+                  caption={stat.caption}
+                  source={stat.source && <Citation text={stat.source} />}
+                />
+              ))}
+            </StatGrid>
+          )}
         </StoryBeat>
 
         {/* Solution / Science */}

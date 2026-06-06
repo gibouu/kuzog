@@ -42,14 +42,10 @@ export const en: SiteContent = {
       ],
     },
     problem: {
-      eyebrow: 'The problem we work on',
-      title: 'Soil is collapsing under climate stress and intensive agriculture.',
-      body: 'Drought-affected land has doubled in 40 years. A third of global soils are moderately or highly degraded. Agriculture absorbs 70% of all freshwater withdrawals worldwide. We started Hydrobio because the conventional toolbox treats one dimension at a time — physical, chemical, or biological — but never all three together.',
-      stats: [
-        { value: '×2', label: 'Drought-affected area in 40 years', source: 'FAO' },
-        { value: '33%', label: 'Global soils degraded', source: 'FAO/ITPS, 2015' },
-        { value: '70%', label: 'Freshwater going to agriculture', source: 'UNESCO WWAP, 2024' },
-      ],
+      eyebrow: 'Why now',
+      title: 'Soil is collapsing — and conventional tools only address one dimension at a time.',
+      body: 'A third of the world\'s soils are degraded, drought-affected land has doubled in 40 years, and 70% of all freshwater goes to agriculture. Existing inputs treat one dimension — physical, chemical, or biological — but never all three together. Hydrobio combines them into a single application.',
+      stats: [],
     },
     solution: {
       eyebrow: 'The science',
@@ -83,12 +79,12 @@ export const en: SiteContent = {
         { value: '−20–30%', label: 'Chemical inputs eliminated', caption: 'Less synthetic fertiliser and pesticide reaching the soil' },
       ],
       footnote: 'Controlled trials, to be confirmed in independent field trials.',
-      roadmapHeading: 'Where we are',
+      roadmapHeading: 'Our path to commercial launch',
       roadmapSteps: [
-        { phase: 'Done', label: 'Internal lab tests', detail: 'Validated in-house' },
-        { phase: 'In progress', label: 'Independent lab tests', detail: 'Semi-industrial pilots (FarmInnLab)' },
-        { phase: '2027', label: 'Field trials', detail: 'Occitanie' },
-        { phase: '2028', label: 'EU homologation', detail: 'Hybrid biostimulant — EU Reg. 2019/1009' },
+        { phase: 'Step 1', label: 'In-house lab validation', detail: 'Complete — formulation locked, mechanism characterised.' },
+        { phase: 'Step 2', label: 'Semi-industrial pilots', detail: 'FarmInnLab — running now, results due 2026.' },
+        { phase: 'Step 3', label: 'Independent field trials', detail: 'Occitanie — Q2 2027.' },
+        { phase: 'Step 4', label: 'EU homologation', detail: 'Hybrid biostimulant — EU Reg. 2019/1009, target 2028.' },
       ],
     },
     team: {
