@@ -1,3 +1,4 @@
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import clsx from 'clsx';
 import { Mail, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
@@ -30,16 +31,19 @@ const initialState: FormState = {
 export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const firstFieldRef = useRef<HTMLInputElement>(null);
+  const captchaRef = useRef<HCaptcha>(null);
   const { content } = useLanguage();
   const [formState, setFormState] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   useEffect(() => {
     if (!open) {
       setFormState(initialState);
       setSubmitting(false);
       setError(null);
+      setCaptchaToken(null);
       return;
     }
 
@@ -115,6 +119,11 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
       return;
     }
 
+    if (!captchaToken) {
+      setError(content.contactModal.errorCaptcha ?? 'Please complete the captcha.');
+      return;
+    }
+
     try {
       setSubmitting(true);
       await submitContact({
@@ -122,14 +131,19 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
         timestamp: new Date().toISOString(),
         ...(topic ? { topic } : {}),
         ...(formState.botcheck ? { botcheck: formState.botcheck } : {}),
+        hCaptchaResponse: captchaToken,
       });
       setSubmitting(false);
       onSuccess();
       onClose();
+      captchaRef.current?.resetCaptcha();
+      setCaptchaToken(null);
     } catch (submissionError) {
       console.error(submissionError);
       setSubmitting(false);
       setError(content.contactModal.errorSubmit);
+      captchaRef.current?.resetCaptcha();
+      setCaptchaToken(null);
     }
   };
 
@@ -236,6 +250,17 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
                 onChange={(e) => setFormState((prev) => ({ ...prev, botcheck: e.target.value }))}
               />
             </label>
+          </div>
+
+          <div className="flex justify-center">
+            <HCaptcha
+              ref={captchaRef}
+              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+              reCaptchaCompat={false}
+              onVerify={(token) => setCaptchaToken(token)}
+              onExpire={() => setCaptchaToken(null)}
+              onError={() => setCaptchaToken(null)}
+            />
           </div>
 
           {error ? (

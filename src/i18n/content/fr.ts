@@ -22,12 +22,11 @@ export const fr: SiteContent = {
       },
       group: {
         name: 'KUZOG France',
-        slogan: 'La holding parisienne derrière Hydrobio, Microplantes et un portefeuille d\'aventures industrielles.',
+        slogan: 'Une holding parisienne qui bâtit des entreprises industrielles à la croisée du sol, du vivant et du capital.',
         cta: 'À propos',
         accent: 'group',
       },
     },
-    mission: 'KUZOG conçoit et exploite des entreprises à la croisée du sol, du vivant et du capital — depuis Paris.',
   },
 
   hydrobio: {
@@ -35,6 +34,7 @@ export const fr: SiteContent = {
       eyebrow: 'Innovation du sol',
       title: 'Restaurer la vie du sol. Économiser l\'eau. Nourrir le monde.',
       tagline: 'Hydrobio est un amendement de sol hybride minéral-biologique — argile, zéolite et champignons mycorhiziens qui travaillent ensemble pour restaurer les sols dégradés en une seule application.',
+      recognition: 'Rotary Club de Paris — Startup de l\'année 2026',
       leadStats: [
         { value: '+47%', label: 'Rétention d\'eau sur sols sableux' },
         { value: '+18,7%', label: 'Rendement vs. témoin non traité' },
@@ -267,6 +267,7 @@ export const fr: SiteContent = {
     emailButton: 'Nous envoyer un e-mail',
     errorRequired: 'Veuillez remplir tous les champs avant d\'envoyer.',
     errorEmail: 'Entrez une adresse e-mail valide.',
+    errorCaptcha: 'Veuillez compléter le captcha avant d\'envoyer.',
     errorSubmit: 'Nous n\'avons pas pu envoyer votre message. Veuillez réessayer.',
     successMessage: 'Message envoyé. Nous répondrons sous peu.',
   },

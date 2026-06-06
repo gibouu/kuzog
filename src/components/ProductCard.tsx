@@ -20,7 +20,7 @@ export function ProductCard({ name, slogan, cta, accent, href }: ProductCardProp
     >
       <div className="flex flex-col gap-6">
         <span className={`inline-block h-2 w-2 rounded-full ${ACCENT_DOT[accent]}`} aria-hidden />
-        <h2 className="text-display-lg text-ink">{name}</h2>
+        <h2 className="text-[clamp(28px,3vw,40px)] font-semibold leading-tight tracking-tight text-ink">{name}</h2>
         <p className="text-base text-muted-ink md:text-lg">{slogan}</p>
       </div>
       <div className="flex items-center gap-2 text-sm font-medium text-ink transition group-hover:gap-3">
