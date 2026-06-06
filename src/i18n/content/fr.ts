@@ -282,12 +282,12 @@ export const fr: SiteContent = {
     activitiesHeading: 'Ce que nous faisons',
     activities: [
       {
-        title: 'Import / Export & Commissionnement',
-        detail: 'Approvisionnement et commissionnement industriels clé en main dans l\'UE et MENA. Nous gérons sourcing, logistique, douanes et navigation réglementaire, puis envoyons un opérateur senior sur site pour le commissionnement. Conçu pour des clients industriels qui ont besoin de livraisons, pas de slides.',
+        title: 'Import / Export',
+        detail: 'Approvisionnement industriel clé en main et logistique transfrontalière dans l\'UE et MENA. Nous gérons sourcing, douanes, navigation réglementaire et livraison pour des clients industriels qui ont besoin d\'un partenaire qui déplace réellement les marchandises.',
       },
       {
-        title: 'Industrie',
-        detail: 'Reconversion industrielle de sites en difficulté et constructions ex nihilo. Nous nous spécialisons dans la requalification d\'infrastructures existantes — salles blanches, lignes de procédé, environnements contrôlés — en actifs productifs, avec la structure technique et capitalistique pour mener des projets de l\'acquisition au commissionnement.',
+        title: 'Commissionnement industriel',
+        detail: 'Nous construisons des usines. Sélection et adaptation de procédés industriels étrangers, conception du plan de production, sourcing des équipements, séquençage des travaux, mise en service des lignes — jusqu\'au transfert. Particulièrement pertinent pour les marchés émergents, où le savoir-faire industriel — et non le capital — est le goulet d\'étranglement.',
       },
       {
         title: 'Conseil',

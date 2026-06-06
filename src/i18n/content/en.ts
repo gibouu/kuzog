@@ -281,12 +281,12 @@ export const en: SiteContent = {
     activitiesHeading: 'What we do',
     activities: [
       {
-        title: 'Import / Export & Commissioning',
-        detail: 'Turnkey procurement and industrial commissioning across the EU and MENA. We handle sourcing, logistics, customs, and regulatory navigation, then send a senior operator on site for commissioning. Built for industrial clients who need delivery, not slideware.',
+        title: 'Import / Export',
+        detail: 'Turnkey industrial procurement and cross-border logistics across the EU and MENA. We handle sourcing, customs, regulatory navigation, and delivery for industrial clients who need a partner who actually moves goods.',
       },
       {
-        title: 'Manufacturing',
-        detail: 'Industrial reconversion of distressed sites and greenfield builds. We specialise in repurposing existing infrastructure — cleanrooms, process lines, controlled environments — into productive assets, with the technical and capital structure to take projects from acquisition to commissioning.',
+        title: 'Commissioning',
+        detail: 'We build factories. Selecting and adapting foreign process technologies, designing the production plan, sourcing the equipment, sequencing the works, and commissioning the lines — through to handover. Particularly relevant for emerging markets where industrial know-how, not capital, is the bottleneck.',
       },
       {
         title: 'Consulting',
