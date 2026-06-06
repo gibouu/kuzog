@@ -1,8 +1,10 @@
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { Home as HomeIcon } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { LanguageSelector } from './LanguageSelector';
 import { SiteFooter } from './SiteFooter';
+import { BottomBar } from './BottomBar';
 
 interface ProductPageShellProps {
   accent: 'hydrobio' | 'microplantes' | 'group';
@@ -19,8 +21,12 @@ const ACCENT_BAR: Record<ProductPageShellProps['accent'], string> = {
 
 export function ProductPageShell({ accent, eyebrow, title, children }: ProductPageShellProps) {
   const { content } = useLanguage();
+  const navItems = [
+    { key: 'home', label: content.navigation.home, icon: HomeIcon, href: '/' },
+  ];
   return (
     <div className="flex min-h-screen flex-col">
+      <BottomBar items={navItems} />
       <header className="px-6 pt-10">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3">
           <Link to="/" className="flex items-center gap-3 no-underline">
