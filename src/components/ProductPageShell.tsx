@@ -6,8 +6,8 @@ import { SiteFooter } from './SiteFooter';
 
 interface ProductPageShellProps {
   accent: 'hydrobio' | 'microplantes' | 'group';
-  eyebrow: string;
-  title: string;
+  eyebrow?: string;
+  title?: string;
   children?: ReactNode;
 }
 
@@ -34,18 +34,22 @@ export function ProductPageShell({ accent, eyebrow, title, children }: ProductPa
           <LanguageSelector />
         </div>
       </header>
-      <main className="mt-12 flex-1 space-y-12 md:space-y-16">
-        <section className="px-6">
-          <div className="mx-auto flex w-full max-w-6xl flex-col gap-4">
-            <div className="flex items-center gap-2">
-              <span className={`inline-block h-2 w-2 rounded-full ${ACCENT_BAR[accent]}`} aria-hidden />
-              <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-ink">{eyebrow}</span>
+      <main className="flex-1">
+        {(eyebrow || title) && (
+          <section className="px-6 pt-12">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-4">
+              {eyebrow && (
+                <div className="flex items-center gap-2">
+                  <span className={`inline-block h-2 w-2 rounded-full ${ACCENT_BAR[accent]}`} aria-hidden />
+                  <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-ink">{eyebrow}</span>
+                </div>
+              )}
+              {title && <h1 className="text-display-lg text-ink">{title}</h1>}
             </div>
-            <h1 className="text-display-lg text-ink">{title}</h1>
-          </div>
-        </section>
+          </section>
+        )}
         {children ?? (
-          <section className="px-6">
+          <section className="px-6 pt-12">
             <div className="mx-auto max-w-6xl rounded-card border border-hairline bg-surface-elevated p-12 text-center">
               <p className="text-base text-muted-ink">Coming soon.</p>
             </div>

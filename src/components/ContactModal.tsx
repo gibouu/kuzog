@@ -8,6 +8,7 @@ type ContactModalProps = {
   open: boolean;
   onClose: () => void;
   onSuccess: () => void;
+  topic?: string;
 };
 
 type FormState = {
@@ -24,7 +25,7 @@ const initialState: FormState = {
   industry: ''
 };
 
-export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
+export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const firstFieldRef = useRef<HTMLInputElement>(null);
   const { content } = useLanguage();
@@ -114,7 +115,7 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
 
     try {
       setSubmitting(true);
-      await submitContact({ ...trimmed, timestamp: new Date().toISOString() });
+      await submitContact({ ...trimmed, timestamp: new Date().toISOString(), ...(topic ? { topic } : {}) });
       setSubmitting(false);
       onSuccess();
       onClose();

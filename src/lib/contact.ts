@@ -3,21 +3,26 @@ type ContactPayload = {
   email: string;
   message: string;
   timestamp: string;
+  topic?: string;
 };
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 const WEB3FORMS_KEY = 'f2ce33a4-b6ff-430d-8df0-83d86a51c7f5';
 
 export async function submitContact(payload: ContactPayload): Promise<void> {
-  const body = {
+  const body: Record<string, string> = {
     access_key: WEB3FORMS_KEY,
-    subject: 'New KUZOG enquiry',
+    subject: payload.topic ? `New KUZOG enquiry [${payload.topic}]` : 'New KUZOG enquiry',
     from_name: payload.name,
     from_email: payload.email,
     message: payload.message,
     submitted_at: payload.timestamp,
     source: window.location.href
   };
+
+  if (payload.topic) {
+    body['topic'] = payload.topic;
+  }
 
   const response = await fetch(WEB3FORMS_ENDPOINT, {
     method: 'POST',
