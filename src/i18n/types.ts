@@ -49,7 +49,7 @@ export interface HydrobioLeadStat {
 export interface HydrobioProblemStat {
   value: string;
   label: string;
-  caption: string;
+  caption?: string;
   source?: string;
 }
 
