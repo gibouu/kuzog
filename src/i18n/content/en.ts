@@ -21,9 +21,9 @@ export const en: SiteContent = {
         accent: 'microplantes',
       },
       group: {
-        name: 'KUZOG France',
-        slogan: 'A Paris-based holding building industrial ventures at the intersection of soil, plants, and capital.',
-        cta: 'About us',
+        name: 'Group',
+        slogan: 'Industrial ventures, capital, advisory — what else we do from Paris.',
+        cta: 'Explore',
         accent: 'group',
       },
     },
@@ -239,9 +239,9 @@ export const en: SiteContent = {
 
   group: {
     hero: {
-      eyebrow: 'The Parent Operation',
-      title: 'KUZOG Group — import, manufacture, invest. From Paris.',
-      body: 'KUZOG France is a Paris-based holding building and operating ventures at the intersection of soil, plants, and capital. Incubated at Paris&Co, backed by the City of Paris, and laureate of the 2025 Open Carca entrepreneurial competition, the group structures industrial and investment projects with international ambitions — Hydrobio and Microplantes are its two flagship operations.',
+      eyebrow: 'Our other activities',
+      title: 'What else we do from Paris.',
+      body: 'Beyond the two flagship operations, KUZOG runs a portfolio of industrial, capital, and advisory ventures. Paris-incubated, City-of-Paris backed, and laureate of the 2025 Open Carca entrepreneurial competition.',
     },
     activitiesHeading: 'What we do',
     activities: [

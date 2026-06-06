@@ -21,9 +21,9 @@ export const fr: SiteContent = {
         accent: 'microplantes',
       },
       group: {
-        name: 'KUZOG France',
-        slogan: 'Une holding parisienne qui bâtit des entreprises industrielles à la croisée du sol, du vivant et du capital.',
-        cta: 'À propos',
+        name: 'Groupe',
+        slogan: 'Aventures industrielles, capital, conseil — nos autres activités depuis Paris.',
+        cta: 'Explorer',
         accent: 'group',
       },
     },
@@ -240,9 +240,9 @@ export const fr: SiteContent = {
 
   group: {
     hero: {
-      eyebrow: 'La maison-mère',
-      title: 'KUZOG Group — importer, fabriquer, investir. Depuis Paris.',
-      body: 'KUZOG France est une holding parisienne qui conçoit et exploite des entreprises à la croisée du sol, du vivant et du capital. Incubée à Paris&Co, soutenue par la Ville de Paris, et lauréate du concours entrepreneurial Open Carca 2025, le groupe structure des projets industriels et d\'investissement à ambition internationale — Hydrobio et Microplantes sont ses deux opérations phares.',
+      eyebrow: 'Nos autres activités',
+      title: 'Ce que nous faisons aussi, depuis Paris.',
+      body: 'En parallèle de nos deux opérations phares, KUZOG opère un portefeuille de ventures industriels, capitalistiques et de conseil. Incubée à Paris, soutenue par la Ville de Paris, et lauréate du concours Open Carca 2025.',
     },
     activitiesHeading: 'Ce que nous faisons',
     activities: [
