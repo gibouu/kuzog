@@ -1,13 +1,98 @@
+import { useState } from 'react';
+import { ExternalLink } from 'lucide-react';
 import { ProductPageShell } from '../components/ProductPageShell';
+import { StoryBeat } from '../components/StoryBeat';
+import { ContactCTA } from '../components/ContactCTA';
+import { ContactModal } from '../components/ContactModal';
+import { Toast } from '../components/Toast';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function GroupPage() {
   const { content } = useLanguage();
+  const g = content.group;
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [toastOpen, setToastOpen] = useState(false);
+
   return (
-    <ProductPageShell
-      accent="group"
-      eyebrow={content.home.cards.group.eyebrow}
-      title={content.home.cards.group.title}
-    />
+    <>
+      <Toast open={toastOpen} onDismiss={() => setToastOpen(false)} message={content.contactModal.successMessage} />
+      <ContactModal
+        open={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+        onSuccess={() => setToastOpen(true)}
+        topic="group"
+      />
+      <ProductPageShell accent="group">
+        {/* Hero */}
+        <StoryBeat id="hero" eyebrow={g.hero.eyebrow} title={g.hero.title} accent="group">
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{g.hero.body}</p>
+        </StoryBeat>
+
+        {/* Activities */}
+        <StoryBeat id="activities" title={g.activitiesHeading} accent="group" bleed>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {g.activities.map((activity) => {
+              const isExternal = Boolean(activity.externalUrl);
+              const cardClasses = "flex h-full flex-col gap-3 rounded-card border border-hairline bg-surface p-8 transition duration-200 ease-out";
+              const interactiveClasses = isExternal
+                ? " hover:-translate-y-0.5 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+                : "";
+
+              const inner = (
+                <>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-display-md text-ink">{activity.title}</h3>
+                    {isExternal && <ExternalLink className="h-5 w-5 flex-shrink-0 text-muted-ink" aria-hidden />}
+                  </div>
+                  <p className="text-sm text-muted-ink md:text-base">{activity.detail}</p>
+                </>
+              );
+
+              if (isExternal && activity.externalUrl) {
+                return (
+                  <a
+                    key={activity.title}
+                    href={activity.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cardClasses + interactiveClasses}
+                  >
+                    {inner}
+                  </a>
+                );
+              }
+
+              return (
+                <div key={activity.title} className={cardClasses}>
+                  {inner}
+                </div>
+              );
+            })}
+          </div>
+        </StoryBeat>
+
+        {/* Recognition */}
+        <StoryBeat id="recognition" title={g.recognitionHeading} accent="group">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {g.recognitions.map((rec) => (
+              <div key={rec.name} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-6">
+                <h4 className="text-base font-semibold text-ink md:text-lg">{rec.name}</h4>
+                <p className="text-sm text-muted-ink md:text-base">{rec.detail}</p>
+              </div>
+            ))}
+          </div>
+        </StoryBeat>
+
+        {/* Contact CTA */}
+        <StoryBeat id="contact">
+          <ContactCTA
+            title={g.contactCTA.title}
+            description={g.contactCTA.description}
+            ctaLabel={g.contactCTA.ctaLabel}
+            onContactClick={() => setIsContactOpen(true)}
+          />
+        </StoryBeat>
+      </ProductPageShell>
+    </>
   );
 }
