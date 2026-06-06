@@ -21,9 +21,9 @@ export const en: SiteContent = {
         accent: 'microplantes',
       },
       group: {
-        name: 'KUZOG France',
-        slogan: 'A Paris-based holding building industrial ventures at the intersection of soil, plants, and capital.',
-        cta: 'About us',
+        name: 'Group',
+        slogan: 'Industrial ventures, capital, advisory — what else we do from Paris.',
+        cta: 'Explore',
         accent: 'group',
       },
     },
@@ -183,48 +183,14 @@ export const en: SiteContent = {
       advantageLine: 'Reconverting an existing industrial asset — faster, cheaper, and lower-risk than building from scratch.',
     },
     partnership: {
-      eyebrow: 'The partnership',
-      title: 'A 35-year operational partner from Costa Rica.',
-      body: 'Microplantes is launched in partnership with Micro Plantas Costa Rica, a Latin American leader founded in 1990 with mastery of more than 200 species. The partnership brings proven industrial protocols, hands-on training, and on-site supervision from Day 1.',
-      pillarsHeading: 'How we collaborate',
+      eyebrow: 'How we collaborate',
+      title: 'A 35-year operational playbook, applied in France.',
       pillars: [
-        { title: 'Know-how transfer', detail: 'Protocols proven over 35 years on 200+ species — initiation, multiplication, acclimation.' },
-        { title: 'Staff training', detail: 'Theoretical and practical training, organised between Costa Rica and France.' },
-        { title: 'Day-1 supervision', detail: 'Fernando Alvarado physically on site to commission the rooms and the first explants.' },
-        { title: 'Process licence', detail: 'Exclusive France + Europe licence to Micro Plantas\' proprietary processes.' },
-        { title: 'Joint R&D', detail: 'Shared pipeline of tropical varieties with European potential.' },
-      ],
-      partnerName: 'Micro Plantas S.A.',
-      partnerCredentials: 'Alajuela, Costa Rica · founded 1990 · 10M plants/yr · 200+ species.',
-    },
-    team: {
-      eyebrow: 'Team',
-      title: 'Founders, advisors, and an industrial partner.',
-      members: [
-        {
-          name: 'Gibril-Gabriel Bachouchi',
-          role: 'President — KUZOG France',
-          bio: 'Nanotechnology engineer from the University of Waterloo. Cleanroom and contamination-protocol expert. Inventor of the Hydrobio formulation.',
-          highlights: ['Designs and secures the propagation centre', 'R&D linkages with INRAE and engineering schools', 'Cleanroom & ISO 5 protocols'],
-        },
-        {
-          name: 'Malik Bachouchi',
-          role: 'Director — KUZOG France',
-          bio: 'Wharton (UPenn) MBA + MSc Computer Science + bachelor in mechanical engineering. 15 years leading large international programs.',
-          highlights: ['Public-private partnerships', 'International strategy', 'Founding and operating ventures abroad'],
-        },
-        {
-          name: 'Anne Buchwalder',
-          role: 'Strategic Consultant',
-          bio: 'Senior strategic advisor supporting project structuring and stakeholder relationships.',
-          highlights: ['Project structuring', 'Stakeholder management', 'Strategic positioning'],
-        },
-        {
-          name: 'Fernando Alvarado',
-          role: 'Strategic Technical Partner — Micro Plantas Costa Rica',
-          bio: 'Founder of Micro Plantas (Alajuela, 1990). 35 years of operational experience. On site at Boissy from Day 1.',
-          highlights: ['Industrial protocols on 200+ species', 'Process licence for France + Europe', 'On-site supervision during start-up'],
-        },
+        { title: 'Know-how transfer', detail: 'Industrial-grade protocols, proven across more than 200 species, transferred to the French team.' },
+        { title: 'Staff training', detail: 'Theoretical and practical training programs to ramp the team to industrial standards from day one.' },
+        { title: 'On-site supervision', detail: 'Senior operator on site to commission the rooms, supervise the first explants, and stress-test the production line.' },
+        { title: 'Process licence', detail: 'Exclusive France + Europe licence to industrial micropropagation processes refined over decades.' },
+        { title: 'Joint R&D', detail: 'Shared species pipeline with co-developed acclimation protocols and export-market synergies.' },
       ],
     },
     contactCTA: {
@@ -273,9 +239,9 @@ export const en: SiteContent = {
 
   group: {
     hero: {
-      eyebrow: 'The Parent Operation',
-      title: 'KUZOG Group — import, manufacture, invest. From Paris.',
-      body: 'KUZOG France is a Paris-based holding building and operating ventures at the intersection of soil, plants, and capital. Incubated at Paris&Co, backed by the City of Paris, and laureate of the 2025 Open Carca entrepreneurial competition, the group structures industrial and investment projects with international ambitions — Hydrobio and Microplantes are its two flagship operations.',
+      eyebrow: 'Our other activities',
+      title: 'What else we do from Paris.',
+      body: 'Beyond the two flagship operations, KUZOG runs a portfolio of industrial, capital, and advisory ventures. Paris-incubated, City-of-Paris backed, and laureate of the 2025 Open Carca entrepreneurial competition.',
     },
     activitiesHeading: 'What we do',
     activities: [

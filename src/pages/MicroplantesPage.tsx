@@ -4,7 +4,6 @@ import { StoryBeat } from '../components/StoryBeat';
 import { BigStat } from '../components/BigStat';
 import { StatGrid } from '../components/StatGrid';
 import { Citation } from '../components/Citation';
-import { TeamMember } from '../components/TeamMember';
 import { ContactCTA } from '../components/ContactCTA';
 import { DiagramSlot } from '../components/DiagramSlot';
 import { ContactModal } from '../components/ContactModal';
@@ -100,36 +99,12 @@ export default function MicroplantesPage() {
 
         {/* Partnership */}
         <StoryBeat id="partnership" eyebrow={m.partnership.eyebrow} title={m.partnership.title} accent="microplantes">
-          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.partnership.body}</p>
-          <DiagramSlot id="D-5" title="France ↔ Costa Rica partnership" prompt="Minimalist world map showing only two labelled points connected by a thin sage-green arc — 'Alajuela, Costa Rica' to 'Boissy-l'Aillerie, France' — five small text annotations along the arc reading 'Know-how transfer', 'Staff training', 'Day-1 supervision', 'Process license', 'Joint R&D', white background, geographic outlines in very light grey, editorial style." />
-          <div className="flex flex-col gap-6">
-            <h3 className="text-display-md text-ink">{m.partnership.pillarsHeading}</h3>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
-              {m.partnership.pillars.map((pillar) => (
-                <div key={pillar.title} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-6">
-                  <h4 className="text-base font-semibold text-ink md:text-lg">{pillar.title}</h4>
-                  <p className="text-sm text-muted-ink">{pillar.detail}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-col gap-2 rounded-card border border-hairline bg-surface-elevated p-6">
-            <h4 className="text-base font-semibold text-ink md:text-lg">{m.partnership.partnerName}</h4>
-            <p className="text-sm text-muted-ink md:text-base">{m.partnership.partnerCredentials}</p>
-          </div>
-        </StoryBeat>
-
-        {/* Team */}
-        <StoryBeat id="team" eyebrow={m.team.eyebrow} title={m.team.title} accent="microplantes" bleed>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {m.team.members.map((member) => (
-              <TeamMember
-                key={member.name}
-                name={member.name}
-                role={member.role}
-                bio={member.bio}
-                highlights={member.highlights}
-              />
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
+            {m.partnership.pillars.map((pillar) => (
+              <div key={pillar.title} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-6">
+                <h4 className="text-base font-semibold text-ink md:text-lg">{pillar.title}</h4>
+                <p className="text-sm text-muted-ink">{pillar.detail}</p>
+              </div>
             ))}
           </div>
         </StoryBeat>
