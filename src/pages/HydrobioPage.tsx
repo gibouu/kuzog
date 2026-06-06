@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 import { ProductPageShell } from '../components/ProductPageShell';
 import { StoryBeat } from '../components/StoryBeat';
 import { BigStat } from '../components/BigStat';
@@ -42,6 +43,22 @@ export default function HydrobioPage() {
               <BigStat key={stat.label} value={stat.value} label={stat.label} />
             ))}
           </StatGrid>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <button
+              type="button"
+              onClick={() => setIsContactOpen(true)}
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-brand-ink shadow-card transition hover:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:text-base"
+            >
+              <span>{h.hero.pilotCta}</span>
+              <ArrowRight className="h-4 w-4" />
+            </button>
+            <a
+              href="#solution"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-hairline bg-surface px-6 text-sm font-semibold text-ink transition hover:bg-surface-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:text-base"
+            >
+              {h.hero.scienceCta}
+            </a>
+          </div>
         </StoryBeat>
 
         {/* Problem */}

@@ -10,19 +10,19 @@ export const en: SiteContent = {
     cards: {
       hydrobio: {
         name: 'Hydrobio',
-        slogan: 'A hybrid mineral-biological soil amendment that restores life, water, and yield.',
+        slogan: 'A patent-pending hybrid mineral-biological soil amendment that restores life, water, and yield.',
         cta: 'Discover',
         accent: 'hydrobio',
       },
       microplantes: {
         name: 'Microplantes',
-        slogan: 'Industrial vegetal micropropagation, built in France.',
+        slogan: 'Set to be France\'s largest plant micropropagation facility.',
         cta: 'Discover',
         accent: 'microplantes',
       },
       group: {
         name: 'Group',
-        slogan: 'Industrial ventures, capital, advisory — what else we do from Paris.',
+        slogan: 'Investments, commissioning, industrial advisory.',
         cta: 'Explore',
         accent: 'group',
       },
@@ -35,6 +35,8 @@ export const en: SiteContent = {
       title: 'Restoring Soil Life. Saving Water. Feeding the World.',
       tagline: 'Hydrobio is a hybrid mineral-biological soil amendment — clay, zeolite, and mycorrhizal fungi working together to restore degraded soils with a single application.',
       recognition: 'Rotary Club of Paris — 2026 Startup of the Year',
+      pilotCta: 'Request pilot information',
+      scienceCta: 'Read the science',
       leadStats: [
         { value: '+47%', label: 'Water retention on sandy soils' },
         { value: '+18.7%', label: 'Crop yield vs. untreated control' },
@@ -215,6 +217,16 @@ export const en: SiteContent = {
         { title: 'Joint R&D', detail: 'Shared species pipeline with co-developed acclimation protocols and export-market synergies.' },
       ],
     },
+    sustainability: {
+      eyebrow: 'Why this matters',
+      title: 'The case for producing plants in France.',
+      body: 'Industrial micropropagation in France isn\'t just a commercial story — it\'s a strategic one. Producing here means less dependency on a handful of foreign suppliers, less freight emissions across the EU corridor, and less risk of importing the next plant pathogen.',
+      pillars: [
+        { value: 'Sovereignty', title: 'Reducing import dependency', detail: 'France currently imports 60% of its young plants. Domestic production reduces exposure to foreign supply shocks and protects the national horticultural base.' },
+        { value: '−CO₂', title: 'Cutting freight emissions', detail: 'Plants produced in Boissy-l\'Aillerie ship hundreds of kilometres, not thousands. Less refrigerated road transport means a materially smaller carbon footprint per plant.' },
+        { value: 'Sanitary', title: 'Lowering biosecurity risk', detail: 'Every imported batch of young plants is a vector for new pests and viruses. Producing in-vitro under ISO 5 conditions gives buyers certified-clean material at the source.' },
+      ],
+    },
     contactCTA: {
       title: 'Talk to us about Microplantes.',
       description: 'Site partnerships, technical questions, commercial enquiries — we reply within two business days.',
@@ -268,12 +280,31 @@ export const en: SiteContent = {
     },
     activitiesHeading: 'What we do',
     activities: [
-      { title: 'Import / Export & Commissioning', detail: 'Turnkey procurement and industrial commissioning across the EU and MENA — sourcing, logistics, regulatory navigation, on-site supervision.' },
-      { title: 'Manufacturing', detail: 'Industrial reconversion of distressed sites and greenfield builds.' },
-      { title: 'Consulting', detail: 'Strategy and advisory for industrial agronomy and innovation clients — delivered through our Canadian subsidiary.', externalUrl: 'https://kuzog.ca' },
-      { title: 'Distressed-Asset Investing', detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value.' },
-      { title: 'Applied AI', detail: 'Internal AI projects and advisory — building automation and decision systems into our operations.' },
-      { title: 'Investment Fund', detail: 'A KUZOG-anchored vehicle for adjacent ventures.' },
+      {
+        title: 'Import / Export',
+        detail: 'Turnkey industrial procurement and cross-border logistics across the EU and MENA. We handle sourcing, customs, regulatory navigation, and delivery for industrial clients who need a partner who actually moves goods.',
+      },
+      {
+        title: 'Commissioning',
+        detail: 'We build factories. Selecting and adapting foreign process technologies, designing the production plan, sourcing the equipment, sequencing the works, and commissioning the lines — through to handover. Particularly relevant for emerging markets where industrial know-how, not capital, is the bottleneck.',
+      },
+      {
+        title: 'Consulting',
+        detail: 'Strategy and advisory for industrial agronomy and innovation clients, delivered through our Canadian subsidiary. Focused engagements on go-to-market, public-private partnerships, and capital structuring for projects at the intersection of agriculture, deep tech, and capital.',
+        externalUrl: 'https://kuzog.ca',
+      },
+      {
+        title: 'Distressed-Asset Investing',
+        detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value. We move quickly on liquidations and restructurings where engineering due-diligence is the bottleneck — exactly where most generalist funds hesitate.',
+      },
+      {
+        title: 'Applied AI',
+        detail: 'Internal AI projects and advisory engagements. We build automation, decision systems, and operational tooling into our own ventures first, then offer the playbook to industrial clients who want to do the same.',
+      },
+      {
+        title: 'Investment Fund',
+        detail: 'A KUZOG-anchored vehicle for adjacent ventures at the intersection of agronomy, deep tech, and industrial reconversion. Co-investing alongside operating partners on the kind of opportunities our core operations already surface.',
+      },
     ],
     foundersHeading: 'Founders',
     founders: [

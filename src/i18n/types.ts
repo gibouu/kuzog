@@ -73,6 +73,8 @@ export interface HydrobioContent {
     title: string;
     tagline: string;
     recognition?: string;
+    pilotCta: string;
+    scienceCta: string;
     leadStats: HydrobioLeadStat[];
   };
   problem: {
@@ -184,6 +186,12 @@ export interface MicroplantesContent {
     eyebrow: string;
     title: string;
     pillars: MicroplantesPartnershipPillar[];
+  };
+  sustainability: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    pillars: Array<{ value: string; title: string; detail: string }>;
   };
   contactCTA: {
     title: string;

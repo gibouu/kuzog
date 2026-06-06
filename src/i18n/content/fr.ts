@@ -10,19 +10,19 @@ export const fr: SiteContent = {
     cards: {
       hydrobio: {
         name: 'Hydrobio',
-        slogan: 'Un amendement de sol hybride minéral-biologique qui restaure vie, eau et rendement.',
+        slogan: 'Un amendement de sol hybride minéral-biologique en attente de brevet, qui restaure vie, eau et rendement.',
         cta: 'Découvrir',
         accent: 'hydrobio',
       },
       microplantes: {
         name: 'Microplantes',
-        slogan: 'Micropropagation végétale industrielle, conçue en France.',
+        slogan: 'Bientôt la plus grande installation de micropropagation végétale de France.',
         cta: 'Découvrir',
         accent: 'microplantes',
       },
       group: {
         name: 'Groupe',
-        slogan: 'Aventures industrielles, capital, conseil — nos autres activités depuis Paris.',
+        slogan: 'Investissements, commissionnement industriel, conseil.',
         cta: 'Explorer',
         accent: 'group',
       },
@@ -35,6 +35,8 @@ export const fr: SiteContent = {
       title: 'Restaurer la vie du sol. Économiser l\'eau. Nourrir le monde.',
       tagline: 'Hydrobio est un amendement de sol hybride minéral-biologique — argile, zéolite et champignons mycorhiziens qui travaillent ensemble pour restaurer les sols dégradés en une seule application.',
       recognition: 'Rotary Club de Paris — Startup de l\'année 2026',
+      pilotCta: 'Demander un site pilote',
+      scienceCta: 'Lire la science',
       leadStats: [
         { value: '+47%', label: 'Rétention d\'eau sur sols sableux' },
         { value: '+18,7%', label: 'Rendement vs. témoin non traité' },
@@ -216,6 +218,16 @@ export const fr: SiteContent = {
         { title: 'R&D conjointe', detail: 'Pipeline d\'espèces partagé avec protocoles d\'acclimatation co-développés et synergies à l\'export.' },
       ],
     },
+    sustainability: {
+      eyebrow: 'Pourquoi cela compte',
+      title: 'Pourquoi produire les plants en France.',
+      body: 'La micropropagation industrielle en France n\'est pas seulement une affaire commerciale — c\'est une affaire stratégique. Produire ici, c\'est moins dépendre d\'une poignée de fournisseurs étrangers, moins d\'émissions de fret sur le corridor européen, et moins de risque d\'importer le prochain pathogène végétal.',
+      pillars: [
+        { value: 'Souveraineté', title: 'Réduire la dépendance aux importations', detail: 'La France importe aujourd\'hui 60 % de ses jeunes plants. Une production nationale réduit l\'exposition aux chocs d\'approvisionnement étrangers et protège la base horticole française.' },
+        { value: '−CO₂', title: 'Réduire les émissions de fret', detail: 'Les plants produits à Boissy-l\'Aillerie parcourent des centaines de kilomètres, pas des milliers. Moins de transport routier réfrigéré, donc une empreinte carbone par plant nettement plus faible.' },
+        { value: 'Sanitaire', title: 'Diminuer le risque biosécuritaire', detail: 'Chaque lot importé est un vecteur potentiel de nouveaux ravageurs et virus. Une production in vitro en ISO 5 fournit aux acheteurs un matériel certifié sain à la source.' },
+      ],
+    },
     contactCTA: {
       title: 'Parlons de Microplantes.',
       description: 'Partenariats site, questions techniques, demandes commerciales — nous répondons sous deux jours ouvrés.',
@@ -269,12 +281,31 @@ export const fr: SiteContent = {
     },
     activitiesHeading: 'Ce que nous faisons',
     activities: [
-      { title: 'Import / Export & Commissionnement', detail: 'Approvisionnement et commissionnement industriels clé en main dans l\'UE et MENA.' },
-      { title: 'Industrie', detail: 'Reconversion industrielle de sites en difficulté et constructions ex nihilo.' },
-      { title: 'Conseil', detail: 'Stratégie et conseil aux clients de l\'agronomie industrielle et de l\'innovation — délivré par notre filiale canadienne.', externalUrl: 'https://kuzog.ca' },
-      { title: 'Investissement en actifs distressed', detail: 'Acquisitions opportunistes de sites industriels et entreprises à valeur stratégique.' },
-      { title: 'IA appliquée', detail: 'Projets internes d\'IA et conseil.' },
-      { title: 'Fonds d\'investissement', detail: 'Véhicule ancré chez KUZOG pour les ventures adjacentes.' },
+      {
+        title: 'Import / Export',
+        detail: 'Approvisionnement industriel clé en main et logistique transfrontalière dans l\'UE et MENA. Nous gérons sourcing, douanes, navigation réglementaire et livraison pour des clients industriels qui ont besoin d\'un partenaire qui déplace réellement les marchandises.',
+      },
+      {
+        title: 'Commissionnement industriel',
+        detail: 'Nous construisons des usines. Sélection et adaptation de procédés industriels étrangers, conception du plan de production, sourcing des équipements, séquençage des travaux, mise en service des lignes — jusqu\'au transfert. Particulièrement pertinent pour les marchés émergents, où le savoir-faire industriel — et non le capital — est le goulet d\'étranglement.',
+      },
+      {
+        title: 'Conseil',
+        detail: 'Stratégie et conseil aux clients de l\'agronomie industrielle et de l\'innovation, délivré par notre filiale canadienne. Missions focalisées sur le go-to-market, les partenariats publics-privés et la structuration de capital pour des projets à la croisée de l\'agriculture, de la deep tech et du capital.',
+        externalUrl: 'https://kuzog.ca',
+      },
+      {
+        title: 'Investissement en actifs distressed',
+        detail: 'Acquisitions opportunistes de sites industriels et entreprises à valeur stratégique. Nous savons agir vite sur des liquidations et restructurations où la due-diligence technique est le goulet d\'étranglement — précisément là où la plupart des fonds généralistes hésitent.',
+      },
+      {
+        title: 'IA appliquée',
+        detail: 'Projets internes d\'IA et missions de conseil. Nous intégrons d\'abord l\'automatisation et les systèmes de décision dans nos propres ventures, puis proposons le playbook aux clients industriels qui veulent faire de même.',
+      },
+      {
+        title: 'Fonds d\'investissement',
+        detail: 'Véhicule ancré chez KUZOG pour les ventures adjacentes à la croisée de l\'agronomie, de la deep tech et de la reconversion industrielle. Co-investissement aux côtés de partenaires opérateurs sur les opportunités que nos opérations cœur font émerger.',
+      },
     ],
     foundersHeading: 'Fondateurs',
     founders: [
