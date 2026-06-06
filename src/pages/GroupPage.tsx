@@ -26,6 +26,7 @@ export default function GroupPage() {
         {/* Hero */}
         <StoryBeat id="hero" eyebrow={g.hero.eyebrow} title={g.hero.title} accent="group">
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{g.hero.body}</p>
+          <p className="text-sm italic text-muted-ink md:text-base md:max-w-3xl">{g.hero.origin}</p>
         </StoryBeat>
 
         {/* Activities */}
@@ -68,6 +69,22 @@ export default function GroupPage() {
                 </div>
               );
             })}
+          </div>
+        </StoryBeat>
+
+        {/* Founders */}
+        <StoryBeat id="founders" title={g.foundersHeading} accent="group">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {g.founders.map((f) => (
+              <article key={f.name} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-8">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-surface-elevated text-display-md text-muted-ink" aria-hidden>
+                  {f.name.charAt(0)}
+                </div>
+                <h3 className="text-display-md text-ink">{f.name}</h3>
+                <p className="text-sm font-medium uppercase tracking-[0.12em] text-muted-ink md:text-base">{f.role}</p>
+                <p className="text-sm text-muted-ink md:text-base">{f.bio}</p>
+              </article>
+            ))}
           </div>
         </StoryBeat>
 

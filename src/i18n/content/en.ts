@@ -42,14 +42,10 @@ export const en: SiteContent = {
       ],
     },
     problem: {
-      eyebrow: 'The problem we work on',
-      title: 'Soil is collapsing under climate stress and intensive agriculture.',
-      body: 'Drought-affected land has doubled in 40 years. A third of global soils are moderately or highly degraded. Agriculture absorbs 70% of all freshwater withdrawals worldwide. We started Hydrobio because the conventional toolbox treats one dimension at a time — physical, chemical, or biological — but never all three together.',
-      stats: [
-        { value: '×2', label: 'Drought-affected area in 40 years', source: 'FAO' },
-        { value: '33%', label: 'Global soils degraded', source: 'FAO/ITPS, 2015' },
-        { value: '70%', label: 'Freshwater going to agriculture', source: 'UNESCO WWAP, 2024' },
-      ],
+      eyebrow: 'Why now',
+      title: 'Soil is collapsing — and conventional tools only address one dimension at a time.',
+      body: 'A third of the world\'s soils are degraded, drought-affected land has doubled in 40 years, and 70% of all freshwater goes to agriculture. Existing inputs treat one dimension — physical, chemical, or biological — but never all three together. Hydrobio combines them into a single application.',
+      stats: [],
     },
     solution: {
       eyebrow: 'The science',
@@ -83,12 +79,12 @@ export const en: SiteContent = {
         { value: '−20–30%', label: 'Chemical inputs eliminated', caption: 'Less synthetic fertiliser and pesticide reaching the soil' },
       ],
       footnote: 'Controlled trials, to be confirmed in independent field trials.',
-      roadmapHeading: 'Where we are',
+      roadmapHeading: 'Our path to commercial launch',
       roadmapSteps: [
-        { phase: 'Done', label: 'Internal lab tests', detail: 'Validated in-house' },
-        { phase: 'In progress', label: 'Independent lab tests', detail: 'Semi-industrial pilots (FarmInnLab)' },
-        { phase: '2027', label: 'Field trials', detail: 'Occitanie' },
-        { phase: '2028', label: 'EU homologation', detail: 'Hybrid biostimulant — EU Reg. 2019/1009' },
+        { phase: 'Step 1', label: 'In-house lab validation', detail: 'Complete — formulation locked, mechanism characterised.' },
+        { phase: 'Step 2', label: 'Semi-industrial pilots', detail: 'FarmInnLab — running now, results due 2026.' },
+        { phase: 'Step 3', label: 'Independent field trials', detail: 'Occitanie — Q2 2027.' },
+        { phase: 'Step 4', label: 'EU homologation', detail: 'Hybrid biostimulant — EU Reg. 2019/1009, target 2028.' },
       ],
     },
     team: {
@@ -170,17 +166,43 @@ export const en: SiteContent = {
       ],
       densityFootnote: 'For the same 7M plants/yr target volume. Sources: CTIFL Balandran, GRAB, Plants-de-fraises.fr.',
     },
+    catalogue: {
+      eyebrow: 'What we produce',
+      title: 'A multi-species platform from day one.',
+      body: 'Our manufacturing capacity is built to handle hundreds of species. The launch catalogue prioritises high-demand French and EU professional markets, with new species added every quarter based on commercial pull.',
+      categories: [
+        {
+          name: 'Ornamentals',
+          species: ['Geraniums', 'Dipladenias', 'Cyclamens', 'Chrysanthemums', 'Orchids', 'Begonias', 'Pansies', 'Impatiens', 'Petunias'],
+        },
+        {
+          name: 'Soft fruits & vegetables',
+          species: ['Strawberry', 'Raspberry', 'Blueberry', 'Blackberry', 'Currant', 'Potato', 'Artichoke', 'Asparagus', 'Leafy greens'],
+        },
+        {
+          name: 'Fruit trees & rootstocks',
+          species: ['Apple rootstocks', 'Pear rootstocks', 'Cherry rootstocks', 'Vine clones', 'Olive clones', 'Mulberry'],
+        },
+        {
+          name: 'Tropical & strategic',
+          species: ['Banana', 'Pineapple (MD2)', 'Date palm', 'Vanilla', 'Ginger', 'Turmeric', 'Medicinal plants'],
+        },
+      ],
+      suggestionHeading: 'Don\'t see your species?',
+      suggestionBody: 'We have the capacity to onboard new species fast. Tell us what you need and we\'ll come back with a feasibility and timeline.',
+      suggestionCta: 'Suggest a species',
+    },
     site: {
       eyebrow: 'The site',
-      title: 'A cleanroom infrastructure already standing in Boissy-l\'Aillerie.',
-      body: 'The Microplantes site is the former SEBBIN industrial facility, repurposed in partnership with SEMAVO (the regional public mixed economy) through a lease-to-own arrangement. The conversion needs only modest refurbishment — the cleanroom envelope, air handling, and laminar flow hoods are already in place.',
+      title: 'France\'s largest in-vitro plant lab, in Boissy-l\'Aillerie.',
+      body: 'The Microplantes facility is the former SEBBIN industrial site, repurposed in partnership with SEMAVO (the regional public mixed economy) through a lease-to-own arrangement. The cleanroom envelope and air handling are already in place — the conversion needs only modest refurbishment.',
       stats: [
         { value: '952 m²', label: 'Total covered area on two floors' },
         { value: '370 m²', label: 'ISO 5 cleanrooms already operational' },
-        { value: '11', label: 'Double laminar flow hoods on site' },
         { value: '1,307 m²', label: 'Land footprint' },
       ],
       advantageLine: 'Reconverting an existing industrial asset — faster, cheaper, and lower-risk than building from scratch.',
+      positioning: 'At full capacity, Microplantes will be the largest dedicated in-vitro plant production facility in France.',
     },
     partnership: {
       eyebrow: 'How we collaborate',
@@ -242,15 +264,29 @@ export const en: SiteContent = {
       eyebrow: 'Our other activities',
       title: 'What else we do from Paris.',
       body: 'Beyond the two flagship operations, KUZOG runs a portfolio of industrial, capital, and advisory ventures. Paris-incubated, City-of-Paris backed, and laureate of the 2025 Open Carca entrepreneurial competition.',
+      origin: 'Founded in 2024 by two brothers — a nanotech engineer and a Wharton-trained operator — to build industrial ventures where engineering, capital, and Paris meet.',
     },
     activitiesHeading: 'What we do',
     activities: [
       { title: 'Import / Export & Commissioning', detail: 'Turnkey procurement and industrial commissioning across the EU and MENA — sourcing, logistics, regulatory navigation, on-site supervision.' },
-      { title: 'Manufacturing', detail: 'Industrial reconversion of distressed sites and greenfield builds. Microplantes is the flagship.' },
-      { title: 'Consulting', detail: 'Strategy and advisory for industrial agronomy and innovation clients.', externalUrl: 'https://kuzog.ca' },
-      { title: 'Distressed-Asset Investing', detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value — the playbook behind the Microplantes site.' },
+      { title: 'Manufacturing', detail: 'Industrial reconversion of distressed sites and greenfield builds.' },
+      { title: 'Consulting', detail: 'Strategy and advisory for industrial agronomy and innovation clients — delivered through our Canadian subsidiary.', externalUrl: 'https://kuzog.ca' },
+      { title: 'Distressed-Asset Investing', detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value.' },
       { title: 'Applied AI', detail: 'Internal AI projects and advisory — building automation and decision systems into our operations.' },
-      { title: 'Investment Fund', detail: 'A KUZOG-anchored vehicle for adjacent ventures at the intersection of agronomy, deep tech, and industrial reconversion.' },
+      { title: 'Investment Fund', detail: 'A KUZOG-anchored vehicle for adjacent ventures.' },
+    ],
+    foundersHeading: 'Founders',
+    founders: [
+      {
+        name: 'Gibril-Gabriel Bachouchi',
+        role: 'President',
+        bio: 'Nanotechnology engineer (University of Waterloo). Cleanroom and contamination-protocol expert.',
+      },
+      {
+        name: 'Malik Bachouchi',
+        role: 'Director',
+        bio: 'Wharton (UPenn) MBA + MSc Computer Science. 15 years leading large international industrial and financial programs.',
+      },
     ],
     recognitionHeading: 'Recognition',
     recognitions: [
