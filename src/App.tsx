@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Home as HomeIcon, Mail, Sprout, Building2 } from 'lucide-react';
+import { Home as HomeIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from './contexts/LanguageContext';
 import { LanguageSelector } from './components/LanguageSelector';
@@ -13,7 +13,6 @@ import { MissionLine } from './components/MissionLine';
 
 export default function App() {
   const { content } = useLanguage();
-  const [activeNav, setActiveNav] = useState<'home' | 'hydrobio' | 'microplantes' | 'group' | 'contact'>('home');
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
   const [toastOpen, setToastOpen] = useState(false);
@@ -26,7 +25,6 @@ export default function App() {
   }, [isContactOpen, isPolicyOpen]);
 
   const handleReturnToStart = useCallback(() => {
-    setActiveNav('home');
     if (typeof window === 'undefined') return;
     window.requestAnimationFrame(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -34,11 +32,7 @@ export default function App() {
   }, []);
 
   const navItems = [
-    { key: 'home' as const, label: content.navigation.home, icon: HomeIcon, onSelect: handleReturnToStart },
-    { key: 'hydrobio' as const, label: 'Hydrobio', icon: Sprout, onSelect: () => { window.location.href = '/hydrobio'; } },
-    { key: 'microplantes' as const, label: 'Microplantes', icon: Sprout, onSelect: () => { window.location.href = '/microplantes'; } },
-    { key: 'group' as const, label: 'Group', icon: Building2, onSelect: () => { window.location.href = '/group'; } },
-    { key: 'contact' as const, label: content.navigation.contact, icon: Mail, onSelect: () => { setIsContactOpen(true); setActiveNav('contact'); } },
+    { key: 'home' as const, label: content.navigation.home, icon: HomeIcon, href: '/' },
   ];
 
   return (
@@ -46,7 +40,7 @@ export default function App() {
       <Toast open={toastOpen} onDismiss={() => setToastOpen(false)} message={content.contactModal.successMessage} />
       <ContactModal open={isContactOpen} onClose={() => setIsContactOpen(false)} onSuccess={() => setToastOpen(true)} />
       <PolicyModal open={isPolicyOpen} onClose={() => setIsPolicyOpen(false)} />
-      <BottomBar items={navItems} activeKey={activeNav} />
+      <BottomBar items={navItems} activeKey="home" />
 
       <header className="px-6 pt-10" id="home">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3">
@@ -62,7 +56,7 @@ export default function App() {
             <LanguageSelector />
             <button
               type="button"
-              onClick={() => { setIsContactOpen(true); setActiveNav('contact'); }}
+              onClick={() => setIsContactOpen(true)}
               className="inline-flex h-11 flex-shrink-0 items-center justify-center rounded-full border border-hairline bg-surface px-4 text-xs font-semibold text-ink shadow-card transition hover:bg-surface-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface sm:h-12 sm:w-44 sm:text-sm"
             >
               {content.header.contactButton}

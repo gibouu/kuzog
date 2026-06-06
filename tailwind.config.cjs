@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        border: 'rgba(15, 20, 25, 0.08)',
+        border: 'var(--hairline)',
         bg: 'var(--bg)',
         surface: 'var(--surface)',
         'surface-elevated': 'var(--surface-elevated)',
