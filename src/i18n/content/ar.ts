@@ -104,6 +104,15 @@ export const ar: SiteContent = {
       sdgLabel: '2 · 6 · 13 · 15',
       sdgCaption: 'القضاء على الجوع · مياه نظيفة · العمل المناخي · الحياة البرية',
     },
+    recognition: {
+      eyebrow: 'الأخبار والاعتراف',
+      title: 'إشارات من أطراف ثالثة.',
+      items: [
+        { kind: 'award', source: 'نادي روتاري باريس', date: '2026', detail: 'تم اختيار Hydrobio شركة ناشئة للعام — تقدير للابتكار التقني وإمكانات التأثير.' },
+        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (الشركة الأم لـ Hydrobio) مُحتضنة في نظام Paris&Co للابتكار.' },
+        { kind: 'grant', source: 'مدينة باريس', detail: 'حصلت KUZOG على منحة بقيمة 30,000 € من مدينة باريس للابتكار الصناعي.' },
+      ],
+    },
     contactCTA: {
       title: 'تحدّث معنا عن Hydrobio.',
       description: 'استفسارات المواقع التجريبية، محادثات الشراكة، أسئلة علمية — نرد خلال يومَي عمل.',
@@ -231,6 +240,15 @@ export const ar: SiteContent = {
         { value: 'الأمان البيولوجي', title: 'تقليل المخاطر الصحية', detail: 'كل دفعة مستوردة هي ناقل محتمل لآفات وفيروسات جديدة. الإنتاج في المختبر تحت ظروف ISO 5 يمنح المشترين مادة معتمدة نظيفة من المصدر.' },
       ],
     },
+    recognition: {
+      eyebrow: 'الأخبار والاعتراف',
+      title: 'مدعومة من KUZOG France.',
+      items: [
+        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (الشركة الأم لـ Microplantes) مُحتضنة في نظام Paris&Co للابتكار.' },
+        { kind: 'grant', source: 'مدينة باريس', detail: 'حصلت KUZOG على منحة بقيمة 30,000 € من مدينة باريس.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG حاصلة على جائزة مسابقة Open Carca 2025.' },
+      ],
+    },
     contactCTA: {
       title: 'تحدّث معنا عن Microplantes.',
       description: 'شراكات الموقع، أسئلة تقنية، استفسارات تجارية — نرد خلال يومَي عمل.',
@@ -258,12 +276,16 @@ export const ar: SiteContent = {
       { name: 'جبريل بشوشي', role: 'الرئيس', bio: 'مهندس نانوتكنولوجيا (جامعة واترلو). خبير في الغرف النظيفة وبروتوكولات التلوث.' },
       { name: 'مالك بشوشي', role: 'المدير', bio: 'MBA Wharton (UPenn) + MSc علوم حاسوب. 15 سنة في برامج صناعية ومالية دولية كبرى.' },
     ],
-    recognitionHeading: 'الاعتراف',
-    recognitions: [
-      { name: 'Paris&Co', detail: 'مُحتضنة في نظام Paris&Co للابتكار.' },
-      { name: 'مدينة باريس', detail: 'منحة بقيمة 30,000 € من مدينة باريس.' },
-      { name: 'Open Carca 2025', detail: 'الفائزة في مسابقة 2025 لريادة الأعمال.' },
-    ],
+    recognition: {
+      eyebrow: 'الاعتراف',
+      title: 'إشارات من أطراف ثالثة.',
+      items: [
+        { kind: 'incubation', source: 'Paris&Co', detail: 'مُحتضنة في نظام Paris&Co للابتكار — أبرز مركز ابتكار في باريس.' },
+        { kind: 'grant', source: 'مدينة باريس', detail: 'منحة بقيمة 30,000 € من مدينة باريس للابتكار الصناعي.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'الفائزة بمسابقة 2025 لريادة الأعمال.' },
+        { kind: 'award', source: 'نادي روتاري باريس', date: '2026', detail: 'Hydrobio (المشروع الرائد لـ KUZOG) — شركة ناشئة للعام.' },
+      ],
+    },
     contactCTA: {
       title: 'لنتحدث.',
       description: 'استفسارات الاستثمار، محادثات الشراكة، مهام الاستشارات.',

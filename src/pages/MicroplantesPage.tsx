@@ -6,6 +6,7 @@ import { StatGrid } from '../components/StatGrid';
 import { Citation } from '../components/Citation';
 import { ContactCTA } from '../components/ContactCTA';
 import { DiagramSlot } from '../components/DiagramSlot';
+import { RecognitionBeat } from '../components/RecognitionBeat';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -82,7 +83,7 @@ export default function MicroplantesPage() {
             </div>
             <Citation text={m.method.densityFootnote} />
           </div>
-          <DiagramSlot id="D-3" title="Density comparison" prompt="Minimalist horizontal bar chart comparing 5 propagation methods by plants/m²/yr (Microplantes 19,000 dominant in fresh green; intensive greenhouse 100; strawberry stolons 50; raspberry drageons 30; tree grafting 5). White background, editorial Apple aesthetic." />
+          <DiagramSlot id="D-3" title="Density comparison" prompt="Minimalist horizontal bar chart comparing 5 propagation methods by plants/m²/yr (Microplantes 19,000 dominant in fresh green; intensive greenhouse 100; strawberry stolons 50; raspberry drageons 30; tree grafting 5). White background, editorial Apple aesthetic." src="/diagrams/D3.png" />
         </StoryBeat>
 
         {/* Catalogue */}
@@ -156,6 +157,9 @@ export default function MicroplantesPage() {
             ))}
           </div>
         </StoryBeat>
+
+        {/* News & recognition */}
+        <RecognitionBeat content={m.recognition} accent="microplantes" />
 
         {/* Contact CTA */}
         <StoryBeat id="contact">

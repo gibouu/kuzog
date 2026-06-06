@@ -9,6 +9,7 @@ import { Roadmap } from '../components/Roadmap';
 import { TeamMember } from '../components/TeamMember';
 import { ContactCTA } from '../components/ContactCTA';
 import { DiagramSlot } from '../components/DiagramSlot';
+import { RecognitionBeat } from '../components/RecognitionBeat';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -92,7 +93,7 @@ export default function HydrobioPage() {
               </div>
             ))}
           </div>
-          <DiagramSlot id="D-1" title="3-component synergy" prompt="Minimalist Venn diagram, three overlapping circles in sage green tones, labels 'Micronised Clay', 'Micronised Zeolite', 'Mycorrhizal Consortium', centre intersection labelled 'Synergy', monoline strokes, white background, editorial aesthetic." />
+          <DiagramSlot id="D-1" title="3-component synergy" prompt="Minimalist Venn diagram, three overlapping circles in sage green tones, labels 'Micronised Clay', 'Micronised Zeolite', 'Mycorrhizal Consortium', centre intersection labelled 'Synergy', monoline strokes, white background, editorial aesthetic." src="/diagrams/D1.png" />
           <p className="text-base font-medium text-ink md:text-lg md:max-w-4xl">{h.solution.synergyLine}</p>
         </StoryBeat>
 
@@ -139,6 +140,9 @@ export default function HydrobioPage() {
             <BigStat value={h.impact.sdgValue} label={h.impact.sdgLabel} caption={h.impact.sdgCaption} />
           </StatGrid>
         </StoryBeat>
+
+        {/* News & recognition */}
+        <RecognitionBeat content={h.recognition} accent="hydrobio" />
 
         {/* Contact CTA */}
         <StoryBeat id="contact">

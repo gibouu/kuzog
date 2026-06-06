@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { ProductPageShell } from '../components/ProductPageShell';
 import { StoryBeat } from '../components/StoryBeat';
+import { RecognitionBeat } from '../components/RecognitionBeat';
 import { ContactCTA } from '../components/ContactCTA';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
@@ -88,17 +89,8 @@ export default function GroupPage() {
           </div>
         </StoryBeat>
 
-        {/* Recognition */}
-        <StoryBeat id="recognition" title={g.recognitionHeading} accent="group">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            {g.recognitions.map((rec) => (
-              <div key={rec.name} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-6">
-                <h4 className="text-base font-semibold text-ink md:text-lg">{rec.name}</h4>
-                <p className="text-sm text-muted-ink md:text-base">{rec.detail}</p>
-              </div>
-            ))}
-          </div>
-        </StoryBeat>
+        {/* News & recognition */}
+        <RecognitionBeat content={g.recognition} accent="group" />
 
         {/* Contact CTA */}
         <StoryBeat id="contact">
