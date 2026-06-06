@@ -16,13 +16,15 @@ type FormState = {
   email: string;
   message: string;
   industry: string;
+  botcheck: string;
 };
 
 const initialState: FormState = {
   name: '',
   email: '',
   message: '',
-  industry: ''
+  industry: '',
+  botcheck: ''
 };
 
 export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalProps) {
@@ -115,7 +117,12 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
 
     try {
       setSubmitting(true);
-      await submitContact({ ...trimmed, timestamp: new Date().toISOString(), ...(topic ? { topic } : {}) });
+      await submitContact({
+        ...trimmed,
+        timestamp: new Date().toISOString(),
+        ...(topic ? { topic } : {}),
+        ...(formState.botcheck ? { botcheck: formState.botcheck } : {}),
+      });
       setSubmitting(false);
       onSuccess();
       onClose();
@@ -215,6 +222,21 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
               className="rounded-2xl border border-border bg-chip px-4 py-3 text-base text-ink shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             />
           </label>
+
+          {/* Honeypot — invisible to humans; Web3Forms rejects submissions where this is filled. */}
+          <div className="sr-only" aria-hidden="true">
+            <label>
+              Leave this field empty
+              <input
+                type="text"
+                name="botcheck"
+                tabIndex={-1}
+                autoComplete="off"
+                value={formState.botcheck}
+                onChange={(e) => setFormState((prev) => ({ ...prev, botcheck: e.target.value }))}
+              />
+            </label>
+          </div>
 
           {error ? (
             <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
