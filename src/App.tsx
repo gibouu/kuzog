@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Home as HomeIcon, Mail, Sprout, Building2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from './contexts/LanguageContext';
 import { LanguageSelector } from './components/LanguageSelector';
 import { BottomBar } from './components/BottomBar';
@@ -13,6 +13,7 @@ import { MissionLine } from './components/MissionLine';
 
 export default function App() {
   const { content } = useLanguage();
+  const navigate = useNavigate();
   const [activeNav, setActiveNav] = useState<'home' | 'hydrobio' | 'microplantes' | 'group' | 'contact'>('home');
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
@@ -35,9 +36,9 @@ export default function App() {
 
   const navItems = [
     { key: 'home' as const, label: content.navigation.home, icon: HomeIcon, onSelect: handleReturnToStart },
-    { key: 'hydrobio' as const, label: 'Hydrobio', icon: Sprout, onSelect: () => { window.location.href = '/hydrobio'; } },
-    { key: 'microplantes' as const, label: 'Microplantes', icon: Sprout, onSelect: () => { window.location.href = '/microplantes'; } },
-    { key: 'group' as const, label: 'Group', icon: Building2, onSelect: () => { window.location.href = '/group'; } },
+    { key: 'hydrobio' as const, label: 'Hydrobio', icon: Sprout, onSelect: () => { navigate('/hydrobio'); setActiveNav('hydrobio'); } },
+    { key: 'microplantes' as const, label: 'Microplantes', icon: Sprout, onSelect: () => { navigate('/microplantes'); setActiveNav('microplantes'); } },
+    { key: 'group' as const, label: 'Group', icon: Building2, onSelect: () => { navigate('/group'); setActiveNav('group'); } },
     { key: 'contact' as const, label: content.navigation.contact, icon: Mail, onSelect: () => { setIsContactOpen(true); setActiveNav('contact'); } },
   ];
 
