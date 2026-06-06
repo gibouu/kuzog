@@ -213,6 +213,148 @@ export interface HydrobioContent {
   };
 }
 
+export interface MicroplantesLeadStat {
+  value: string;
+  label: string;
+}
+
+export interface MicroplantesStat {
+  value: string;
+  label: string;
+  caption?: string;
+  source?: string;
+}
+
+export interface MicroplantesDensityRow {
+  method: string;
+  density: string;
+  surface: string;
+  multiplier: string;
+}
+
+export interface MicroplantesPartnershipPillar {
+  title: string;
+  detail: string;
+}
+
+export interface MicroplantesMarketSegment {
+  name: string;
+  share: string;
+  volume: string;
+  caption: string;
+}
+
+export interface MicroplantesCompetitor {
+  name: string;
+  capacity: string;
+  positioning: string;
+}
+
+export interface MicroplantesRampStep {
+  year: string;
+  capacity: string;
+  workforce: string;
+  caption?: string;
+}
+
+export interface MicroplantesFinancialRow {
+  label: string;
+  values: string[];
+}
+
+export interface MicroplantesTeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  highlights: string[];
+}
+
+export interface MicroplantesContent {
+  hero: {
+    eyebrow: string;
+    title: string;
+    tagline: string;
+    leadStats: MicroplantesLeadStat[];
+  };
+  opportunity: {
+    eyebrow: string;
+    title: string;
+    stats: MicroplantesStat[];
+    framingLine: string;
+  };
+  method: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    advantageLine: string;
+    densityHeading: string;
+    densityRows: MicroplantesDensityRow[];
+    densityFootnote: string;
+  };
+  site: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    stats: MicroplantesStat[];
+    advantageLine: string;
+  };
+  partnership: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    pillarsHeading: string;
+    pillars: MicroplantesPartnershipPillar[];
+    partnerName: string;
+    partnerCredentials: string;
+  };
+  market: {
+    eyebrow: string;
+    title: string;
+    segments: MicroplantesMarketSegment[];
+    totalLine: string;
+  };
+  competition: {
+    eyebrow: string;
+    title: string;
+    competitors: MicroplantesCompetitor[];
+    positioningLine: string;
+  };
+  operations: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    rampHeading: string;
+    rampSteps: MicroplantesRampStep[];
+  };
+  financials: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    years: string[];
+    rows: MicroplantesFinancialRow[];
+    capitalStructureHeading: string;
+    capitalStructureLine: string;
+    roiLine: string;
+  };
+  team: {
+    eyebrow: string;
+    title: string;
+    members: MicroplantesTeamMember[];
+  };
+  successFactors: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    factors: string[];
+    closing: string;
+  };
+  contactCTA: {
+    title: string;
+    description: string;
+    ctaLabel: string;
+  };
+}
+
 export interface SiteContent {
   // Header
   header: {
@@ -223,6 +365,7 @@ export interface SiteContent {
   // Home
   home: HomeContent;
   hydrobio: HydrobioContent;
+  microplantes: MicroplantesContent;
 
   // Find Your Solution Section
   findSolution: {
