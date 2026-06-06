@@ -761,4 +761,31 @@ export const en: SiteContent = {
       ],
     },
   },
+  group: {
+    hero: {
+      eyebrow: 'The Parent Operation',
+      title: 'KUZOG Group — import, manufacture, invest. From Paris.',
+      body: 'KUZOG France is a Paris-based holding building and operating ventures at the intersection of soil, plants, and capital. Incubated at Paris&Co, backed by the City of Paris, and laureate of the 2025 Open Carca entrepreneurial competition, the group structures industrial and investment projects with international ambitions — Hydrobio and Microplantes are its two flagship operations.',
+    },
+    activitiesHeading: 'What we do',
+    activities: [
+      { title: 'Import / Export & Commissioning', detail: 'Turnkey procurement and industrial commissioning across the EU and MENA — sourcing, logistics, regulatory navigation, on-site supervision.' },
+      { title: 'Manufacturing', detail: 'Industrial reconversion of distressed sites and greenfield builds. Microplantes is the flagship.' },
+      { title: 'Consulting', detail: 'Strategy and advisory for industrial agronomy and innovation clients.', externalUrl: 'https://kuzog.ca' },
+      { title: 'Distressed-Asset Investing', detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value — the playbook behind the Microplantes site.' },
+      { title: 'Applied AI', detail: 'Internal AI projects and advisory — building automation and decision systems into our operations.' },
+      { title: 'Investment Fund', detail: 'A KUZOG-anchored vehicle for adjacent ventures at the intersection of agronomy, deep tech, and industrial reconversion.' },
+    ],
+    recognitionHeading: 'Recognition',
+    recognitions: [
+      { name: 'Paris&Co', detail: 'Incubated at the Paris&Co innovation ecosystem.' },
+      { name: 'City of Paris', detail: '€30,000 grant from the Ville de Paris for industrial innovation.' },
+      { name: 'Open Carca 2025', detail: 'Laureate of the 2025 entrepreneurial competition.' },
+    ],
+    contactCTA: {
+      title: 'Talk to KUZOG.',
+      description: 'Investment enquiries, partnership conversations, advisory mandates — we reply within two business days.',
+      ctaLabel: 'Get in touch',
+    },
+  },
 };

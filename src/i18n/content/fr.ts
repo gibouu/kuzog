@@ -762,4 +762,31 @@ export const fr: SiteContent = {
       ],
     },
   },
+  group: {
+    hero: {
+      eyebrow: 'La maison-mère',
+      title: 'KUZOG Group — importer, fabriquer, investir. Depuis Paris.',
+      body: 'KUZOG France est une holding parisienne qui conçoit et exploite des entreprises à la croisée du sol, du vivant et du capital. Incubée à Paris&Co, soutenue par la Ville de Paris, et lauréate du concours entrepreneurial Open Carca 2025, le groupe structure des projets industriels et d\'investissement à ambition internationale — Hydrobio et Microplantes sont ses deux opérations phares.',
+    },
+    activitiesHeading: 'Ce que nous faisons',
+    activities: [
+      { title: 'Import / Export & Commissionnement', detail: 'Approvisionnement et commissionnement industriels clé en main dans l\'UE et MENA — sourcing, logistique, navigation réglementaire, supervision terrain.' },
+      { title: 'Industrie', detail: 'Reconversion industrielle de sites en difficulté et constructions ex nihilo. Microplantes en est l\'opération phare.' },
+      { title: 'Conseil', detail: 'Stratégie et conseil aux clients de l\'agronomie industrielle et de l\'innovation.', externalUrl: 'https://kuzog.ca' },
+      { title: 'Investissement en actifs distressed', detail: 'Acquisitions opportunistes de sites industriels et entreprises à valeur stratégique — la mécanique derrière le site Microplantes.' },
+      { title: 'IA appliquée', detail: 'Projets internes d\'IA et conseil — intégration de l\'automatisation et des systèmes de décision dans nos opérations.' },
+      { title: 'Fonds d\'investissement', detail: 'Véhicule ancré chez KUZOG pour les ventures adjacentes à la croisée de l\'agronomie, de la deep tech et de la reconversion industrielle.' },
+    ],
+    recognitionHeading: 'Reconnaissances',
+    recognitions: [
+      { name: 'Paris&Co', detail: 'Incubée dans l\'écosystème d\'innovation Paris&Co.' },
+      { name: 'Ville de Paris', detail: 'Subvention de 30 000 € de la Ville de Paris pour l\'innovation industrielle.' },
+      { name: 'Open Carca 2025', detail: 'Lauréate du concours entrepreneurial 2025.' },
+    ],
+    contactCTA: {
+      title: 'Parlons.',
+      description: 'Demandes d\'investissement, conversations de partenariat, missions de conseil — nous répondons sous deux jours ouvrés.',
+      ctaLabel: 'Nous contacter',
+    },
+  },
 };
