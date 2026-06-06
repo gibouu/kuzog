@@ -26,12 +26,10 @@ export interface AudienceContent {
 }
 
 export interface HomeCardContent {
-  eyebrow: string;
-  title: string;
-  microStats: string[];
+  name: string;       // e.g. "Hydrobio"
+  slogan: string;     // short one-liner, max ~12 words
   cta: string;
   accent: 'hydrobio' | 'microplantes' | 'group';
-  chips?: string[]; // group card only
 }
 
 export interface HomeContent {
