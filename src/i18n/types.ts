@@ -169,6 +169,7 @@ export interface MicroplantesContent {
     body: string;
     stats: MicroplantesStat[];
     advantageLine: string;
+    positioning: string;  // NEW — for "Largest in-vitro lab in France at launch"
   };
   partnership: {
     eyebrow: string;

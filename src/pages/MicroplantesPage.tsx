@@ -88,13 +88,15 @@ export default function MicroplantesPage() {
         {/* Site */}
         <StoryBeat id="site" eyebrow={m.site.eyebrow} title={m.site.title} accent="microplantes" bleed>
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.site.body}</p>
-          <StatGrid columns={4}>
+          <StatGrid columns={3}>
             {m.site.stats.map((stat) => (
               <BigStat key={stat.label} value={stat.value} label={stat.label} />
             ))}
           </StatGrid>
-          <p className="text-base font-medium text-ink md:text-lg md:max-w-4xl">{m.site.advantageLine}</p>
-          <DiagramSlot id="D-4" title="Site floor plan" prompt="Minimalist architectural floor-plan diagram of a two-floor industrial building, 952 m² total footprint, 370 m² ISO 5 cleanroom highlighted in soft green, surrounded by a 1,307 m² land outline in light grey, monoline strokes on white background, editorial style." />
+          <div className="rounded-card border border-accent-microplantes bg-surface px-6 py-4">
+            <p className="text-base font-semibold text-ink md:text-lg">{m.site.positioning}</p>
+          </div>
+          <p className="text-base text-muted-ink md:text-lg md:max-w-4xl">{m.site.advantageLine}</p>
         </StoryBeat>
 
         {/* Partnership */}

@@ -172,15 +172,15 @@ export const en: SiteContent = {
     },
     site: {
       eyebrow: 'The site',
-      title: 'A cleanroom infrastructure already standing in Boissy-l\'Aillerie.',
-      body: 'The Microplantes site is the former SEBBIN industrial facility, repurposed in partnership with SEMAVO (the regional public mixed economy) through a lease-to-own arrangement. The conversion needs only modest refurbishment — the cleanroom envelope, air handling, and laminar flow hoods are already in place.',
+      title: 'France\'s largest in-vitro plant lab, in Boissy-l\'Aillerie.',
+      body: 'The Microplantes facility is the former SEBBIN industrial site, repurposed in partnership with SEMAVO (the regional public mixed economy) through a lease-to-own arrangement. The cleanroom envelope and air handling are already in place — the conversion needs only modest refurbishment.',
       stats: [
         { value: '952 m²', label: 'Total covered area on two floors' },
         { value: '370 m²', label: 'ISO 5 cleanrooms already operational' },
-        { value: '11', label: 'Double laminar flow hoods on site' },
         { value: '1,307 m²', label: 'Land footprint' },
       ],
       advantageLine: 'Reconverting an existing industrial asset — faster, cheaper, and lower-risk than building from scratch.',
+      positioning: 'At full capacity, Microplantes will be the largest dedicated in-vitro plant production facility in France.',
     },
     partnership: {
       eyebrow: 'How we collaborate',

@@ -173,15 +173,15 @@ export const fr: SiteContent = {
     },
     site: {
       eyebrow: 'Le site',
-      title: 'Une infrastructure de salles blanches déjà en place à Boissy-l\'Aillerie.',
-      body: 'Le site Microplantes est l\'ancien établissement industriel SEBBIN, repris en partenariat avec la SEMAVO (société d\'économie mixte régionale) via un dispositif de location avec option d\'achat. La conversion ne nécessite qu\'une remise à niveau modeste — l\'enveloppe propre, le traitement d\'air et les hottes à flux laminaire sont déjà en place.',
+      title: 'Le plus grand laboratoire in vitro végétal de France, à Boissy-l\'Aillerie.',
+      body: 'Le site Microplantes est l\'ancien établissement industriel SEBBIN, repris en partenariat avec la SEMAVO (société d\'économie mixte régionale) via un dispositif de location avec option d\'achat. L\'enveloppe propre et le traitement d\'air sont déjà en place — la conversion ne nécessite qu\'une remise à niveau modeste.',
       stats: [
         { value: '952 m²', label: 'Surface couverte sur deux étages' },
         { value: '370 m²', label: 'Salles blanches ISO 5 opérationnelles' },
-        { value: '11', label: 'Doubles hottes à flux laminaire' },
         { value: '1 307 m²', label: 'Surface foncière' },
       ],
       advantageLine: 'Reconvertir un actif industriel existant — plus rapide, plus économique et moins risqué que de construire ex nihilo.',
+      positioning: 'À pleine capacité, Microplantes sera la plus grande installation française dédiée à la production de plants in vitro.',
     },
     partnership: {
       eyebrow: 'Comment nous collaborons',
