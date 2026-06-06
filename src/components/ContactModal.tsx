@@ -3,7 +3,6 @@ import { Mail, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
 import { submitContact } from '../lib/contact';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useNavigation } from '../contexts/NavigationContext';
 
 type ContactModalProps = {
   open: boolean;
@@ -29,20 +28,9 @@ export function ContactModal({ open, onClose, onSuccess }: ContactModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const firstFieldRef = useRef<HTMLInputElement>(null);
   const { content } = useLanguage();
-  const { selectedAudience } = useNavigation();
   const [formState, setFormState] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Pre-populate industry based on selected audience
-  useEffect(() => {
-    if (selectedAudience) {
-      const audienceContent = content.audiences.find((a) => a.id === selectedAudience);
-      if (audienceContent) {
-        setFormState((prev) => ({ ...prev, industry: audienceContent.industry }));
-      }
-    }
-  }, [selectedAudience, content]);
 
   useEffect(() => {
     if (!open) {

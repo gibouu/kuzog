@@ -1,45 +1,18 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 
-export type AudienceType = 'farmer' | 'startup' | 'manufacturer' | 'importer' | null;
-
-export interface NavigationState {
-  selectedAudience: AudienceType;
-  selectedSubSection: string;
-  showSolutions: boolean;
-}
-
-interface NavigationContextType extends NavigationState {
-  setSelectedAudience: (audience: AudienceType) => void;
-  setSelectedSubSection: (section: string) => void;
-  setShowSolutions: (show: boolean) => void;
-  resetNavigation: () => void;
+interface NavigationContextType {
+  // Intentionally minimal. Audience-based navigation was removed in
+  // the redesign (issue #1). This stub remains so any leftover
+  // imports compile during Plans 2-4 cleanup. Safe to delete the
+  // entire context once no consumers remain.
+  noop: () => void;
 }
 
 const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
 
 export function NavigationProvider({ children }: { children: ReactNode }) {
-  const [selectedAudience, setSelectedAudience] = useState<AudienceType>(null);
-  const [selectedSubSection, setSelectedSubSection] = useState<string>('overview');
-  const [showSolutions, setShowSolutions] = useState<boolean>(false);
-
-  const resetNavigation = () => {
-    setSelectedAudience(null);
-    setSelectedSubSection('overview');
-    setShowSolutions(false);
-  };
-
   return (
-    <NavigationContext.Provider
-      value={{
-        selectedAudience,
-        selectedSubSection,
-        showSolutions,
-        setSelectedAudience,
-        setSelectedSubSection,
-        setShowSolutions,
-        resetNavigation,
-      }}
-    >
+    <NavigationContext.Provider value={{ noop: () => {} }}>
       {children}
     </NavigationContext.Provider>
   );

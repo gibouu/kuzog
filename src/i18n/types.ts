@@ -25,12 +25,33 @@ export interface AudienceContent {
   ctaText: string;
 }
 
+export interface HomeCardContent {
+  eyebrow: string;
+  title: string;
+  microStats: string[];
+  cta: string;
+  accent: 'hydrobio' | 'microplantes' | 'group';
+  chips?: string[]; // group card only
+}
+
+export interface HomeContent {
+  cards: {
+    hydrobio: HomeCardContent;
+    microplantes: HomeCardContent;
+    group: HomeCardContent;
+  };
+  mission: string;
+}
+
 export interface SiteContent {
   // Header
   header: {
     logoText: string;
     contactButton: string;
   };
+
+  // Home
+  home: HomeContent;
 
   // Find Your Solution Section
   findSolution: {

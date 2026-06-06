@@ -6,6 +6,42 @@ export const en: SiteContent = {
     contactButton: 'Contact us',
   },
 
+  home: {
+    cards: {
+      hydrobio: {
+        eyebrow: 'Soil Innovation',
+        title: 'Restoring Soil Life. Saving Water. Feeding the World.',
+        microStats: ['+47% water retention', '+18.7% crop yield', '3–5 yr effect'],
+        cta: 'Discover Hydrobio',
+        accent: 'hydrobio',
+      },
+      microplantes: {
+        eyebrow: 'Plant Sovereignty',
+        title: 'Industrial vegetal micropropagation, at French scale.',
+        microStats: ['6–7.5M plants/yr', '370 m² ISO 5', '25 jobs at maturity'],
+        cta: 'Discover Microplantes',
+        accent: 'microplantes',
+      },
+      group: {
+        eyebrow: 'The Parent Operation',
+        title: 'Import, manufacture, invest. From Paris.',
+        microStats: [],
+        chips: [
+          'Import/Export',
+          'Commissioning',
+          'Manufacturing',
+          'Consulting',
+          'Distressed-Asset Investing',
+          'AI',
+          'Investment Fund',
+        ],
+        cta: 'Explore KUZOG Group',
+        accent: 'group',
+      },
+    },
+    mission: 'KUZOG builds and operates ventures at the intersection of soil, plants, and capital — from Paris.',
+  },
+
   findSolution: {
     title: 'Find Your Solution',
     description: 'KUZOG is an international network of problem-solvers bridging markets from North America and Europe and the Middle East.',

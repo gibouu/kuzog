@@ -6,6 +6,42 @@ export const fr: SiteContent = {
     contactButton: 'Contactez-nous',
   },
 
+  home: {
+    cards: {
+      hydrobio: {
+        eyebrow: 'Innovation du sol',
+        title: 'Restaurer la vie du sol. Économiser l\'eau. Nourrir le monde.',
+        microStats: ['+47% rétention d\'eau', '+18,7% rendement', 'Effet 3–5 ans'],
+        cta: 'Découvrir Hydrobio',
+        accent: 'hydrobio',
+      },
+      microplantes: {
+        eyebrow: 'Souveraineté végétale',
+        title: 'Micropropagation végétale industrielle, à l\'échelle française.',
+        microStats: ['6–7,5 M plants/an', '370 m² ISO 5', '25 emplois à maturité'],
+        cta: 'Découvrir Microplantes',
+        accent: 'microplantes',
+      },
+      group: {
+        eyebrow: 'La maison-mère',
+        title: 'Importer, fabriquer, investir. Depuis Paris.',
+        microStats: [],
+        chips: [
+          'Import / Export',
+          'Commissionnement',
+          'Industrie',
+          'Conseil',
+          'Investissement en actifs distressed',
+          'IA',
+          'Fonds d\'investissement',
+        ],
+        cta: 'Explorer le Groupe KUZOG',
+        accent: 'group',
+      },
+    },
+    mission: 'KUZOG conçoit et exploite des entreprises à la croisée du sol, du vivant et du capital — depuis Paris.',
+  },
+
   findSolution: {
     title: 'Trouvez Votre Solution',
     description: 'KUZOG est un réseau international d\'experts qui relie les marchés d\'Amérique du Nord, d\'Europe et du Moyen-Orient.',
