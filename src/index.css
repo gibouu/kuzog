@@ -4,18 +4,22 @@
 
 :root {
   color-scheme: light;
-  --bg: #f7f1e6;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --ink: #1f2933;
+  --surface-elevated: #f7f7f8;
+  --ink: #0f1419;
   --muted-ink: #5a646f;
-  --brand: #d6a86a;
-  --brand-ink: #2b2116;
-  --accent: #9db7b2;
-  --chip: #f2ebe0;
-  --chip-active: #e8decd;
-  --ring: #8c6f48;
-  --pill-bg: rgba(0, 0, 0, 0.04);
-  --pill-text: #27303a;
+  --hairline: rgba(15, 20, 25, 0.08);
+  --brand: #1f1f1f;
+  --brand-ink: #ffffff;
+  --accent-hydrobio: #7a8c7e;
+  --accent-microplantes: #5f8a4f;
+  --accent-group: #3a3a3a;
+  --chip: #f2f2f3;
+  --chip-active: #e6e6e8;
+  --ring: #0f1419;
+  --pill-bg: rgba(15, 20, 25, 0.04);
+  --pill-text: #0f1419;
 }
 
 @layer base {
@@ -28,14 +32,9 @@
     @apply min-h-full bg-bg text-ink font-sans antialiased;
   }
 
-  body {
-    background-image: radial-gradient(circle at 20% 20%, rgba(214, 168, 106, 0.2), transparent 45%),
-      radial-gradient(circle at 80% 10%, rgba(157, 183, 178, 0.18), transparent 55%);
-  }
-
   ::selection {
-    background: rgba(214, 168, 106, 0.35);
-    color: var(--brand-ink);
+    background: rgba(15, 20, 25, 0.12);
+    color: var(--ink);
   }
 
   img {
