@@ -278,12 +278,31 @@ export const en: SiteContent = {
     },
     activitiesHeading: 'What we do',
     activities: [
-      { title: 'Import / Export & Commissioning', detail: 'Turnkey procurement and industrial commissioning across the EU and MENA — sourcing, logistics, regulatory navigation, on-site supervision.' },
-      { title: 'Manufacturing', detail: 'Industrial reconversion of distressed sites and greenfield builds.' },
-      { title: 'Consulting', detail: 'Strategy and advisory for industrial agronomy and innovation clients — delivered through our Canadian subsidiary.', externalUrl: 'https://kuzog.ca' },
-      { title: 'Distressed-Asset Investing', detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value.' },
-      { title: 'Applied AI', detail: 'Internal AI projects and advisory — building automation and decision systems into our operations.' },
-      { title: 'Investment Fund', detail: 'A KUZOG-anchored vehicle for adjacent ventures.' },
+      {
+        title: 'Import / Export & Commissioning',
+        detail: 'Turnkey procurement and industrial commissioning across the EU and MENA. We handle sourcing, logistics, customs, and regulatory navigation, then send a senior operator on site for commissioning. Built for industrial clients who need delivery, not slideware.',
+      },
+      {
+        title: 'Manufacturing',
+        detail: 'Industrial reconversion of distressed sites and greenfield builds. We specialise in repurposing existing infrastructure — cleanrooms, process lines, controlled environments — into productive assets, with the technical and capital structure to take projects from acquisition to commissioning.',
+      },
+      {
+        title: 'Consulting',
+        detail: 'Strategy and advisory for industrial agronomy and innovation clients, delivered through our Canadian subsidiary. Focused engagements on go-to-market, public-private partnerships, and capital structuring for projects at the intersection of agriculture, deep tech, and capital.',
+        externalUrl: 'https://kuzog.ca',
+      },
+      {
+        title: 'Distressed-Asset Investing',
+        detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value. We move quickly on liquidations and restructurings where engineering due-diligence is the bottleneck — exactly where most generalist funds hesitate.',
+      },
+      {
+        title: 'Applied AI',
+        detail: 'Internal AI projects and advisory engagements. We build automation, decision systems, and operational tooling into our own ventures first, then offer the playbook to industrial clients who want to do the same.',
+      },
+      {
+        title: 'Investment Fund',
+        detail: 'A KUZOG-anchored vehicle for adjacent ventures at the intersection of agronomy, deep tech, and industrial reconversion. Co-investing alongside operating partners on the kind of opportunities our core operations already surface.',
+      },
     ],
     foundersHeading: 'Founders',
     founders: [

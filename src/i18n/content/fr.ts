@@ -279,12 +279,31 @@ export const fr: SiteContent = {
     },
     activitiesHeading: 'Ce que nous faisons',
     activities: [
-      { title: 'Import / Export & Commissionnement', detail: 'Approvisionnement et commissionnement industriels clé en main dans l\'UE et MENA.' },
-      { title: 'Industrie', detail: 'Reconversion industrielle de sites en difficulté et constructions ex nihilo.' },
-      { title: 'Conseil', detail: 'Stratégie et conseil aux clients de l\'agronomie industrielle et de l\'innovation — délivré par notre filiale canadienne.', externalUrl: 'https://kuzog.ca' },
-      { title: 'Investissement en actifs distressed', detail: 'Acquisitions opportunistes de sites industriels et entreprises à valeur stratégique.' },
-      { title: 'IA appliquée', detail: 'Projets internes d\'IA et conseil.' },
-      { title: 'Fonds d\'investissement', detail: 'Véhicule ancré chez KUZOG pour les ventures adjacentes.' },
+      {
+        title: 'Import / Export & Commissionnement',
+        detail: 'Approvisionnement et commissionnement industriels clé en main dans l\'UE et MENA. Nous gérons sourcing, logistique, douanes et navigation réglementaire, puis envoyons un opérateur senior sur site pour le commissionnement. Conçu pour des clients industriels qui ont besoin de livraisons, pas de slides.',
+      },
+      {
+        title: 'Industrie',
+        detail: 'Reconversion industrielle de sites en difficulté et constructions ex nihilo. Nous nous spécialisons dans la requalification d\'infrastructures existantes — salles blanches, lignes de procédé, environnements contrôlés — en actifs productifs, avec la structure technique et capitalistique pour mener des projets de l\'acquisition au commissionnement.',
+      },
+      {
+        title: 'Conseil',
+        detail: 'Stratégie et conseil aux clients de l\'agronomie industrielle et de l\'innovation, délivré par notre filiale canadienne. Missions focalisées sur le go-to-market, les partenariats publics-privés et la structuration de capital pour des projets à la croisée de l\'agriculture, de la deep tech et du capital.',
+        externalUrl: 'https://kuzog.ca',
+      },
+      {
+        title: 'Investissement en actifs distressed',
+        detail: 'Acquisitions opportunistes de sites industriels et entreprises à valeur stratégique. Nous savons agir vite sur des liquidations et restructurations où la due-diligence technique est le goulet d\'étranglement — précisément là où la plupart des fonds généralistes hésitent.',
+      },
+      {
+        title: 'IA appliquée',
+        detail: 'Projets internes d\'IA et missions de conseil. Nous intégrons d\'abord l\'automatisation et les systèmes de décision dans nos propres ventures, puis proposons le playbook aux clients industriels qui veulent faire de même.',
+      },
+      {
+        title: 'Fonds d\'investissement',
+        detail: 'Véhicule ancré chez KUZOG pour les ventures adjacentes à la croisée de l\'agronomie, de la deep tech et de la reconversion industrielle. Co-investissement aux côtés de partenaires opérateurs sur les opportunités que nos opérations cœur font émerger.',
+      },
     ],
     foundersHeading: 'Fondateurs',
     founders: [
