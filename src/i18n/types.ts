@@ -43,6 +43,176 @@ export interface HomeContent {
   mission: string;
 }
 
+export interface HydrobioLeadStat {
+  value: string;
+  label: string;
+}
+
+export interface HydrobioProblemStat {
+  value: string;
+  label: string;
+  caption: string;
+  source?: string;
+}
+
+export interface HydrobioSolutionComponent {
+  name: string;
+  role: string;
+  bullets: string[];
+}
+
+export interface HydrobioMarketCard {
+  eyebrow: string;
+  value: string;
+  label: string;
+  caption: string;
+  source?: string;
+}
+
+export interface HydrobioTamSamSom {
+  tamValue: string;
+  tamLabel: string;
+  tamCaption: string;
+  tamSource?: string;
+  samValue: string;
+  samLabel: string;
+  samCaption: string;
+  samSource?: string;
+  somValue: string;
+  somLabel: string;
+  somCaption: string;
+  somSource?: string;
+}
+
+export interface HydrobioRoadmapStep {
+  phase: string;
+  label: string;
+  detail?: string;
+}
+
+export interface HydrobioPricingTier {
+  label: string;
+  price: string;
+  margin: string;
+}
+
+export interface HydrobioDeploymentStep {
+  number: number;
+  title: string;
+  detail: string;
+}
+
+export interface HydrobioTeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  highlights: string[];
+}
+
+export interface HydrobioIpCard {
+  title: string;
+  detail: string;
+}
+
+export interface HydrobioImpactStat {
+  value: string;
+  label: string;
+  caption: string;
+  source?: string;
+}
+
+export interface HydrobioContent {
+  hero: {
+    eyebrow: string;
+    title: string;
+    tagline: string;
+    leadStats: HydrobioLeadStat[];
+  };
+  problem: {
+    eyebrow: string;
+    title: string;
+    stats: HydrobioProblemStat[];
+    quote: string;
+    quoteSource: string;
+    framingLine: string;
+  };
+  solution: {
+    eyebrow: string;
+    title: string;
+    components: HydrobioSolutionComponent[];
+    synergyLine: string;
+  };
+  competitiveEdge: {
+    eyebrow: string;
+    title: string;
+    columns: string[];
+    rows: { criterion: string; values: string[] }[];
+    caption: string;
+  };
+  market: {
+    eyebrow: string;
+    title: string;
+    cards: HydrobioMarketCard[];
+    tamSamSom: HydrobioTamSamSom;
+  };
+  results: {
+    eyebrow: string;
+    title: string;
+    stats: HydrobioImpactStat[];
+    footnote: string;
+    roadmapHeading: string;
+    roadmapSteps: HydrobioRoadmapStep[];
+  };
+  businessModel: {
+    eyebrow: string;
+    title: string;
+    pricingHeading: string;
+    pricing: HydrobioPricingTier[];
+    pricingFootnote: string;
+    trajectoryHeading: string;
+    trajectoryLine: string;
+    distributionHeading: string;
+    distribution: { share: string; label: string }[];
+  };
+  gtm: {
+    eyebrow: string;
+    title: string;
+    steps: HydrobioDeploymentStep[];
+    priorityLine: string;
+    roadmapHeading: string;
+    roadmapSteps: HydrobioRoadmapStep[];
+  };
+  team: {
+    eyebrow: string;
+    title: string;
+    members: HydrobioTeamMember[];
+    ipHeading: string;
+    ipCards: HydrobioIpCard[];
+  };
+  systemicImpact: {
+    eyebrow: string;
+    title: string;
+    stats: HydrobioImpactStat[];
+    sdgValue: string;
+    sdgLabel: string;
+    sdgCaption: string;
+  };
+  smallholder: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    introSource: string;
+    body: string;
+    stats: HydrobioImpactStat[];
+    closing: string;
+  };
+  contactCTA: {
+    title: string;
+    description: string;
+    ctaLabel: string;
+  };
+}
+
 export interface SiteContent {
   // Header
   header: {
@@ -52,6 +222,7 @@ export interface SiteContent {
 
   // Home
   home: HomeContent;
+  hydrobio: HydrobioContent;
 
   // Find Your Solution Section
   findSolution: {
