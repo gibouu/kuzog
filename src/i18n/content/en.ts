@@ -264,15 +264,29 @@ export const en: SiteContent = {
       eyebrow: 'Our other activities',
       title: 'What else we do from Paris.',
       body: 'Beyond the two flagship operations, KUZOG runs a portfolio of industrial, capital, and advisory ventures. Paris-incubated, City-of-Paris backed, and laureate of the 2025 Open Carca entrepreneurial competition.',
+      origin: 'Founded in 2024 by two brothers — a nanotech engineer and a Wharton-trained operator — to build industrial ventures where engineering, capital, and Paris meet.',
     },
     activitiesHeading: 'What we do',
     activities: [
       { title: 'Import / Export & Commissioning', detail: 'Turnkey procurement and industrial commissioning across the EU and MENA — sourcing, logistics, regulatory navigation, on-site supervision.' },
-      { title: 'Manufacturing', detail: 'Industrial reconversion of distressed sites and greenfield builds. Microplantes is the flagship.' },
-      { title: 'Consulting', detail: 'Strategy and advisory for industrial agronomy and innovation clients.', externalUrl: 'https://kuzog.ca' },
-      { title: 'Distressed-Asset Investing', detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value — the playbook behind the Microplantes site.' },
+      { title: 'Manufacturing', detail: 'Industrial reconversion of distressed sites and greenfield builds.' },
+      { title: 'Consulting', detail: 'Strategy and advisory for industrial agronomy and innovation clients — delivered through our Canadian subsidiary.', externalUrl: 'https://kuzog.ca' },
+      { title: 'Distressed-Asset Investing', detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value.' },
       { title: 'Applied AI', detail: 'Internal AI projects and advisory — building automation and decision systems into our operations.' },
-      { title: 'Investment Fund', detail: 'A KUZOG-anchored vehicle for adjacent ventures at the intersection of agronomy, deep tech, and industrial reconversion.' },
+      { title: 'Investment Fund', detail: 'A KUZOG-anchored vehicle for adjacent ventures.' },
+    ],
+    foundersHeading: 'Founders',
+    founders: [
+      {
+        name: 'Gibril-Gabriel Bachouchi',
+        role: 'President',
+        bio: 'Nanotechnology engineer (University of Waterloo). Cleanroom and contamination-protocol expert.',
+      },
+      {
+        name: 'Malik Bachouchi',
+        role: 'Director',
+        bio: 'Wharton (UPenn) MBA + MSc Computer Science. 15 years leading large international industrial and financial programs.',
+      },
     ],
     recognitionHeading: 'Recognition',
     recognitions: [

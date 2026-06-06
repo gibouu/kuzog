@@ -203,14 +203,23 @@ export interface GroupRecognition {
   detail: string;
 }
 
+export interface GroupFounder {
+  name: string;
+  role: string;
+  bio: string;
+}
+
 export interface GroupContent {
   hero: {
     eyebrow: string;
     title: string;
     body: string;
+    origin: string;  // NEW — one line, founding context
   };
   activitiesHeading: string;
   activities: GroupActivity[];
+  foundersHeading: string;  // NEW
+  founders: GroupFounder[];  // NEW
   recognitionHeading: string;
   recognitions: GroupRecognition[];
   contactCTA: {
