@@ -355,6 +355,34 @@ export interface MicroplantesContent {
   };
 }
 
+export interface GroupActivity {
+  title: string;
+  detail: string;
+  externalUrl?: string;
+}
+
+export interface GroupRecognition {
+  name: string;
+  detail: string;
+}
+
+export interface GroupContent {
+  hero: {
+    eyebrow: string;
+    title: string;
+    body: string;
+  };
+  activitiesHeading: string;
+  activities: GroupActivity[];
+  recognitionHeading: string;
+  recognitions: GroupRecognition[];
+  contactCTA: {
+    title: string;
+    description: string;
+    ctaLabel: string;
+  };
+}
+
 export interface SiteContent {
   // Header
   header: {
@@ -366,6 +394,7 @@ export interface SiteContent {
   home: HomeContent;
   hydrobio: HydrobioContent;
   microplantes: MicroplantesContent;
+  group: GroupContent;
 
   // Find Your Solution Section
   findSolution: {
