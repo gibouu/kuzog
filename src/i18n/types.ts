@@ -34,7 +34,7 @@ export interface RecognitionItem {
 
 export interface RecognitionContent {
   eyebrow: string;
-  title: string;
+  title?: string;
   items: RecognitionItem[];
 }
 
@@ -208,7 +208,6 @@ export interface MicroplantesContent {
     body: string;
     pillars: Array<{ value: string; title: string; detail: string }>;
   };
-  recognition: RecognitionContent;
   contactCTA: {
     title: string;
     description: string;
