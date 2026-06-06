@@ -59,45 +59,10 @@ export interface HydrobioSolutionComponent {
   bullets: string[];
 }
 
-export interface HydrobioMarketCard {
-  eyebrow: string;
-  value: string;
-  label: string;
-  caption: string;
-  source?: string;
-}
-
-export interface HydrobioTamSamSom {
-  tamValue: string;
-  tamLabel: string;
-  tamCaption: string;
-  tamSource?: string;
-  samValue: string;
-  samLabel: string;
-  samCaption: string;
-  samSource?: string;
-  somValue: string;
-  somLabel: string;
-  somCaption: string;
-  somSource?: string;
-}
-
 export interface HydrobioRoadmapStep {
   phase: string;
   label: string;
   detail?: string;
-}
-
-export interface HydrobioPricingTier {
-  label: string;
-  price: string;
-  margin: string;
-}
-
-export interface HydrobioDeploymentStep {
-  number: number;
-  title: string;
-  detail: string;
 }
 
 export interface HydrobioTeamMember {
@@ -129,10 +94,8 @@ export interface HydrobioContent {
   problem: {
     eyebrow: string;
     title: string;
+    body: string;
     stats: HydrobioProblemStat[];
-    quote: string;
-    quoteSource: string;
-    framingLine: string;
   };
   solution: {
     eyebrow: string;
@@ -140,43 +103,11 @@ export interface HydrobioContent {
     components: HydrobioSolutionComponent[];
     synergyLine: string;
   };
-  competitiveEdge: {
-    eyebrow: string;
-    title: string;
-    columns: string[];
-    rows: { criterion: string; values: string[] }[];
-    caption: string;
-  };
-  market: {
-    eyebrow: string;
-    title: string;
-    cards: HydrobioMarketCard[];
-    tamSamSom: HydrobioTamSamSom;
-  };
   results: {
     eyebrow: string;
     title: string;
     stats: HydrobioImpactStat[];
     footnote: string;
-    roadmapHeading: string;
-    roadmapSteps: HydrobioRoadmapStep[];
-  };
-  businessModel: {
-    eyebrow: string;
-    title: string;
-    pricingHeading: string;
-    pricing: HydrobioPricingTier[];
-    pricingFootnote: string;
-    trajectoryHeading: string;
-    trajectoryLine: string;
-    distributionHeading: string;
-    distribution: { share: string; label: string }[];
-  };
-  gtm: {
-    eyebrow: string;
-    title: string;
-    steps: HydrobioDeploymentStep[];
-    priorityLine: string;
     roadmapHeading: string;
     roadmapSteps: HydrobioRoadmapStep[];
   };
@@ -187,22 +118,13 @@ export interface HydrobioContent {
     ipHeading: string;
     ipCards: HydrobioIpCard[];
   };
-  systemicImpact: {
+  impact: {
     eyebrow: string;
     title: string;
     stats: HydrobioImpactStat[];
     sdgValue: string;
     sdgLabel: string;
     sdgCaption: string;
-  };
-  smallholder: {
-    eyebrow: string;
-    title: string;
-    intro: string;
-    introSource: string;
-    body: string;
-    stats: HydrobioImpactStat[];
-    closing: string;
   };
   contactCTA: {
     title: string;
