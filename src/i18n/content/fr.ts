@@ -216,6 +216,16 @@ export const fr: SiteContent = {
         { title: 'R&D conjointe', detail: 'Pipeline d\'espèces partagé avec protocoles d\'acclimatation co-développés et synergies à l\'export.' },
       ],
     },
+    sustainability: {
+      eyebrow: 'Pourquoi cela compte',
+      title: 'Pourquoi produire les plants en France.',
+      body: 'La micropropagation industrielle en France n\'est pas seulement une affaire commerciale — c\'est une affaire stratégique. Produire ici, c\'est moins dépendre d\'une poignée de fournisseurs étrangers, moins d\'émissions de fret sur le corridor européen, et moins de risque d\'importer le prochain pathogène végétal.',
+      pillars: [
+        { value: 'Souveraineté', title: 'Réduire la dépendance aux importations', detail: 'La France importe aujourd\'hui 60 % de ses jeunes plants. Une production nationale réduit l\'exposition aux chocs d\'approvisionnement étrangers et protège la base horticole française.' },
+        { value: '−CO₂', title: 'Réduire les émissions de fret', detail: 'Les plants produits à Boissy-l\'Aillerie parcourent des centaines de kilomètres, pas des milliers. Moins de transport routier réfrigéré, donc une empreinte carbone par plant nettement plus faible.' },
+        { value: 'Sanitaire', title: 'Diminuer le risque biosécuritaire', detail: 'Chaque lot importé est un vecteur potentiel de nouveaux ravageurs et virus. Une production in vitro en ISO 5 fournit aux acheteurs un matériel certifié sain à la source.' },
+      ],
+    },
     contactCTA: {
       title: 'Parlons de Microplantes.',
       description: 'Partenariats site, questions techniques, demandes commerciales — nous répondons sous deux jours ouvrés.',

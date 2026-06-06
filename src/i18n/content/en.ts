@@ -215,6 +215,16 @@ export const en: SiteContent = {
         { title: 'Joint R&D', detail: 'Shared species pipeline with co-developed acclimation protocols and export-market synergies.' },
       ],
     },
+    sustainability: {
+      eyebrow: 'Why this matters',
+      title: 'The case for producing plants in France.',
+      body: 'Industrial micropropagation in France isn\'t just a commercial story — it\'s a strategic one. Producing here means less dependency on a handful of foreign suppliers, less freight emissions across the EU corridor, and less risk of importing the next plant pathogen.',
+      pillars: [
+        { value: 'Sovereignty', title: 'Reducing import dependency', detail: 'France currently imports 60% of its young plants. Domestic production reduces exposure to foreign supply shocks and protects the national horticultural base.' },
+        { value: '−CO₂', title: 'Cutting freight emissions', detail: 'Plants produced in Boissy-l\'Aillerie ship hundreds of kilometres, not thousands. Less refrigerated road transport means a materially smaller carbon footprint per plant.' },
+        { value: 'Sanitary', title: 'Lowering biosecurity risk', detail: 'Every imported batch of young plants is a vector for new pests and viruses. Producing in-vitro under ISO 5 conditions gives buyers certified-clean material at the source.' },
+      ],
+    },
     contactCTA: {
       title: 'Talk to us about Microplantes.',
       description: 'Site partnerships, technical questions, commercial enquiries — we reply within two business days.',

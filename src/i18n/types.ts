@@ -185,6 +185,12 @@ export interface MicroplantesContent {
     title: string;
     pillars: MicroplantesPartnershipPillar[];
   };
+  sustainability: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    pillars: Array<{ value: string; title: string; detail: string }>;
+  };
   contactCTA: {
     title: string;
     description: string;
