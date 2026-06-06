@@ -21,7 +21,7 @@ export const en: SiteContent = {
         accent: 'microplantes',
       },
       group: {
-        name: 'Group',
+        name: 'The Group',
         slogan: 'Investments, commissioning, industrial advisory.',
         cta: 'Explore',
         accent: 'group',
@@ -131,6 +131,8 @@ export const en: SiteContent = {
       title: 'Third-party signals.',
       items: [
         { kind: 'award', source: 'Rotary Club of Paris', date: '2026', detail: 'Hydrobio named Startup of the Year — recognising the formulation\'s technical novelty and impact potential.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG (Hydrobio\'s parent) — laureate of the 2025 Open Carca entrepreneurial competition.' },
+        { kind: 'incubation', source: 'AgroParisTech — FarmInnLab', detail: 'Hydrobio\'s semi-industrial pilot programme hosted at the AgroParisTech FarmInnLab incubator.' },
         { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (Hydrobio\'s parent) incubated at the Paris&Co innovation ecosystem.' },
         { kind: 'grant', source: 'City of Paris', detail: 'KUZOG awarded a €30,000 industrial-innovation grant from the Ville de Paris.' },
       ],
@@ -236,15 +238,6 @@ export const en: SiteContent = {
         { value: 'Sanitary', title: 'Lowering biosecurity risk', detail: 'Every imported batch of young plants is a vector for new pests and viruses. Producing in-vitro under ISO 5 conditions gives buyers certified-clean material at the source.' },
       ],
     },
-    recognition: {
-      eyebrow: 'News & recognition',
-      title: 'Backed by KUZOG France.',
-      items: [
-        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (Microplantes\' parent) incubated at the Paris&Co innovation ecosystem.' },
-        { kind: 'grant', source: 'City of Paris', detail: 'KUZOG awarded a €30,000 industrial-innovation grant from the Ville de Paris.' },
-        { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG laureate of the 2025 Open Carca entrepreneurial competition.' },
-      ],
-    },
     contactCTA: {
       title: 'Talk to us about Microplantes.',
       description: 'Site partnerships, technical questions, commercial enquiries — we reply within two business days.',
@@ -293,8 +286,8 @@ export const en: SiteContent = {
     hero: {
       eyebrow: 'Our other activities',
       title: 'What else we do from Paris.',
-      body: 'Beyond the two flagship operations, KUZOG runs a portfolio of industrial, capital, and advisory ventures. Paris-incubated, City-of-Paris backed, and laureate of the 2025 Open Carca entrepreneurial competition.',
-      origin: 'Founded in 2024 by two brothers — a nanotech engineer and a Wharton-trained operator — to build industrial ventures where engineering, capital, and Paris meet.',
+      body: 'Beyond the two flagship operations, KUZOG runs a portfolio of industrial, capital, and advisory ventures.',
+      origin: 'Founded in 2024 by a father-son duo — a nanotech engineer and a Wharton-trained operator — to build industrial ventures where engineering, capital, and Paris meet.',
     },
     activitiesHeading: 'What we do',
     activities: [
@@ -339,7 +332,6 @@ export const en: SiteContent = {
     ],
     recognition: {
       eyebrow: 'Recognition',
-      title: 'Third-party signals.',
       items: [
         { kind: 'incubation', source: 'Paris&Co', detail: 'Incubated at the Paris&Co innovation ecosystem — the leading innovation hub in Paris.' },
         { kind: 'grant', source: 'City of Paris', detail: '€30,000 industrial-innovation grant from the Ville de Paris.' },

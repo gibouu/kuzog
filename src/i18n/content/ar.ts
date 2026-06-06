@@ -109,6 +109,8 @@ export const ar: SiteContent = {
       title: 'إشارات من أطراف ثالثة.',
       items: [
         { kind: 'award', source: 'نادي روتاري باريس', date: '2026', detail: 'تم اختيار Hydrobio شركة ناشئة للعام — تقدير للابتكار التقني وإمكانات التأثير.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG (الشركة الأم لـ Hydrobio) — حاصلة على جائزة مسابقة Open Carca 2025.' },
+        { kind: 'incubation', source: 'AgroParisTech — FarmInnLab', detail: 'برنامج Hydrobio التجريبي شبه الصناعي مستضاف في حاضنة AgroParisTech FarmInnLab.' },
         { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (الشركة الأم لـ Hydrobio) مُحتضنة في نظام Paris&Co للابتكار.' },
         { kind: 'grant', source: 'مدينة باريس', detail: 'حصلت KUZOG على منحة بقيمة 30,000 € من مدينة باريس للابتكار الصناعي.' },
       ],
@@ -240,15 +242,6 @@ export const ar: SiteContent = {
         { value: 'الأمان البيولوجي', title: 'تقليل المخاطر الصحية', detail: 'كل دفعة مستوردة هي ناقل محتمل لآفات وفيروسات جديدة. الإنتاج في المختبر تحت ظروف ISO 5 يمنح المشترين مادة معتمدة نظيفة من المصدر.' },
       ],
     },
-    recognition: {
-      eyebrow: 'الأخبار والاعتراف',
-      title: 'مدعومة من KUZOG France.',
-      items: [
-        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (الشركة الأم لـ Microplantes) مُحتضنة في نظام Paris&Co للابتكار.' },
-        { kind: 'grant', source: 'مدينة باريس', detail: 'حصلت KUZOG على منحة بقيمة 30,000 € من مدينة باريس.' },
-        { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG حاصلة على جائزة مسابقة Open Carca 2025.' },
-      ],
-    },
     contactCTA: {
       title: 'تحدّث معنا عن Microplantes.',
       description: 'شراكات الموقع، أسئلة تقنية، استفسارات تجارية — نرد خلال يومَي عمل.',
@@ -259,8 +252,8 @@ export const ar: SiteContent = {
     hero: {
       eyebrow: 'أنشطتنا الأخرى',
       title: 'ما الذي نفعله أيضًا من باريس.',
-      body: 'إلى جانب عملياتنا الرائدتين، تدير KUZOG محفظة من المشاريع الصناعية والاستثمارية والاستشارية. مُحتضنة في باريس، مدعومة من مدينة باريس، وحاصلة على جائزة Open Carca 2025.',
-      origin: 'تأسست عام 2024 على يد شقيقين — مهندس نانوتكنولوجيا ومشغّل تخرَّج من Wharton — لبناء مشاريع صناعية عند تقاطع الهندسة ورأس المال وباريس.',
+      body: 'إلى جانب عملياتنا الرائدتين، تدير KUZOG محفظة من المشاريع الصناعية والاستثمارية والاستشارية.',
+      origin: 'تأسست عام 2024 على يد ثنائي من أب وابن — مهندس نانوتكنولوجيا ومشغّل تخرَّج من Wharton — لبناء مشاريع صناعية عند تقاطع الهندسة ورأس المال وباريس.',
     },
     activitiesHeading: 'ما نقوم به',
     activities: [
@@ -278,7 +271,6 @@ export const ar: SiteContent = {
     ],
     recognition: {
       eyebrow: 'الاعتراف',
-      title: 'إشارات من أطراف ثالثة.',
       items: [
         { kind: 'incubation', source: 'Paris&Co', detail: 'مُحتضنة في نظام Paris&Co للابتكار — أبرز مركز ابتكار في باريس.' },
         { kind: 'grant', source: 'مدينة باريس', detail: 'منحة بقيمة 30,000 € من مدينة باريس للابتكار الصناعي.' },
