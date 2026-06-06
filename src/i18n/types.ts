@@ -73,6 +73,8 @@ export interface HydrobioContent {
     title: string;
     tagline: string;
     recognition?: string;
+    pilotCta: string;
+    scienceCta: string;
     leadStats: HydrobioLeadStat[];
   };
   problem: {

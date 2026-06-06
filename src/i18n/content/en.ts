@@ -35,6 +35,8 @@ export const en: SiteContent = {
       title: 'Restoring Soil Life. Saving Water. Feeding the World.',
       tagline: 'Hydrobio is a hybrid mineral-biological soil amendment — clay, zeolite, and mycorrhizal fungi working together to restore degraded soils with a single application.',
       recognition: 'Rotary Club of Paris — 2026 Startup of the Year',
+      pilotCta: 'Request pilot information',
+      scienceCta: 'Read the science',
       leadStats: [
         { value: '+47%', label: 'Water retention on sandy soils' },
         { value: '+18.7%', label: 'Crop yield vs. untreated control' },

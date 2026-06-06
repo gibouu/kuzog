@@ -35,6 +35,8 @@ export const fr: SiteContent = {
       title: 'Restaurer la vie du sol. Économiser l\'eau. Nourrir le monde.',
       tagline: 'Hydrobio est un amendement de sol hybride minéral-biologique — argile, zéolite et champignons mycorhiziens qui travaillent ensemble pour restaurer les sols dégradés en une seule application.',
       recognition: 'Rotary Club de Paris — Startup de l\'année 2026',
+      pilotCta: 'Demander un site pilote',
+      scienceCta: 'Lire la science',
       leadStats: [
         { value: '+47%', label: 'Rétention d\'eau sur sols sableux' },
         { value: '+18,7%', label: 'Rendement vs. témoin non traité' },
