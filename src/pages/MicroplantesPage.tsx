@@ -82,7 +82,7 @@ export default function MicroplantesPage() {
             </div>
             <Citation text={m.method.densityFootnote} />
           </div>
-          <DiagramSlot id="D-3" title="Density comparison" prompt="Minimalist horizontal bar chart comparing 5 propagation methods by plants/m²/yr (Microplantes 19,000 dominant in fresh green; intensive greenhouse 100; strawberry stolons 50; raspberry drageons 30; tree grafting 5). White background, editorial Apple aesthetic." />
+          <DiagramSlot id="D-3" title="Density comparison" prompt="Minimalist horizontal bar chart comparing 5 propagation methods by plants/m²/yr (Microplantes 19,000 dominant in fresh green; intensive greenhouse 100; strawberry stolons 50; raspberry drageons 30; tree grafting 5). White background, editorial Apple aesthetic." src="/diagrams/D3.png" />
         </StoryBeat>
 
         {/* Catalogue */}
