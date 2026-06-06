@@ -301,9 +301,9 @@ User can replace any of these with custom artwork — the `DiagramSlot` componen
 
 Audit summary (full report in conversation log; will be filed as issue #2):
 
-**Critical fixes (file as Issue #2, separate branch):**
+**Fixes (file as Issue #2, separate branch):**
 
-1. **Rotate the leaked Web3Forms key** — `src/lib/contact.ts:9` ships `f2ce33a4-b6ff-430d-8df0-83d86a51c7f5` in the public bundle. Rotate it, restrict to `kuzog.com` in Web3Forms settings, and add hCaptcha + honeypot to `ContactModal`.
+1. **Add anti-abuse to the contact form.** The Web3Forms access key at `src/lib/contact.ts:9` is **public by design** (Web3Forms calls it a Form ID, comparable to a Stripe publishable key) — no rotation needed. But the form has no rate-limiting, captcha, or honeypot, so the key can be replayed off-domain to spam your inbox or burn your submission quota. Mitigations: (a) set "Allowed Domains" in the Web3Forms project to `kuzog.com` / `www.kuzog.com`, (b) add hCaptcha (Web3Forms supports it natively via `h-captcha-response`), (c) add a hidden honeypot input.
 2. **Add meta-tag CSP** to `index.html` (GitHub Pages can't set HTTP headers). Move the inline SPA-redirect script at `index.html:35-49` to an external file first.
 3. **Add `X-Content-Type-Options`, `Referrer-Policy` meta tags.**
 4. **Delete `api/contact.ts`** — dead code on GitHub Pages, but a live endpoint with vulnerabilities if/when migrated.
