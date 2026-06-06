@@ -6,6 +6,7 @@ import { StatGrid } from '../components/StatGrid';
 import { Citation } from '../components/Citation';
 import { ContactCTA } from '../components/ContactCTA';
 import { DiagramSlot } from '../components/DiagramSlot';
+import { RecognitionBeat } from '../components/RecognitionBeat';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -156,6 +157,9 @@ export default function MicroplantesPage() {
             ))}
           </div>
         </StoryBeat>
+
+        {/* News & recognition */}
+        <RecognitionBeat content={m.recognition} accent="microplantes" />
 
         {/* Contact CTA */}
         <StoryBeat id="contact">

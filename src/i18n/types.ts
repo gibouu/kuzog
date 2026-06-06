@@ -24,6 +24,20 @@ export interface HomeContent {
   };
 }
 
+export interface RecognitionItem {
+  kind: 'award' | 'press' | 'grant' | 'partnership' | 'incubation';
+  source: string;
+  date?: string;
+  detail: string;
+  href?: string;
+}
+
+export interface RecognitionContent {
+  eyebrow: string;
+  title: string;
+  items: RecognitionItem[];
+}
+
 export interface HydrobioLeadStat {
   value: string;
   label: string;
@@ -112,6 +126,7 @@ export interface HydrobioContent {
     sdgLabel: string;
     sdgCaption: string;
   };
+  recognition: RecognitionContent;
   contactCTA: {
     title: string;
     description: string;
@@ -193,6 +208,7 @@ export interface MicroplantesContent {
     body: string;
     pillars: Array<{ value: string; title: string; detail: string }>;
   };
+  recognition: RecognitionContent;
   contactCTA: {
     title: string;
     description: string;
@@ -204,11 +220,6 @@ export interface GroupActivity {
   title: string;
   detail: string;
   externalUrl?: string;
-}
-
-export interface GroupRecognition {
-  name: string;
-  detail: string;
 }
 
 export interface GroupFounder {
@@ -228,8 +239,7 @@ export interface GroupContent {
   activities: GroupActivity[];
   foundersHeading: string;  // NEW
   founders: GroupFounder[];  // NEW
-  recognitionHeading: string;
-  recognitions: GroupRecognition[];
+  recognition: RecognitionContent;
   contactCTA: {
     title: string;
     description: string;

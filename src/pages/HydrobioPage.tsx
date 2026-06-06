@@ -9,6 +9,7 @@ import { Roadmap } from '../components/Roadmap';
 import { TeamMember } from '../components/TeamMember';
 import { ContactCTA } from '../components/ContactCTA';
 import { DiagramSlot } from '../components/DiagramSlot';
+import { RecognitionBeat } from '../components/RecognitionBeat';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -139,6 +140,9 @@ export default function HydrobioPage() {
             <BigStat value={h.impact.sdgValue} label={h.impact.sdgLabel} caption={h.impact.sdgCaption} />
           </StatGrid>
         </StoryBeat>
+
+        {/* News & recognition */}
+        <RecognitionBeat content={h.recognition} accent="hydrobio" />
 
         {/* Contact CTA */}
         <StoryBeat id="contact">

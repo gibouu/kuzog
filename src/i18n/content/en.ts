@@ -126,6 +126,15 @@ export const en: SiteContent = {
       sdgLabel: '2 · 6 · 13 · 15',
       sdgCaption: 'Zero Hunger · Clean Water · Climate Action · Life on Land',
     },
+    recognition: {
+      eyebrow: 'News & recognition',
+      title: 'Third-party signals.',
+      items: [
+        { kind: 'award', source: 'Rotary Club of Paris', date: '2026', detail: 'Hydrobio named Startup of the Year — recognising the formulation\'s technical novelty and impact potential.' },
+        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (Hydrobio\'s parent) incubated at the Paris&Co innovation ecosystem.' },
+        { kind: 'grant', source: 'City of Paris', detail: 'KUZOG awarded a €30,000 industrial-innovation grant from the Ville de Paris.' },
+      ],
+    },
     contactCTA: {
       title: 'Talk to us about Hydrobio.',
       description: 'Pilot site enquiries, partnership conversations, science questions — we reply within two business days.',
@@ -227,6 +236,15 @@ export const en: SiteContent = {
         { value: 'Sanitary', title: 'Lowering biosecurity risk', detail: 'Every imported batch of young plants is a vector for new pests and viruses. Producing in-vitro under ISO 5 conditions gives buyers certified-clean material at the source.' },
       ],
     },
+    recognition: {
+      eyebrow: 'News & recognition',
+      title: 'Backed by KUZOG France.',
+      items: [
+        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (Microplantes\' parent) incubated at the Paris&Co innovation ecosystem.' },
+        { kind: 'grant', source: 'City of Paris', detail: 'KUZOG awarded a €30,000 industrial-innovation grant from the Ville de Paris.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG laureate of the 2025 Open Carca entrepreneurial competition.' },
+      ],
+    },
     contactCTA: {
       title: 'Talk to us about Microplantes.',
       description: 'Site partnerships, technical questions, commercial enquiries — we reply within two business days.',
@@ -319,12 +337,16 @@ export const en: SiteContent = {
         bio: 'Wharton (UPenn) MBA + MSc Computer Science. 15 years leading large international industrial and financial programs.',
       },
     ],
-    recognitionHeading: 'Recognition',
-    recognitions: [
-      { name: 'Paris&Co', detail: 'Incubated at the Paris&Co innovation ecosystem.' },
-      { name: 'City of Paris', detail: '€30,000 grant from the Ville de Paris for industrial innovation.' },
-      { name: 'Open Carca 2025', detail: 'Laureate of the 2025 entrepreneurial competition.' },
-    ],
+    recognition: {
+      eyebrow: 'Recognition',
+      title: 'Third-party signals.',
+      items: [
+        { kind: 'incubation', source: 'Paris&Co', detail: 'Incubated at the Paris&Co innovation ecosystem — the leading innovation hub in Paris.' },
+        { kind: 'grant', source: 'City of Paris', detail: '€30,000 industrial-innovation grant from the Ville de Paris.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'Laureate of the 2025 entrepreneurial competition.' },
+        { kind: 'award', source: 'Rotary Club of Paris', date: '2026', detail: 'Hydrobio (KUZOG\'s flagship) — Startup of the Year.' },
+      ],
+    },
     contactCTA: {
       title: 'Talk to KUZOG.',
       description: 'Investment enquiries, partnership conversations, advisory mandates — we reply within two business days.',

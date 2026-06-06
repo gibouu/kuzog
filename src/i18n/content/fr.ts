@@ -126,6 +126,15 @@ export const fr: SiteContent = {
       sdgLabel: '2 · 6 · 13 · 15',
       sdgCaption: 'Faim zéro · Eau propre · Action climatique · Vie terrestre',
     },
+    recognition: {
+      eyebrow: 'Actualités & reconnaissances',
+      title: 'Signaux tiers.',
+      items: [
+        { kind: 'award', source: 'Rotary Club de Paris', date: '2026', detail: 'Hydrobio désignée Startup de l\'année — reconnaissance de la nouveauté technique et du potentiel d\'impact de la formulation.' },
+        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (la maison-mère d\'Hydrobio) incubée à l\'écosystème d\'innovation Paris&Co.' },
+        { kind: 'grant', source: 'Ville de Paris', detail: 'KUZOG bénéficie d\'une subvention de 30 000 € de la Ville de Paris pour l\'innovation industrielle.' },
+      ],
+    },
     contactCTA: {
       title: 'Parlons d\'Hydrobio.',
       description: 'Demandes de sites pilotes, conversations de partenariat, questions scientifiques — nous répondons sous deux jours ouvrés.',
@@ -228,6 +237,15 @@ export const fr: SiteContent = {
         { value: 'Sanitaire', title: 'Diminuer le risque biosécuritaire', detail: 'Chaque lot importé est un vecteur potentiel de nouveaux ravageurs et virus. Une production in vitro en ISO 5 fournit aux acheteurs un matériel certifié sain à la source.' },
       ],
     },
+    recognition: {
+      eyebrow: 'Actualités & reconnaissances',
+      title: 'Soutenu par KUZOG France.',
+      items: [
+        { kind: 'incubation', source: 'Paris&Co', detail: 'KUZOG (la maison-mère de Microplantes) incubée à l\'écosystème d\'innovation Paris&Co.' },
+        { kind: 'grant', source: 'Ville de Paris', detail: 'KUZOG bénéficie d\'une subvention de 30 000 € de la Ville de Paris.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG lauréate du concours entrepreneurial Open Carca 2025.' },
+      ],
+    },
     contactCTA: {
       title: 'Parlons de Microplantes.',
       description: 'Partenariats site, questions techniques, demandes commerciales — nous répondons sous deux jours ouvrés.',
@@ -312,12 +330,16 @@ export const fr: SiteContent = {
       { name: 'Gibril-Gabriel Bachouchi', role: 'Président', bio: 'Ingénieur en nanotechnologie (Université de Waterloo). Expert en salles blanches et protocoles de contamination.' },
       { name: 'Malik Bachouchi', role: 'Directeur', bio: 'MBA Wharton (UPenn) + MSc Informatique. 15 ans à diriger de grands programmes industriels et financiers internationaux.' },
     ],
-    recognitionHeading: 'Reconnaissances',
-    recognitions: [
-      { name: 'Paris&Co', detail: 'Incubée dans l\'écosystème d\'innovation Paris&Co.' },
-      { name: 'Ville de Paris', detail: 'Subvention de 30 000 € de la Ville de Paris pour l\'innovation industrielle.' },
-      { name: 'Open Carca 2025', detail: 'Lauréate du concours entrepreneurial 2025.' },
-    ],
+    recognition: {
+      eyebrow: 'Reconnaissances',
+      title: 'Signaux tiers.',
+      items: [
+        { kind: 'incubation', source: 'Paris&Co', detail: 'Incubée à l\'écosystème d\'innovation Paris&Co — le principal hub d\'innovation de la capitale.' },
+        { kind: 'grant', source: 'Ville de Paris', detail: 'Subvention de 30 000 € de la Ville de Paris pour l\'innovation industrielle.' },
+        { kind: 'award', source: 'Open Carca 2025', detail: 'Lauréate du concours entrepreneurial 2025.' },
+        { kind: 'award', source: 'Rotary Club de Paris', date: '2026', detail: 'Hydrobio (le projet phare de KUZOG) — Startup de l\'année.' },
+      ],
+    },
     contactCTA: {
       title: 'Parlons.',
       description: 'Demandes d\'investissement, conversations de partenariat, missions de conseil — nous répondons sous deux jours ouvrés.',
