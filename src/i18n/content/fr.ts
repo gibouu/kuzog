@@ -267,6 +267,7 @@ export const fr: SiteContent = {
     emailButton: 'Nous envoyer un e-mail',
     errorRequired: 'Veuillez remplir tous les champs avant d\'envoyer.',
     errorEmail: 'Entrez une adresse e-mail valide.',
+    errorCaptcha: 'Veuillez compléter le captcha avant d\'envoyer.',
     errorSubmit: 'Nous n\'avons pas pu envoyer votre message. Veuillez réessayer.',
     successMessage: 'Message envoyé. Nous répondrons sous peu.',
   },

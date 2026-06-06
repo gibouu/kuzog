@@ -5,6 +5,7 @@ type ContactPayload = {
   timestamp: string;
   topic?: string;
   botcheck?: string;
+  hCaptchaResponse?: string;
 };
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
@@ -27,6 +28,10 @@ export async function submitContact(payload: ContactPayload): Promise<void> {
 
   if (payload.botcheck) {
     body['botcheck'] = payload.botcheck;
+  }
+
+  if (payload.hCaptchaResponse) {
+    body['h-captcha-response'] = payload.hCaptchaResponse;
   }
 
   const response = await fetch(WEB3FORMS_ENDPOINT, {

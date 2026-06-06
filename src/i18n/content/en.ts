@@ -266,6 +266,7 @@ export const en: SiteContent = {
     emailButton: 'Email us',
     errorRequired: 'Please complete every field before sending.',
     errorEmail: 'Enter a valid email address.',
+    errorCaptcha: 'Please complete the captcha before submitting.',
     errorSubmit: 'We could not send your message. Please try again.',
     successMessage: 'Message sent. We will respond shortly.',
   },

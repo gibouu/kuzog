@@ -145,6 +145,7 @@ export const ar: SiteContent = {
     emailButton: 'راسلنا',
     errorRequired: 'يرجى إكمال كل حقل قبل الإرسال.',
     errorEmail: 'أدخل عنوان بريد إلكتروني صالح.',
+    errorCaptcha: 'يرجى إكمال captcha قبل الإرسال.',
     errorSubmit: 'لم نتمكن من إرسال رسالتك. يرجى المحاولة مرة أخرى.',
     successMessage: 'تم إرسال الرسالة. سنرد قريباً.',
   },

@@ -274,6 +274,7 @@ export interface SiteContent {
     emailButton: string;
     errorRequired: string;
     errorEmail: string;
+    errorCaptcha: string;
     errorSubmit: string;
     successMessage: string;
   };
