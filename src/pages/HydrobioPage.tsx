@@ -30,6 +30,12 @@ export default function HydrobioPage() {
       <ProductPageShell accent="hydrobio">
         {/* Hero */}
         <StoryBeat id="hero" eyebrow={h.hero.eyebrow} title={h.hero.title} accent="hydrobio">
+          {h.hero.recognition && (
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent-hydrobio bg-surface px-4 py-1.5 text-xs font-medium uppercase tracking-[0.12em] text-ink">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-hydrobio" aria-hidden />
+              {h.hero.recognition}
+            </div>
+          )}
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{h.hero.tagline}</p>
           <StatGrid columns={3}>
             {h.hero.leadStats.map((stat) => (

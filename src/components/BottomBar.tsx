@@ -21,8 +21,8 @@ function Item({ item, isActive }: { item: BottomBarItem; isActive: boolean }) {
   const className = clsx(
     'flex h-11 min-w-[44px] items-center justify-center rounded-full px-2 text-xs font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:min-w-[60px] sm:px-2.5 md:h-13 md:min-w-[74px] md:px-3.5 md:text-sm',
     isActive
-      ? 'bg-brand/80 text-brand-ink shadow-[0_12px_30px_rgba(31,41,51,0.22)]'
-      : 'text-muted-ink bg-white/30 hover:bg-white/45'
+      ? 'bg-brand text-brand-ink shadow-[0_12px_30px_rgba(31,41,51,0.22)]'
+      : 'text-ink bg-surface hover:bg-surface-elevated'
   );
 
   const commonProps = {
@@ -75,7 +75,7 @@ export function BottomBar({ items, activeKey }: BottomBarProps) {
   return (
     <div className="fixed left-1/2 bottom-4 z-50 w-full -translate-x-1/2 px-4 md:bottom-6">
       <div className="flex justify-center">
-        <nav className="inline-flex items-center rounded-[28px] border border-white/30 bg-white/18 px-2 py-1.5 shadow-[0_24px_60px_rgba(31,41,51,0.18)] backdrop-blur-3xl">
+        <nav className="inline-flex items-center rounded-[28px] border border-hairline bg-surface px-2 py-1.5 shadow-card">
           <ul className="flex items-center gap-1 md:gap-1.5">
             {items.map((item) => (
               <li key={item.key} className="flex-shrink-0">

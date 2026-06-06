@@ -22,7 +22,6 @@ export interface HomeContent {
     microplantes: HomeCardContent;
     group: HomeCardContent;
   };
-  mission: string;
 }
 
 export interface HydrobioLeadStat {
@@ -73,6 +72,7 @@ export interface HydrobioContent {
     eyebrow: string;
     title: string;
     tagline: string;
+    recognition?: string;
     leadStats: HydrobioLeadStat[];
   };
   problem: {

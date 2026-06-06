@@ -22,12 +22,11 @@ export const en: SiteContent = {
       },
       group: {
         name: 'KUZOG France',
-        slogan: 'The Paris-based holding behind Hydrobio, Microplantes, and a portfolio of industrial ventures.',
+        slogan: 'A Paris-based holding building industrial ventures at the intersection of soil, plants, and capital.',
         cta: 'About us',
         accent: 'group',
       },
     },
-    mission: 'KUZOG builds and operates ventures at the intersection of soil, plants, and capital — from Paris.',
   },
 
   hydrobio: {
@@ -35,6 +34,7 @@ export const en: SiteContent = {
       eyebrow: 'Soil Innovation',
       title: 'Restoring Soil Life. Saving Water. Feeding the World.',
       tagline: 'Hydrobio is a hybrid mineral-biological soil amendment — clay, zeolite, and mycorrhizal fungi working together to restore degraded soils with a single application.',
+      recognition: 'Rotary Club of Paris — 2026 Startup of the Year',
       leadStats: [
         { value: '+47%', label: 'Water retention on sandy soils' },
         { value: '+18.7%', label: 'Crop yield vs. untreated control' },

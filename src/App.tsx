@@ -9,7 +9,6 @@ import { PolicyModal } from './components/PolicyModal';
 import { Toast } from './components/Toast';
 import { SiteFooter } from './components/SiteFooter';
 import { HomeHero } from './components/HomeHero';
-import { MissionLine } from './components/MissionLine';
 
 export default function App() {
   const { content } = useLanguage();
@@ -67,7 +66,6 @@ export default function App() {
 
       <main className="mt-12 flex-1 space-y-16 md:space-y-24">
         <HomeHero />
-        <MissionLine />
       </main>
 
       <SiteFooter onShowPolicy={() => setIsPolicyOpen(true)} />
