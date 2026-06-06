@@ -327,9 +327,9 @@ Audit summary (full report in conversation log; will be filed as issue #2):
 
 ## 15. Risks & open questions
 
-1. **Roadmap discrepancy EN vs FR Hydrobio deck.** EN slide 8 has *Q2 2026 → Pre-Industrialization, Q4 → Validation*. FR slide 8 has them swapped. User to confirm canonical order before populating i18n.
-2. **Validation milestones differ** between EN and FR decks (FR mentions FarmInnLab + Occitanie; EN doesn't). Assume FR is newer; user to confirm.
-3. **Contact email** — EN deck shows `contact@kuzog.com`; FR deck shows `management@kuzog.com`. Spec defaults to `contact@`. User to confirm.
+1. **Roadmap discrepancy EN vs FR Hydrobio deck.** EN slide 8 has *Q2 2026 → Pre-Industrialization, Q4 → Validation*. FR slide 8 has them swapped. ~~User to confirm canonical order before populating i18n.~~ **Resolved 2026-06-06: FR is canonical — Validation → Pré-industrialisation → Lancement commercial.**
+2. **Validation milestones differ** between EN and FR decks (FR mentions FarmInnLab + Occitanie; EN doesn't). ~~Assume FR is newer; user to confirm.~~ **Resolved 2026-06-06: FR canonical — FarmInnLab semi-industrial pilots, Occitanie field trials Q2 2027, EU homologation 2028.**
+3. **Contact email** — EN deck shows `contact@kuzog.com`; FR deck shows `management@kuzog.com`. ~~Spec defaults to `contact@`. User to confirm.~~ **Resolved 2026-06-06: site-wide use of `management@kuzog.com`. The codebase already uses it (ContactModal mailto, SiteFooter, JSON-LD).**
 4. **AR translations not yet produced.** User to supply or commission.
 5. **RTL layout** of horizontal `Roadmap` and `ComparisonTable` components — needs test coverage.
 6. **Diagram availability** — pages will look incomplete until user generates assets from the prompts in § 12.

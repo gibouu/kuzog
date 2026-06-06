@@ -41,6 +41,6 @@
 **Open content questions** (Plan 4 may need to resolve before AR translations):
 - EN/FR roadmap order discrepancy (spec § 15 risk #1) — defaulting to FR's order in this plan
 - Validation milestones differ — defaulting to FR (more specific)
-- Contact email — using `contact@kuzog.com` site-wide
+- Contact email — **resolved 2026-06-06**: site-wide use of `management@kuzog.com` (was a placeholder `contact@` during planning)
 
 — Claude + gib
