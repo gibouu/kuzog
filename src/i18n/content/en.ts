@@ -170,6 +170,32 @@ export const en: SiteContent = {
       ],
       densityFootnote: 'For the same 7M plants/yr target volume. Sources: CTIFL Balandran, GRAB, Plants-de-fraises.fr.',
     },
+    catalogue: {
+      eyebrow: 'What we produce',
+      title: 'A multi-species platform from day one.',
+      body: 'Our manufacturing capacity is built to handle hundreds of species. The launch catalogue prioritises high-demand French and EU professional markets, with new species added every quarter based on commercial pull.',
+      categories: [
+        {
+          name: 'Ornamentals',
+          species: ['Geraniums', 'Dipladenias', 'Cyclamens', 'Chrysanthemums', 'Orchids', 'Begonias', 'Pansies', 'Impatiens', 'Petunias'],
+        },
+        {
+          name: 'Soft fruits & vegetables',
+          species: ['Strawberry', 'Raspberry', 'Blueberry', 'Blackberry', 'Currant', 'Potato', 'Artichoke', 'Asparagus', 'Leafy greens'],
+        },
+        {
+          name: 'Fruit trees & rootstocks',
+          species: ['Apple rootstocks', 'Pear rootstocks', 'Cherry rootstocks', 'Vine clones', 'Olive clones', 'Mulberry'],
+        },
+        {
+          name: 'Tropical & strategic',
+          species: ['Banana', 'Pineapple (MD2)', 'Date palm', 'Vanilla', 'Ginger', 'Turmeric', 'Medicinal plants'],
+        },
+      ],
+      suggestionHeading: 'Don\'t see your species?',
+      suggestionBody: 'We have the capacity to onboard new species fast. Tell us what you need and we\'ll come back with a feasibility and timeline.',
+      suggestionCta: 'Suggest a species',
+    },
     site: {
       eyebrow: 'The site',
       title: 'France\'s largest in-vitro plant lab, in Boissy-l\'Aillerie.',

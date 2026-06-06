@@ -171,6 +171,32 @@ export const fr: SiteContent = {
       ],
       densityFootnote: 'À volume cible identique de 7 M plants/an. Sources : CTIFL Balandran, GRAB, Plants-de-fraises.fr.',
     },
+    catalogue: {
+      eyebrow: 'Ce que nous produisons',
+      title: 'Une plateforme multi-espèces dès le démarrage.',
+      body: 'Notre capacité industrielle est conçue pour traiter des centaines d\'espèces. Le catalogue de lancement priorise les marchés professionnels français et européens à forte demande, avec de nouvelles espèces ajoutées chaque trimestre en fonction de la traction commerciale.',
+      categories: [
+        {
+          name: 'Ornementales',
+          species: ['Géraniums', 'Dipladenias', 'Cyclamens', 'Chrysanthèmes', 'Orchidées', 'Bégonias', 'Pensées', 'Impatiens', 'Pétunias'],
+        },
+        {
+          name: 'Petits fruits & maraîchères',
+          species: ['Fraisier', 'Framboisier', 'Myrtillier', 'Mûrier', 'Groseillier', 'Pomme de terre', 'Artichaut', 'Asperge', 'Légumes-feuilles'],
+        },
+        {
+          name: 'Arboricoles & porte-greffes',
+          species: ['Porte-greffes pomme', 'Porte-greffes poire', 'Porte-greffes cerise', 'Clones de vigne', 'Clones d\'olivier', 'Mûrier'],
+        },
+        {
+          name: 'Tropicales & stratégiques',
+          species: ['Bananier', 'Ananas (MD2)', 'Palmier dattier', 'Vanille', 'Gingembre', 'Curcuma', 'Plantes médicinales'],
+        },
+      ],
+      suggestionHeading: 'Votre espèce n\'y est pas ?',
+      suggestionBody: 'Nous avons la capacité d\'intégrer rapidement de nouvelles espèces. Dites-nous ce dont vous avez besoin et nous reviendrons vers vous avec une faisabilité et un calendrier.',
+      suggestionCta: 'Suggérer une espèce',
+    },
     site: {
       eyebrow: 'Le site',
       title: 'Le plus grand laboratoire in vitro végétal de France, à Boissy-l\'Aillerie.',

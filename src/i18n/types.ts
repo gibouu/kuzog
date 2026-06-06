@@ -163,6 +163,15 @@ export interface MicroplantesContent {
     densityRows: MicroplantesDensityRow[];
     densityFootnote: string;
   };
+  catalogue: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    categories: Array<{ name: string; species: string[] }>;
+    suggestionHeading: string;
+    suggestionBody: string;
+    suggestionCta: string;
+  };
   site: {
     eyebrow: string;
     title: string;
