@@ -141,13 +141,6 @@ export interface MicroplantesPartnershipPillar {
   detail: string;
 }
 
-export interface MicroplantesTeamMember {
-  name: string;
-  role: string;
-  bio: string;
-  highlights: string[];
-}
-
 export interface MicroplantesContent {
   hero: {
     eyebrow: string;
@@ -180,16 +173,7 @@ export interface MicroplantesContent {
   partnership: {
     eyebrow: string;
     title: string;
-    body: string;
-    pillarsHeading: string;
     pillars: MicroplantesPartnershipPillar[];
-    partnerName: string;
-    partnerCredentials: string;
-  };
-  team: {
-    eyebrow: string;
-    title: string;
-    members: MicroplantesTeamMember[];
   };
   contactCTA: {
     title: string;
