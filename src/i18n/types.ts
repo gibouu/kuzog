@@ -26,12 +26,10 @@ export interface AudienceContent {
 }
 
 export interface HomeCardContent {
-  eyebrow: string;
-  title: string;
-  microStats: string[];
+  name: string;       // e.g. "Hydrobio"
+  slogan: string;     // short one-liner, max ~12 words
   cta: string;
   accent: 'hydrobio' | 'microplantes' | 'group';
-  chips?: string[]; // group card only
 }
 
 export interface HomeContent {
@@ -51,7 +49,7 @@ export interface HydrobioLeadStat {
 export interface HydrobioProblemStat {
   value: string;
   label: string;
-  caption: string;
+  caption?: string;
   source?: string;
 }
 
@@ -61,45 +59,10 @@ export interface HydrobioSolutionComponent {
   bullets: string[];
 }
 
-export interface HydrobioMarketCard {
-  eyebrow: string;
-  value: string;
-  label: string;
-  caption: string;
-  source?: string;
-}
-
-export interface HydrobioTamSamSom {
-  tamValue: string;
-  tamLabel: string;
-  tamCaption: string;
-  tamSource?: string;
-  samValue: string;
-  samLabel: string;
-  samCaption: string;
-  samSource?: string;
-  somValue: string;
-  somLabel: string;
-  somCaption: string;
-  somSource?: string;
-}
-
 export interface HydrobioRoadmapStep {
   phase: string;
   label: string;
   detail?: string;
-}
-
-export interface HydrobioPricingTier {
-  label: string;
-  price: string;
-  margin: string;
-}
-
-export interface HydrobioDeploymentStep {
-  number: number;
-  title: string;
-  detail: string;
 }
 
 export interface HydrobioTeamMember {
@@ -131,10 +94,8 @@ export interface HydrobioContent {
   problem: {
     eyebrow: string;
     title: string;
+    body: string;
     stats: HydrobioProblemStat[];
-    quote: string;
-    quoteSource: string;
-    framingLine: string;
   };
   solution: {
     eyebrow: string;
@@ -142,43 +103,11 @@ export interface HydrobioContent {
     components: HydrobioSolutionComponent[];
     synergyLine: string;
   };
-  competitiveEdge: {
-    eyebrow: string;
-    title: string;
-    columns: string[];
-    rows: { criterion: string; values: string[] }[];
-    caption: string;
-  };
-  market: {
-    eyebrow: string;
-    title: string;
-    cards: HydrobioMarketCard[];
-    tamSamSom: HydrobioTamSamSom;
-  };
   results: {
     eyebrow: string;
     title: string;
     stats: HydrobioImpactStat[];
     footnote: string;
-    roadmapHeading: string;
-    roadmapSteps: HydrobioRoadmapStep[];
-  };
-  businessModel: {
-    eyebrow: string;
-    title: string;
-    pricingHeading: string;
-    pricing: HydrobioPricingTier[];
-    pricingFootnote: string;
-    trajectoryHeading: string;
-    trajectoryLine: string;
-    distributionHeading: string;
-    distribution: { share: string; label: string }[];
-  };
-  gtm: {
-    eyebrow: string;
-    title: string;
-    steps: HydrobioDeploymentStep[];
-    priorityLine: string;
     roadmapHeading: string;
     roadmapSteps: HydrobioRoadmapStep[];
   };
@@ -189,22 +118,13 @@ export interface HydrobioContent {
     ipHeading: string;
     ipCards: HydrobioIpCard[];
   };
-  systemicImpact: {
+  impact: {
     eyebrow: string;
     title: string;
     stats: HydrobioImpactStat[];
     sdgValue: string;
     sdgLabel: string;
     sdgCaption: string;
-  };
-  smallholder: {
-    eyebrow: string;
-    title: string;
-    intro: string;
-    introSource: string;
-    body: string;
-    stats: HydrobioImpactStat[];
-    closing: string;
   };
   contactCTA: {
     title: string;
@@ -237,31 +157,6 @@ export interface MicroplantesPartnershipPillar {
   detail: string;
 }
 
-export interface MicroplantesMarketSegment {
-  name: string;
-  share: string;
-  volume: string;
-  caption: string;
-}
-
-export interface MicroplantesCompetitor {
-  name: string;
-  capacity: string;
-  positioning: string;
-}
-
-export interface MicroplantesRampStep {
-  year: string;
-  capacity: string;
-  workforce: string;
-  caption?: string;
-}
-
-export interface MicroplantesFinancialRow {
-  label: string;
-  values: string[];
-}
-
 export interface MicroplantesTeamMember {
   name: string;
   role: string;
@@ -279,8 +174,8 @@ export interface MicroplantesContent {
   opportunity: {
     eyebrow: string;
     title: string;
+    body: string;
     stats: MicroplantesStat[];
-    framingLine: string;
   };
   method: {
     eyebrow: string;
@@ -307,46 +202,10 @@ export interface MicroplantesContent {
     partnerName: string;
     partnerCredentials: string;
   };
-  market: {
-    eyebrow: string;
-    title: string;
-    segments: MicroplantesMarketSegment[];
-    totalLine: string;
-  };
-  competition: {
-    eyebrow: string;
-    title: string;
-    competitors: MicroplantesCompetitor[];
-    positioningLine: string;
-  };
-  operations: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    rampHeading: string;
-    rampSteps: MicroplantesRampStep[];
-  };
-  financials: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    years: string[];
-    rows: MicroplantesFinancialRow[];
-    capitalStructureHeading: string;
-    capitalStructureLine: string;
-    roiLine: string;
-  };
   team: {
     eyebrow: string;
     title: string;
     members: MicroplantesTeamMember[];
-  };
-  successFactors: {
-    eyebrow: string;
-    title: string;
-    intro: string;
-    factors: string[];
-    closing: string;
   };
   contactCTA: {
     title: string;
