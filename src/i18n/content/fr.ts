@@ -33,7 +33,7 @@ export const fr: SiteContent = {
     hero: {
       eyebrow: 'Innovation du sol',
       title: 'Restaurer la vie du sol. Économiser l\'eau. Nourrir le monde.',
-      tagline: 'HYDROBIO est un amendement agronomique qui combine des minéraux micronisés et un consortium mycorhizien vivant. Une seule application régénère votre sol, retient l\'eau et nourrit vos cultures — pour 3 à 5 ans. Et grâce à notre application HydrobioFormul, chaque dose est calculée sur mesure pour votre sol et votre culture.',
+      tagline: 'HYDROBIO est un amendement agronomique qui combine des minéraux micronisés et un consortium mycorhizien vivant. Une seule application régénère votre sol, retient l\'eau et nourrit vos cultures — pour 3 à 5 ans. Et grâce à notre application HydrobioFormul par machine learning, chaque dose est calculée sur mesure pour votre sol et votre culture.',
       recognition: 'Rotary Club de Paris — Startup de l\'année 2026',
       pilotCta: 'Demander une analyse de sol',
       scienceCta: 'Découvrir HydrobioFormul',
@@ -61,23 +61,23 @@ export const fr: SiteContent = {
       steps: [
         { number: 1, title: 'Analyse du sol', body: 'Un prélèvement de terrain révèle texture, pH, capacité d\'échange cationique, matière organique, état biologique, capacité de rétention en eau et niveau de dégradation.' },
         { number: 2, title: 'Culture & objectifs', body: 'Nous identifions la culture cible, le contexte climatique (pluviométrie, stress hydrique, irrigation) et vos objectifs : économiser l\'eau, booster les rendements, restaurer un sol dégradé.' },
-        { number: 3, title: 'HydrobioFormul (IA)', body: 'Notre application IA propriétaire calcule la composition exacte (ratios argile/zéolite/mycorhize) et la dose à l\'hectare, adaptées à votre sol et votre culture.' },
+        { number: 3, title: 'HydrobioFormul (ML)', body: 'Notre application machine learning propriétaire calcule la composition exacte (ratios argile/zéolite/mycorhize) et la dose à l\'hectare, adaptées à votre sol et votre culture.' },
         { number: 4, title: 'Formulation sur site & application', body: 'L\'amendement est formulé sur site selon la recette et appliqué en un simple épandage + légère incorporation. Une seule application couvre 3 à 5 ans.' },
       ],
     },
     formul: {
       eyebrow: 'HydrobioFormul',
-      title: 'Moteur de formulation IA.',
-      tagline: 'L\'intelligence au service de chaque sol.',
-      body: 'HydrobioFormul est l\'application propriétaire d\'HYDROBIO, propulsée par l\'intelligence artificielle. Elle transforme une analyse de sol en formulation sur mesure : la composition exacte de l\'amendement et la dose adaptées à votre sol, votre climat et votre culture. Fini le produit générique — chaque parcelle obtient la recette qui lui convient.',
+      title: 'Un moteur de formulation par machine learning.',
+      tagline: 'La modélisation prédictive au service de chaque sol.',
+      body: 'HydrobioFormul est l\'application propriétaire d\'HYDROBIO, propulsée par le machine learning. Elle transforme une analyse de sol en une formulation sur mesure — la composition exacte de l\'amendement et la dose adaptées à votre sol, votre climat et votre culture. Fini le produit générique : chaque parcelle reçoit la recette qui lui convient.',
       inputsHeading: 'Entrées',
       inputs: [
         'Caractéristiques du sol — texture, pH, CEC, matière organique, capacité de rétention en eau',
         'Contexte climatique — pluviométrie, exposition au stress hydrique',
         'Culture cible et objectifs (eau, rendement, restauration)',
       ],
-      engineHeading: 'Le moteur',
-      engineBody: 'Un modèle agronomique couplé à un moteur IA prédictif, entraîné sur des données pédoclimatiques et les résultats des essais HYDROBIO. Il simule la réponse du sol et détermine la combinaison optimale des trois composants.',
+      engineHeading: 'Le modèle',
+      engineBody: 'Un modèle agronomique couplé à un prédicteur de machine learning supervisé, entraîné sur les données pédoclimatiques et les résultats d\'essais HYDROBIO. Il simule la réponse du sol et détermine la combinaison optimale des trois composants.',
       outputsHeading: 'Sorties',
       outputs: [
         'Composition exacte — ratios argile/zéolite/mycorhize',
@@ -87,12 +87,16 @@ export const fr: SiteContent = {
       ],
       advantagesHeading: 'Pourquoi ça compte',
       advantages: [
-        { title: 'Précision', detail: 'Chaque sol est unique — la formulation aussi.' },
+        { title: 'Précision', detail: 'Chaque sol est unique — la formulation l\'est aussi.' },
         { title: 'Performance', detail: 'L\'efficacité et le ROI sont maximisés.' },
-        { title: 'Traçabilité', detail: 'Chaque recommandation est documentée (entrées, dose, justification).' },
-        { title: 'Simplicité', detail: 'Vous saisissez les données, l\'application fait le reste.' },
-        { title: 'Amélioration continue', detail: 'Le moteur apprend des nouveaux essais et résultats de terrain.' },
+        { title: 'Traçabilité', detail: 'Chaque recommandation est documentée (intrant, dose, justification).' },
+        { title: 'Simplicité', detail: 'Vous saisissez les données, le modèle fait le reste.' },
+        { title: 'Apprentissage continu', detail: 'Le modèle s\'améliore à chaque nouvel essai et résultat de terrain.' },
       ],
+      mlExplainer: {
+        heading: 'Pourquoi machine learning et pas \'IA\' générique ?',
+        body: 'HydrobioFormul est un type spécifique d\'IA — du machine learning supervisé. Le moteur ne génère pas de texte ni ne raisonne dans l\'abstrait. Il apprend des motifs numériques à partir d\'analyses de sol réelles, de données climatiques et de résultats d\'essais terrain, puis prédit la formulation la plus susceptible de performer sur votre parcelle. Chaque nouvel essai améliore le modèle. C\'est une technique précise, pas une étiquette marketing.',
+      },
     },
     application: {
       eyebrow: 'Application',
@@ -160,9 +164,30 @@ export const fr: SiteContent = {
         { value: '−25%', label: 'Lessivage des nitrates évité', caption: 'La zéolite à CEC élevée retient l\'azote dans la zone racinaire.', source: 'Huang & Petrovic 1994 · Kubo et al. 2010' },
         { value: '∞', label: 'Sols dégradés rendus productifs', caption: 'Sols arides, sableux ou pauvres restaurés sans excavation ni remplacement.', source: 'FAO/ITPS 2015 · Nair et al. 2011' },
       ],
-      sdgValue: 'ODD',
-      sdgLabel: '2 · 6 · 13 · 15',
-      sdgCaption: 'Faim zéro · Eau propre · Action climatique · Vie terrestre',
+      sdgHeading: 'Alignement avec les Objectifs de Développement Durable de l\'ONU',
+      sdgIntro: 'Hydrobio contribue directement à quatre ODD de l\'ONU. Chaque application restaure le sol et les systèmes qui en dépendent.',
+      sdgs: [
+        {
+          number: 2,
+          name: 'Faim « zéro »',
+          impact: 'Un gain de rendement mesuré de +18,7 % sur la même parcelle, et la capacité de remettre en production des sols dégradés. Nous aidons les producteurs à produire davantage sur des terres qui sinon échoueraient.',
+        },
+        {
+          number: 6,
+          name: 'Eau propre et assainissement',
+          impact: '+47 % de rétention d\'eau réduit les besoins en irrigation. La zéolite à CEC élevée retient l\'azote dans la zone racinaire, diminuant le lessivage des nitrates d\'environ 25 % — les eaux souterraines restent plus propres.',
+        },
+        {
+          number: 13,
+          name: 'Mesures relatives à la lutte contre les changements climatiques',
+          impact: 'Plus de 0,5 t/ha de carbone séquestré par cycle via les réseaux mycorhiziens. La durée d\'effet de 3 à 5 ans signifie moins de réapplications, et la réduction de 20 à 30 % des intrants chimiques diminue l\'empreinte carbone de chaque récolte.',
+        },
+        {
+          number: 15,
+          name: 'Vie terrestre',
+          impact: 'Biodiversité du sol restaurée d\'un ordre de grandeur (×3 d\'activité microbienne). Sols arides, sableux et dégradés remis en production — sans excavation, remplacement ni intrants chimiques.',
+        },
+      ],
     },
     innovation: {
       eyebrow: 'Innovation & technologie',
@@ -180,7 +205,7 @@ export const fr: SiteContent = {
       items: [
         { question: 'Qu\'est-ce qu\'HYDROBIO ?', answer: 'Un amendement hybride qui combine des minéraux micronisés (argile, zéolite) et un consortium mycorhizien vivant — agissant à la fois sur la structure, la nutrition et la vie biologique du sol.' },
         { question: 'Est-ce un engrais ?', answer: 'Non. HYDROBIO restaure la capacité du sol à retenir l\'eau et les nutriments et à nourrir la plante, ce qui réduit le besoin en engrais et en irrigation.' },
-        { question: 'Qu\'est-ce qu\'HydrobioFormul ?', answer: 'Notre application IA qui calcule la composition exacte et la dose à partir de votre analyse de sol et de votre culture cible, et simule les gains attendus.' },
+        { question: 'Qu\'est-ce qu\'HydrobioFormul ?', answer: 'Notre application de machine learning qui calcule la composition exacte et la dose à partir de votre analyse de sol et de votre culture cible, et simule les gains attendus.' },
         { question: 'Dois-je faire analyser mon sol ?', answer: 'Oui — c\'est l\'étape 1. L\'analyse permet à HydrobioFormul de personnaliser la formulation. Nous vous accompagnons pour le prélèvement.' },
         { question: 'Comment s\'applique-t-il ?', answer: 'Épandage simple puis légère incorporation superficielle, à la préparation du sol. Une seule application couvre 3 à 5 ans.' },
         { question: 'Pourquoi la formulation sur site ?', answer: 'Pour préserver la viabilité des mycorhizes vivantes, adapter la composition à chaque sol et réduire le transport et les pertes.' },

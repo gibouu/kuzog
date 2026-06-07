@@ -33,7 +33,7 @@ export const en: SiteContent = {
     hero: {
       eyebrow: 'Soil Innovation',
       title: 'Restoring Soil Life. Saving Water. Feeding the World.',
-      tagline: 'HYDROBIO is a hybrid mineral-biological soil amendment — micronised minerals + a living mycorrhizal consortium. One application regenerates your soil, retains water, and feeds your crops — for 3 to 5 years. And thanks to our HydrobioFormul AI app, each dose is custom-calculated for your soil and crop.',
+      tagline: 'HYDROBIO is a hybrid mineral-biological soil amendment — micronised minerals + a living mycorrhizal consortium. One application regenerates your soil, retains water, and feeds your crops — for 3 to 5 years. And thanks to our HydrobioFormul machine-learning app, each dose is custom-calculated for your soil and crop.',
       recognition: 'Rotary Club of Paris — 2026 Startup of the Year',
       pilotCta: 'Request a soil analysis',
       scienceCta: 'Discover HydrobioFormul',
@@ -61,23 +61,23 @@ export const en: SiteContent = {
       steps: [
         { number: 1, title: 'Soil analysis', body: 'A field sample reveals texture, pH, cation-exchange capacity, organic matter, biological state, water-holding capacity, and degradation level.' },
         { number: 2, title: 'Crop & objectives', body: 'We identify the target crop, the climate context (rainfall, water stress, irrigation), and your objectives: save water, boost yields, restore degraded soil.' },
-        { number: 3, title: 'HydrobioFormul (AI)', body: 'Our proprietary AI application calculates the exact composition (clay/zeolite/mycorrhiza ratios) and the per-hectare dose, tailored to your soil and your crop.' },
+        { number: 3, title: 'HydrobioFormul (ML)', body: 'Our proprietary machine-learning application calculates the exact composition (clay/zeolite/mycorrhiza ratios) and the per-hectare dose, tailored to your soil and your crop.' },
         { number: 4, title: 'On-site formulation & application', body: 'The amendment is formulated on site according to the recipe and applied in a simple spreading + light incorporation step. One application covers 3 to 5 years.' },
       ],
     },
     formul: {
       eyebrow: 'HydrobioFormul',
-      title: 'AI formulation engine.',
-      tagline: 'Intelligence at the service of every soil.',
-      body: 'HydrobioFormul is HYDROBIO\'s proprietary application, powered by artificial intelligence. It transforms a soil analysis into a custom formulation: the exact amendment composition and dose adapted to your soil, climate, and crop. No more generic product — every parcel gets the recipe that suits it.',
+      title: 'A machine-learning formulation engine.',
+      tagline: 'Predictive modelling at the service of every soil.',
+      body: 'HydrobioFormul is HYDROBIO\'s proprietary application, powered by machine learning. It transforms a soil analysis into a custom formulation — the exact amendment composition and dose adapted to your soil, climate, and crop. No more generic product: every parcel gets the recipe that suits it.',
       inputsHeading: 'Inputs',
       inputs: [
         'Soil characteristics — texture, pH, CEC, organic matter, water-holding capacity',
         'Climate context — rainfall, water-stress exposure',
         'Target crop and objectives (water, yield, restoration)',
       ],
-      engineHeading: 'The engine',
-      engineBody: 'An agronomic model coupled with a predictive AI engine, trained on pedoclimatic data and HYDROBIO trial results. It simulates the soil\'s response and determines the optimal combination of the three components.',
+      engineHeading: 'The model',
+      engineBody: 'An agronomic model coupled with a supervised machine-learning predictor, trained on pedoclimatic data and HYDROBIO trial results. It simulates the soil\'s response and determines the optimal combination of the three components.',
       outputsHeading: 'Outputs',
       outputs: [
         'Exact composition — clay/zeolite/mycorrhiza ratios',
@@ -90,9 +90,13 @@ export const en: SiteContent = {
         { title: 'Precision', detail: 'Each soil is unique — so is the formulation.' },
         { title: 'Performance', detail: 'Efficacy and ROI are maximised.' },
         { title: 'Traceability', detail: 'Every recommendation is documented (inputs, dose, justification).' },
-        { title: 'Simplicity', detail: 'You enter the data, the app does the rest.' },
-        { title: 'Continuous improvement', detail: 'The engine learns from new trials and field results.' },
+        { title: 'Simplicity', detail: 'You enter the data, the model does the rest.' },
+        { title: 'Continuous learning', detail: 'The model improves with every new trial and field result.' },
       ],
+      mlExplainer: {
+        heading: 'Why machine learning, not generic AI?',
+        body: 'HydrobioFormul is a specific kind of AI — supervised machine learning. The engine doesn\'t generate text or reason in the abstract. It learns numerical patterns from real soil analyses, climate data, and field trial outcomes, then predicts the formulation most likely to perform on your parcel. Each new trial improves the model. That\'s a precise technique, not a marketing label.',
+      },
     },
     application: {
       eyebrow: 'Application',
@@ -160,9 +164,30 @@ export const en: SiteContent = {
         { value: '−25%', label: 'Nitrate leaching prevented', caption: 'High-CEC zeolite holds nitrogen in the root zone.', source: 'Huang & Petrovic 1994 · Kubo et al. 2010' },
         { value: '∞', label: 'Degraded soils made productive', caption: 'Arid, sandy or poor soils restored without excavation or replacement.', source: 'FAO/ITPS 2015 · Nair et al. 2011' },
       ],
-      sdgValue: 'SDGs',
-      sdgLabel: '2 · 6 · 13 · 15',
-      sdgCaption: 'Zero Hunger · Clean Water · Climate Action · Life on Land',
+      sdgHeading: 'Aligned with the UN Sustainable Development Goals',
+      sdgIntro: 'Hydrobio contributes directly to four UN SDGs. Each application restores soil and the systems that depend on it.',
+      sdgs: [
+        {
+          number: 2,
+          name: 'Zero Hunger',
+          impact: 'A measured +18.7% yield gain on the same plot, plus the capacity to bring degraded soils back into production. We help producers grow more on land that would otherwise fail.',
+        },
+        {
+          number: 6,
+          name: 'Clean Water',
+          impact: '+47% water retention reduces irrigation needs. The high-CEC zeolite holds nitrogen in the root zone, cutting nitrate leaching by an estimated 25% — groundwater stays cleaner.',
+        },
+        {
+          number: 13,
+          name: 'Climate Action',
+          impact: 'More than 0.5 t/ha of carbon sequestered per cycle through mycorrhizal networks. The 3-5 year effect duration means fewer reapplications, and a 20-30% reduction in chemical inputs cuts the carbon footprint of every harvest.',
+        },
+        {
+          number: 15,
+          name: 'Life on Land',
+          impact: 'Soil biodiversity restored by an order of magnitude (×3 microbial activity). Arid, sandy, and degraded soils brought back to productivity — without excavation, replacement, or chemical inputs.',
+        },
+      ],
     },
     innovation: {
       eyebrow: 'Innovation & technology',
@@ -180,7 +205,7 @@ export const en: SiteContent = {
       items: [
         { question: 'What is HYDROBIO?', answer: 'A hybrid amendment combining micronised minerals (clay, zeolite) and a living mycorrhizal consortium — acting on the structure, nutrition, and biological life of the soil all at once.' },
         { question: 'Is it a fertiliser?', answer: 'No. HYDROBIO restores the soil\'s ability to retain water and nutrients and to feed the plant, which reduces the need for fertilisers and irrigation.' },
-        { question: 'What is HydrobioFormul?', answer: 'Our AI application that calculates the exact composition and dose from your soil analysis and target crop, and simulates expected gains.' },
+        { question: 'What is HydrobioFormul?', answer: 'Our machine-learning application that calculates the exact composition and dose from your soil analysis and target crop, and simulates expected gains.' },
         { question: 'Do I need to get my soil analysed?', answer: 'Yes — it\'s step 1. The analysis lets HydrobioFormul personalise the formulation. We support you with sampling.' },
         { question: 'How is it applied?', answer: 'Simple spreading then light surface incorporation, at soil preparation. A single application covers 3 to 5 years.' },
         { question: 'Why on-site formulation?', answer: 'To preserve the viability of the living mycorrhizae, adapt the composition to each soil, and reduce transport and losses.' },
