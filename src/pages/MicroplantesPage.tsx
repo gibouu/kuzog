@@ -3,11 +3,11 @@ import { ProductPageShell } from '../components/ProductPageShell';
 import { StoryBeat } from '../components/StoryBeat';
 import { BigStat } from '../components/BigStat';
 import { StatGrid } from '../components/StatGrid';
-import { Citation } from '../components/Citation';
 import { ContactCTA } from '../components/ContactCTA';
-import { DiagramSlot } from '../components/DiagramSlot';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
+import { ExpandableCard } from '../components/ExpandableCard';
+import { ExpandableList } from '../components/ExpandableList';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function MicroplantesPage() {
@@ -26,7 +26,8 @@ export default function MicroplantesPage() {
         topic="microplantes"
       />
       <ProductPageShell accent="microplantes">
-        {/* Hero */}
+
+        {/* ── 1. Hero ── */}
         <StoryBeat id="hero" eyebrow={m.hero.eyebrow} title={m.hero.title} accent="microplantes">
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.hero.tagline}</p>
           <StatGrid columns={3}>
@@ -34,118 +35,164 @@ export default function MicroplantesPage() {
               <BigStat key={stat.label} value={stat.value} label={stat.label} />
             ))}
           </StatGrid>
-        </StoryBeat>
-
-        {/* Opportunity */}
-        <StoryBeat id="opportunity" eyebrow={m.opportunity.eyebrow} title={m.opportunity.title} accent="microplantes" bleed>
-          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.opportunity.body}</p>
-          <StatGrid columns={3}>
-            {m.opportunity.stats.map((stat) => (
-              <BigStat
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-                caption={stat.caption}
-                source={stat.source && <Citation text={stat.source} />}
-              />
-            ))}
-          </StatGrid>
-        </StoryBeat>
-
-        {/* Method / Science */}
-        <StoryBeat id="method" eyebrow={m.method.eyebrow} title={m.method.title} accent="microplantes">
-          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.method.body}</p>
-          <p className="text-base font-medium text-ink md:text-lg md:max-w-3xl">{m.method.advantageLine}</p>
-          <div className="flex flex-col gap-6">
-            <h3 className="text-display-md text-ink">{m.method.densityHeading}</h3>
-            <div className="overflow-x-auto rounded-card border border-hairline bg-surface">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b border-hairline">
-                    <th className="px-6 py-4 text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">Method</th>
-                    <th className="px-6 py-4 text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">Density</th>
-                    <th className="px-6 py-4 text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">Surface</th>
-                    <th className="px-6 py-4 text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">Multiplier</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {m.method.densityRows.map((row, idx) => (
-                    <tr key={row.method} className={`${idx === 0 ? 'bg-surface-elevated' : ''} ${idx !== m.method.densityRows.length - 1 ? 'border-b border-hairline' : ''}`}>
-                      <td className={`px-6 py-4 text-sm ${idx === 0 ? 'font-semibold text-ink' : 'text-ink'}`}>{row.method}</td>
-                      <td className={`px-6 py-4 text-sm ${idx === 0 ? 'font-semibold text-ink' : 'text-muted-ink'}`}>{row.density}</td>
-                      <td className={`px-6 py-4 text-sm ${idx === 0 ? 'font-semibold text-ink' : 'text-muted-ink'}`}>{row.surface}</td>
-                      <td className={`px-6 py-4 text-sm ${idx === 0 ? 'font-semibold text-ink' : 'text-muted-ink'}`}>{row.multiplier}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          {m.hero.positioning && (
+            <div className="rounded-card border border-accent-microplantes bg-surface px-6 py-4">
+              <p className="text-base font-semibold text-ink md:text-lg">{m.hero.positioning}</p>
             </div>
-            <Citation text={m.method.densityFootnote} />
-          </div>
-          <DiagramSlot id="D-3" title="Density comparison" prompt="Minimalist horizontal bar chart comparing 5 propagation methods by plants/m²/yr (Microplantes 19,000 dominant in fresh green; intensive greenhouse 100; strawberry stolons 50; raspberry drageons 30; tree grafting 5). White background, editorial Apple aesthetic." src="/diagrams/D3.png" />
+          )}
         </StoryBeat>
 
-        {/* Catalogue */}
-        <StoryBeat id="catalogue" eyebrow={m.catalogue.eyebrow} title={m.catalogue.title} accent="microplantes">
-          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.catalogue.body}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {m.catalogue.categories.map((cat) => (
-              <div key={cat.name} className="flex flex-col gap-3 rounded-card-sm border border-hairline bg-surface p-6">
-                <h3 className="text-base font-semibold uppercase tracking-[0.12em] text-ink md:text-lg">{cat.name}</h3>
-                <ul className="flex flex-wrap gap-2">
-                  {cat.species.map((s) => (
-                    <li key={s} className="rounded-full bg-chip px-3 py-1 text-xs font-medium text-ink md:text-sm">
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-col gap-4 rounded-card border border-hairline bg-surface-elevated p-8 md:flex-row md:items-center md:justify-between">
-            <div className="flex flex-col gap-2 md:max-w-xl">
-              <h3 className="text-display-md text-ink">{m.catalogue.suggestionHeading}</h3>
-              <p className="text-base text-muted-ink">{m.catalogue.suggestionBody}</p>
-            </div>
-            <button
-              type="button"
-              onClick={() => setIsContactOpen(true)}
-              className="inline-flex h-12 flex-shrink-0 items-center justify-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-brand-ink shadow-card transition hover:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:text-base"
-            >
-              {m.catalogue.suggestionCta}
-            </button>
-          </div>
-        </StoryBeat>
-
-        {/* Site */}
-        <StoryBeat id="site" eyebrow={m.site.eyebrow} title={m.site.title} accent="microplantes" bleed>
-          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.site.body}</p>
-          <StatGrid columns={3}>
-            {m.site.stats.map((stat) => (
-              <BigStat key={stat.label} value={stat.value} label={stat.label} />
-            ))}
-          </StatGrid>
-          <div className="rounded-card border border-accent-microplantes bg-surface px-6 py-4">
-            <p className="text-base font-semibold text-ink md:text-lg">{m.site.positioning}</p>
-          </div>
-          <p className="text-base text-muted-ink md:text-lg md:max-w-4xl">{m.site.advantageLine}</p>
-        </StoryBeat>
-
-        {/* Sustainability */}
-        <StoryBeat id="sustainability" eyebrow={m.sustainability.eyebrow} title={m.sustainability.title} accent="microplantes" bleed>
-          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.sustainability.body}</p>
+        {/* ── 2. Why in-vitro ── */}
+        <StoryBeat id="why-in-vitro" eyebrow={m.whyInVitro.eyebrow} title={m.whyInVitro.title} accent="microplantes" bleed>
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.whyInVitro.body}</p>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {m.sustainability.pillars.map((pillar) => (
-              <div key={pillar.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-8">
-                <span className="text-display-md text-accent-microplantes">{pillar.value}</span>
-                <h3 className="text-base font-semibold text-ink md:text-lg">{pillar.title}</h3>
-                <p className="text-sm text-muted-ink md:text-base">{pillar.detail}</p>
+            {m.whyInVitro.benefits.map((benefit) => (
+              <div key={benefit.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-8">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
+                <h3 className="text-base font-semibold text-ink md:text-lg">{benefit.title}</h3>
+                <p className="text-sm text-muted-ink md:text-base">{benefit.detail}</p>
               </div>
             ))}
           </div>
         </StoryBeat>
 
-        {/* Contact CTA */}
+        {/* ── 3. 4-step process ── */}
+        <StoryBeat id="process" eyebrow={m.process.eyebrow} title={m.process.title} accent="microplantes">
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.process.body}</p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {m.process.steps.map((step) => (
+              <div key={step.number} className="flex flex-col gap-4 rounded-card border border-hairline bg-surface p-8">
+                <span className="text-display-md font-bold text-accent-microplantes">{String(step.number).padStart(2, '0')}</span>
+                <h3 className="text-base font-semibold text-ink md:text-lg">{step.title}</h3>
+                <p className="text-sm text-muted-ink md:text-base">{step.body}</p>
+              </div>
+            ))}
+          </div>
+        </StoryBeat>
+
+        {/* ── 4. Filières & variétés ── */}
+        <StoryBeat id="filieres" eyebrow={m.filieres.eyebrow} title={m.filieres.title} accent="microplantes" bleed>
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.filieres.body}</p>
+          <ExpandableList>
+            {m.filieres.items.map((f) => (
+              <ExpandableCard
+                key={f.number}
+                title={`${f.number} · ${f.name}`}
+                teaser={f.intro}
+                accent="microplantes"
+              >
+                <div className="flex flex-col gap-4">
+                  <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">{f.latin}</p>
+                  <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+                    {f.varieties.map((v) => (
+                      <div key={v.name} className="rounded-card-sm border border-hairline bg-surface-elevated p-4 flex flex-col gap-1">
+                        <h4 className="text-sm font-semibold text-ink">{v.name}</h4>
+                        {v.type && <p className="text-xs italic text-muted-ink">{v.type}</p>}
+                        <p className="text-sm text-muted-ink">{v.details}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </ExpandableCard>
+            ))}
+          </ExpandableList>
+        </StoryBeat>
+
+        {/* ── 5. Plant formats ── */}
+        <StoryBeat id="formats" eyebrow={m.formats.eyebrow} title={m.formats.title} accent="microplantes">
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.formats.body}</p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {m.formats.items.map((fmt) => (
+              <div key={fmt.format} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
+                <div className="flex items-center gap-2">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
+                  <h3 className="text-base font-semibold text-ink">{fmt.format}</h3>
+                </div>
+                <p className="text-sm text-muted-ink md:text-base">{fmt.description}</p>
+                <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">{fmt.audience}</p>
+              </div>
+            ))}
+          </div>
+        </StoryBeat>
+
+        {/* ── 6. Services on demand ── */}
+        <StoryBeat id="services" eyebrow={m.services.eyebrow} title={m.services.title} accent="microplantes" bleed>
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.services.body}</p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {m.services.items.map((svc) => (
+              <div key={svc.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
+                <h3 className="text-base font-semibold text-ink">{svc.title}</h3>
+                <p className="text-sm text-muted-ink md:text-base">{svc.detail}</p>
+              </div>
+            ))}
+          </div>
+        </StoryBeat>
+
+        {/* ── 7. R&D ── */}
+        <StoryBeat id="rnd" eyebrow={m.rnd.eyebrow} title={m.rnd.title} accent="microplantes">
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.rnd.body}</p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {m.rnd.axes.map((axis) => (
+              <div key={axis.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
+                <div className="flex items-center gap-2">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
+                  <h3 className="text-base font-semibold text-ink">{axis.title}</h3>
+                </div>
+                <p className="text-sm text-muted-ink md:text-base">{axis.detail}</p>
+              </div>
+            ))}
+          </div>
+        </StoryBeat>
+
+        {/* ── 8. Our laboratory ── */}
+        <StoryBeat id="lab" eyebrow={m.lab.eyebrow} title={m.lab.title} accent="microplantes" bleed>
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.lab.body}</p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {m.lab.spaces.map((space) => (
+              <div key={space.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
+                <h3 className="text-base font-semibold text-ink">{space.title}</h3>
+                <p className="text-sm text-muted-ink md:text-base">{space.detail}</p>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-card border border-accent-microplantes bg-surface px-6 py-5 flex flex-col gap-2">
+            <h3 className="text-base font-semibold text-ink">{m.lab.capacityHeading}</h3>
+            <p className="text-sm text-muted-ink md:text-base">{m.lab.capacityBody}</p>
+          </div>
+        </StoryBeat>
+
+        {/* ── 9. Quality & traceability ── */}
+        <StoryBeat id="quality" eyebrow={m.quality.eyebrow} title={m.quality.title} accent="microplantes">
+          <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.quality.body}</p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {m.quality.commitments.map((c) => (
+              <div key={c.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
+                <div className="flex items-center gap-2">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
+                  <h3 className="text-base font-semibold text-ink">{c.title}</h3>
+                </div>
+                <p className="text-sm text-muted-ink md:text-base">{c.detail}</p>
+              </div>
+            ))}
+          </div>
+        </StoryBeat>
+
+        {/* ── 10. FAQ ── */}
+        <StoryBeat id="faq" eyebrow={m.faq.eyebrow} title={m.faq.title} accent="microplantes" bleed>
+          <ExpandableList>
+            {m.faq.items.map((item) => (
+              <ExpandableCard
+                key={item.question}
+                title={item.question}
+                accent="microplantes"
+              >
+                <p>{item.answer}</p>
+              </ExpandableCard>
+            ))}
+          </ExpandableList>
+        </StoryBeat>
+
+        {/* ── 11. Contact CTA ── */}
         <StoryBeat id="contact">
           <ContactCTA
             title={m.contactCTA.title}
@@ -154,6 +201,7 @@ export default function MicroplantesPage() {
             onContactClick={() => setIsContactOpen(true)}
           />
         </StoryBeat>
+
       </ProductPageShell>
     </>
   );
