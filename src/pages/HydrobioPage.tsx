@@ -312,43 +312,46 @@ export default function HydrobioPage() {
               <h3 className="text-display-md text-ink">{h.impact.sdgHeading}</h3>
               <p className="text-base text-muted-ink md:text-lg">{h.impact.sdgIntro}</p>
             </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <ExpandableList>
               {h.impact.sdgs.map((sdg) => (
-                <a
+                <ExpandableCard
                   key={sdg.number}
-                  href={`https://sdgs.un.org/goals/goal${sdg.number}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex h-full gap-5 rounded-card border border-hairline bg-surface p-6 transition hover:-translate-y-0.5 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:p-8"
+                  title={`${sdg.number} · ${sdg.name}`}
+                  accent="hydrobio"
                 >
-                  <img
-                    src={`/sdg/sdg-${sdg.number}.png`}
-                    alt={`UN SDG ${sdg.number} — ${sdg.name}`}
-                    className="h-20 w-20 flex-shrink-0 rounded-[14px] object-cover transition duration-300 grayscale group-hover:grayscale-0 md:h-24 md:w-24"
-                  />
-                  <div className="flex flex-col gap-2">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-display-md text-ink">{sdg.number}</span>
-                      <span className="text-sm font-semibold uppercase tracking-[0.08em] text-muted-ink md:text-base">{sdg.name}</span>
+                  <div className="flex flex-col gap-4 md:flex-row md:items-start">
+                    <img
+                      src={`/sdg/sdg-${sdg.number}.png`}
+                      alt={`UN SDG ${sdg.number} — ${sdg.name}`}
+                      className="h-20 w-20 flex-shrink-0 rounded-[14px] object-cover md:h-24 md:w-24"
+                    />
+                    <div className="flex flex-col gap-3">
+                      <p className="text-sm text-ink md:text-base">{sdg.impact}</p>
+                      <a
+                        href={`https://sdgs.un.org/goals/goal${sdg.number}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-fit items-center gap-1 text-sm font-medium text-ink underline-offset-4 hover:underline"
+                      >
+                        Learn more on un.org →
+                      </a>
                     </div>
-                    <p className="text-sm text-muted-ink md:text-base">{sdg.impact}</p>
                   </div>
-                </a>
+                </ExpandableCard>
               ))}
-            </div>
+            </ExpandableList>
           </div>
         </StoryBeat>
 
         {/* ── 9. Innovation ── */}
         <StoryBeat id="innovation" eyebrow={h.innovation.eyebrow} title={h.innovation.title} accent="hydrobio">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <ExpandableList>
             {h.innovation.items.map((item) => (
-              <div key={item.title} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-6">
-                <h3 className="text-base font-semibold text-ink md:text-lg">{item.title}</h3>
-                <p className="text-sm text-muted-ink md:text-base">{item.detail}</p>
-              </div>
+              <ExpandableCard key={item.title} title={item.title} accent="hydrobio">
+                <p>{item.detail}</p>
+              </ExpandableCard>
             ))}
-          </div>
+          </ExpandableList>
         </StoryBeat>
 
         {/* ── 10. FAQ ── */}
