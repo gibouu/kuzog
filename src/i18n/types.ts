@@ -347,6 +347,37 @@ export interface GroupContent {
   };
 }
 
+export interface JobPosting {
+  id: string;
+  company: 'hydrobio' | 'microplantes';
+  department: string;
+  title: string;
+  contract: string;
+  location: string;
+  mission: string;
+  responsibilities: string[];
+  profile: string[];
+}
+
+export interface CareersContent {
+  hero: {
+    eyebrow: string;
+    title: string;
+    body: string;
+  };
+  filters: {
+    searchPlaceholder: string;
+    allCompanies: string;
+    allDepartments: string;
+  };
+  empty: string;
+  applyCta: string;
+  spontaneousHeading: string;
+  spontaneousBody: string;
+  spontaneousCta: string;
+  jobs: JobPosting[];
+}
+
 export interface SiteContent {
   // Header
   header: {
@@ -359,6 +390,7 @@ export interface SiteContent {
   hydrobio: HydrobioContent;
   microplantes: MicroplantesContent;
   group: GroupContent;
+  careers: CareersContent;
 
   // Footer
   footer: {
