@@ -11,9 +11,16 @@ const ABOUT_LABEL: Record<string, string> = {
   ar: 'حول KUZOG France',
 };
 
+const CAREERS_LABEL: Record<string, string> = {
+  en: 'Careers',
+  fr: 'Carrières',
+  ar: 'وظائف',
+};
+
 export function SiteFooter({ onShowPolicy }: FooterProps) {
   const { language } = useLanguage();
   const aboutLabel = ABOUT_LABEL[language] ?? ABOUT_LABEL.en;
+  const careersLabel = CAREERS_LABEL[language] ?? CAREERS_LABEL.en;
 
   return (
     <footer className="mt-8 border-t border-white/40 bg-white/45 backdrop-blur-xl">
@@ -28,6 +35,12 @@ export function SiteFooter({ onShowPolicy }: FooterProps) {
             className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-ink transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             {aboutLabel}
+          </Link>
+          <Link
+            to="/careers"
+            className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-ink transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+          >
+            {careersLabel}
           </Link>
           <a
             href="mailto:management@kuzog.com"

@@ -7,6 +7,7 @@ import BlogPage from './pages/BlogPage';
 import HydrobioPage from './pages/HydrobioPage';
 import MicroplantesPage from './pages/MicroplantesPage';
 import GroupPage from './pages/GroupPage';
+import CareersPage from './pages/CareersPage';
 import './index.css';
 
 const rootElement = document.getElementById('root');
@@ -25,6 +26,7 @@ ReactDOM.createRoot(rootElement).render(
           <Route path="/microplantes" element={<MicroplantesPage />} />
           <Route path="/group" element={<GroupPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/careers" element={<CareersPage />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>
