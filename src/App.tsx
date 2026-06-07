@@ -52,12 +52,6 @@ export default function App() {
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-ink sm:text-sm sm:tracking-[0.4em]">{content.header.logoText}</span>
           </Link>
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link
-              to="/group"
-              className="hidden text-xs font-medium text-muted-ink transition hover:text-ink sm:inline-flex sm:text-sm"
-            >
-              About
-            </Link>
             <LanguageSelector />
             <button
               type="button"

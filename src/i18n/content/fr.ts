@@ -453,34 +453,6 @@ export const fr: SiteContent = {
     successMessage: 'Message envoyé. Nous répondrons sous peu.',
   },
 
-  group: {
-    hero: {
-      eyebrow: 'À propos de KUZOG France',
-      title: 'KUZOG France — holding à vocation agricole.',
-      body: 'KUZOG France est une holding parisienne à vocation agricole. Nous concevons et exploitons deux entreprises industrielles agricoles : Hydrobio (amendement de sol hybride minéral-biologique + moteur de formulation IA) et Microplantes (laboratoire industriel de micropropagation végétale).',
-      origin: 'Fondée en 2024 par un duo père-fils — un ingénieur nanotech et un opérateur formé à Wharton — pour construire des entreprises industrielles agricoles à la croisée de l\'ingénierie, du capital et de Paris.',
-    },
-    foundersHeading: 'Fondateurs',
-    founders: [
-      { name: 'Gibril-Gabriel Bachouchi', role: 'Président', bio: 'Ingénieur en nanotechnologie (Université de Waterloo). Expert en salles blanches et protocoles de contamination.' },
-      { name: 'Malik Bachouchi', role: 'Directeur', bio: 'MBA Wharton (UPenn) + MSc Informatique. 15 ans à diriger de grands programmes industriels et financiers internationaux.' },
-    ],
-    recognition: {
-      eyebrow: 'Reconnaissances',
-      items: [
-        { kind: 'incubation', source: 'Paris&Co', detail: 'Incubée à l\'écosystème d\'innovation Paris&Co — le principal hub d\'innovation de la capitale.' },
-        { kind: 'grant', source: 'Ville de Paris', detail: 'Subvention de 30 000 € de la Ville de Paris pour l\'innovation industrielle.' },
-        { kind: 'award', source: 'Open Carca 2025', detail: 'Lauréate du concours entrepreneurial 2025.' },
-        { kind: 'award', source: 'Rotary Club de Paris', date: '2026', detail: 'Hydrobio (le projet phare de KUZOG) — Startup de l\'année.' },
-      ],
-    },
-    contactCTA: {
-      title: 'Parlons à KUZOG.',
-      description: 'Demandes d\'investissement, conversations de partenariat, idées de projets — nous répondons sous deux jours ouvrés.',
-      ctaLabel: 'Nous contacter',
-    },
-  },
-
   careers: {
     hero: {
       eyebrow: 'Carrières',
