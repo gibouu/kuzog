@@ -131,18 +131,6 @@ export default function MicroplantesPage() {
           <p className="text-base text-muted-ink md:text-lg md:max-w-4xl">{m.site.advantageLine}</p>
         </StoryBeat>
 
-        {/* Partnership */}
-        <StoryBeat id="partnership" eyebrow={m.partnership.eyebrow} title={m.partnership.title} accent="microplantes">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
-            {m.partnership.pillars.map((pillar) => (
-              <div key={pillar.title} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-6">
-                <h4 className="text-base font-semibold text-ink md:text-lg">{pillar.title}</h4>
-                <p className="text-sm text-muted-ink">{pillar.detail}</p>
-              </div>
-            ))}
-          </div>
-        </StoryBeat>
-
         {/* Sustainability */}
         <StoryBeat id="sustainability" eyebrow={m.sustainability.eyebrow} title={m.sustainability.title} accent="microplantes" bleed>
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.sustainability.body}</p>

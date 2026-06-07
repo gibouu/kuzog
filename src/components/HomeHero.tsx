@@ -4,7 +4,6 @@ import { ProductCard } from './ProductCard';
 const HREFS = {
   hydrobio: '/hydrobio',
   microplantes: '/microplantes',
-  group: '/group',
 } as const;
 
 export function HomeHero() {
@@ -13,10 +12,9 @@ export function HomeHero() {
 
   return (
     <section id="hero" className="px-6">
-      <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-3">
+      <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-2">
         <ProductCard {...cards.hydrobio} href={HREFS.hydrobio} />
         <ProductCard {...cards.microplantes} href={HREFS.microplantes} />
-        <ProductCard {...cards.group} href={HREFS.group} />
       </div>
     </section>
   );

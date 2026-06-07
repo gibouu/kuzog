@@ -130,6 +130,7 @@ export const en: SiteContent = {
       eyebrow: 'News & recognition',
       title: 'Third-party signals.',
       items: [
+        { kind: 'incubation', source: 'Jeune Entreprise Innovante (JEI)', detail: 'Recognised as a Jeune Entreprise Innovante by the French government — a status granted to companies with substantial R&D investment.' },
         { kind: 'award', source: 'Rotary Club of Paris', date: '2026', detail: 'Hydrobio named Startup of the Year — recognising the formulation\'s technical novelty and impact potential.' },
         { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG (Hydrobio\'s parent) — laureate of the 2025 Open Carca entrepreneurial competition.' },
         { kind: 'incubation', source: 'AgroParisTech — FarmInnLab', detail: 'Hydrobio\'s semi-industrial pilot programme hosted at the AgroParisTech FarmInnLab incubator.' },
@@ -147,11 +148,11 @@ export const en: SiteContent = {
     hero: {
       eyebrow: 'Plant Sovereignty',
       title: 'Industrial vegetal micropropagation, built in France.',
-      tagline: 'Microplantes reconverts the ex-SEBBIN industrial site in Boissy-l\'Aillerie into a multi-species in-vitro plant production centre — backed by KUZOG France and a 35-year Costa Rican operating partner.',
+      tagline: 'Microplantes is the future largest plant micropropagation facility in France — built on the SEBBIN reconversion in Boissy-l\'Aillerie, backed by KUZOG France.',
       leadStats: [
-        { value: '6–7.5M', label: 'Vitroplants per year at maturity' },
-        { value: '370 m²', label: 'ISO 5 cleanrooms ready to convert' },
-        { value: '200+', label: 'Species mastered via our Costa Rican partner' },
+        { value: 'Up to ~10M', label: 'Vitroplants per year at full capacity' },
+        { value: '370 m²', label: 'ISO 5 cleanrooms operational' },
+        { value: '4', label: 'Strategic crop families' },
       ],
     },
     opportunity: {
@@ -215,18 +216,7 @@ export const en: SiteContent = {
         { value: '1,307 m²', label: 'Land footprint' },
       ],
       advantageLine: 'Reconverting an existing industrial asset — faster, cheaper, and lower-risk than building from scratch.',
-      positioning: 'At full capacity, Microplantes will be the largest dedicated in-vitro plant production facility in France.',
-    },
-    partnership: {
-      eyebrow: 'How we collaborate',
-      title: 'A 35-year operational playbook, applied in France.',
-      pillars: [
-        { title: 'Know-how transfer', detail: 'Industrial-grade protocols, proven across more than 200 species, transferred to the French team.' },
-        { title: 'Staff training', detail: 'Theoretical and practical training programs to ramp the team to industrial standards from day one.' },
-        { title: 'On-site supervision', detail: 'Senior operator on site to commission the rooms, supervise the first explants, and stress-test the production line.' },
-        { title: 'Process licence', detail: 'Exclusive France + Europe licence to industrial micropropagation processes refined over decades.' },
-        { title: 'Joint R&D', detail: 'Shared species pipeline with co-developed acclimation protocols and export-market synergies.' },
-      ],
+      positioning: 'At full capacity, Microplantes will produce approximately up to 10 million vitroplants per year — making it the largest dedicated plant micropropagation facility in France.',
     },
     sustainability: {
       eyebrow: 'Why this matters',
@@ -284,22 +274,11 @@ export const en: SiteContent = {
 
   group: {
     hero: {
-      eyebrow: 'Our other activities',
-      title: 'What else we do from Paris.',
-      body: 'Beyond the two flagship operations, KUZOG runs an agricultural import/export business and an agricultural commissioning practice — building facilities in emerging markets where industrial know-how is the bottleneck.',
-      origin: 'Founded in 2024 by a father-son duo — a nanotech engineer and a Wharton-trained operator — to build industrial ventures where engineering, capital, and Paris meet.',
+      eyebrow: 'About KUZOG France',
+      title: 'KUZOG France — agricultural-focus holding.',
+      body: 'KUZOG France is a Paris-based holding company focused on agriculture. We build and operate two industrial agricultural ventures: Hydrobio (hybrid mineral-biological soil amendment + AI formulation engine) and Microplantes (industrial plant micropropagation lab).',
+      origin: 'Founded in 2024 by a father-son duo — a nanotech engineer and a Wharton-trained operator — to build agricultural industrial ventures where engineering, capital, and Paris meet.',
     },
-    activitiesHeading: 'What we do',
-    activities: [
-      {
-        title: 'Agricultural Import / Export',
-        detail: 'Turnkey procurement and cross-border logistics for agricultural inputs, plants, and equipment. We handle sourcing, customs, regulatory navigation, and delivery — particularly across the EU, MENA, and Sub-Saharan Africa where access to specialised material is the bottleneck.',
-      },
-      {
-        title: 'Agricultural Commissioning',
-        detail: 'We build agricultural facilities — micropropagation laboratories, controlled-environment grow facilities, soil-input formulation plants. Selecting and adapting foreign process technologies, designing the production plan, sourcing equipment, sequencing the works, and commissioning the lines through to handover. Particularly relevant for emerging markets where industrial agronomy know-how, not capital, is the bottleneck.',
-      },
-    ],
     foundersHeading: 'Founders',
     founders: [
       {
@@ -324,7 +303,7 @@ export const en: SiteContent = {
     },
     contactCTA: {
       title: 'Talk to KUZOG.',
-      description: 'Investment enquiries, partnership conversations, advisory mandates — we reply within two business days.',
+      description: 'Investment enquiries, partnership conversations, project ideas — we reply within two business days.',
       ctaLabel: 'Get in touch',
     },
   },

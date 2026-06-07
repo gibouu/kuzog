@@ -1,8 +1,20 @@
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+
 type FooterProps = {
   onShowPolicy?: () => void;
 };
 
+const ABOUT_LABEL: Record<string, string> = {
+  en: 'About KUZOG France',
+  fr: 'À propos de KUZOG France',
+  ar: 'حول KUZOG France',
+};
+
 export function SiteFooter({ onShowPolicy }: FooterProps) {
+  const { language } = useLanguage();
+  const aboutLabel = ABOUT_LABEL[language] ?? ABOUT_LABEL.en;
+
   return (
     <footer className="mt-8 border-t border-white/40 bg-white/45 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-4 px-6 pb-20 pt-6 text-center text-sm text-muted-ink md:flex-row md:items-center md:justify-between md:pb-24 md:pt-8 md:text-left">
@@ -11,6 +23,12 @@ export function SiteFooter({ onShowPolicy }: FooterProps) {
           <span className="ml-3 text-muted-ink">© 2025 KUZOG France. Paris</span>
         </div>
         <div className="flex flex-row flex-wrap items-center justify-center gap-3 md:justify-end">
+          <Link
+            to="/group"
+            className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-ink transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+          >
+            {aboutLabel}
+          </Link>
           <a
             href="mailto:management@kuzog.com"
             className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-ink transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
