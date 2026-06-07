@@ -65,15 +65,15 @@ export default function HydrobioPage() {
         {/* ── 2. Solution / Science ── */}
         <StoryBeat id="solution" eyebrow={h.solution.eyebrow} title={h.solution.title} accent="hydrobio" bleed>
           <p className="text-base text-muted-ink md:text-lg md:max-w-4xl">{h.solution.intro}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {h.solution.components.map((comp) => (
-              <div key={comp.name} className="flex flex-col gap-3 rounded-card-sm border border-hairline bg-surface p-6">
-                <h3 className="text-display-md text-ink">{comp.name}</h3>
+              <div key={comp.name} className="flex flex-col gap-4 rounded-card border border-hairline bg-surface p-8 md:p-10 xl:p-12">
+                <h3 className="text-2xl font-semibold leading-tight tracking-tight text-ink md:text-3xl">{comp.name}</h3>
                 <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">{comp.role}</p>
-                <ul className="flex flex-col gap-2 text-sm text-muted-ink md:text-base">
+                <ul className="flex flex-col gap-3 text-sm text-muted-ink md:text-base">
                   {comp.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2">
-                      <span className="mt-[0.35em] inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-hydrobio" aria-hidden />
+                      <span className="mt-[0.5em] inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-hydrobio" aria-hidden />
                       {b}
                     </li>
                   ))}

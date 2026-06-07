@@ -33,12 +33,12 @@ export default function GroupPage() {
         <StoryBeat id="founders" title={g.foundersHeading} accent="group">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {g.founders.map((f) => (
-              <article key={f.name} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-8">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-surface-elevated text-display-md text-muted-ink" aria-hidden>
+              <article key={f.name} className="flex flex-col gap-4 rounded-card border border-hairline bg-surface p-10 md:p-12 xl:p-14">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-surface-elevated text-3xl font-semibold text-muted-ink md:h-24 md:w-24" aria-hidden>
                   {f.name.charAt(0)}
                 </div>
-                <h3 className="text-display-md text-ink">{f.name}</h3>
-                <p className="text-sm font-medium uppercase tracking-[0.12em] text-muted-ink md:text-base">{f.role}</p>
+                <h3 className="text-2xl font-semibold leading-tight tracking-tight text-ink md:text-3xl">{f.name}</h3>
+                <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink md:text-sm">{f.role}</p>
                 <p className="text-sm text-muted-ink md:text-base">{f.bio}</p>
               </article>
             ))}
