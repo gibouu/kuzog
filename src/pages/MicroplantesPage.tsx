@@ -45,15 +45,13 @@ export default function MicroplantesPage() {
         {/* ── 2. Why in-vitro ── */}
         <StoryBeat id="why-in-vitro" eyebrow={m.whyInVitro.eyebrow} title={m.whyInVitro.title} accent="microplantes" bleed>
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.whyInVitro.body}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {m.whyInVitro.benefits.map((benefit) => (
-              <div key={benefit.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-8">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
-                <h3 className="text-base font-semibold text-ink md:text-lg">{benefit.title}</h3>
-                <p className="text-sm text-muted-ink md:text-base">{benefit.detail}</p>
-              </div>
+          <ExpandableList>
+            {m.whyInVitro.benefits.map((b) => (
+              <ExpandableCard key={b.title} title={b.title} accent="microplantes">
+                <p>{b.detail}</p>
+              </ExpandableCard>
             ))}
-          </div>
+          </ExpandableList>
         </StoryBeat>
 
         {/* ── 3. 4-step process ── */}
@@ -146,14 +144,13 @@ export default function MicroplantesPage() {
         {/* ── 8. Our laboratory ── */}
         <StoryBeat id="lab" eyebrow={m.lab.eyebrow} title={m.lab.title} accent="microplantes" bleed>
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.lab.body}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <ExpandableList>
             {m.lab.spaces.map((space) => (
-              <div key={space.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
-                <h3 className="text-base font-semibold text-ink">{space.title}</h3>
-                <p className="text-sm text-muted-ink md:text-base">{space.detail}</p>
-              </div>
+              <ExpandableCard key={space.title} title={space.title} accent="microplantes">
+                <p>{space.detail}</p>
+              </ExpandableCard>
             ))}
-          </div>
+          </ExpandableList>
           <div className="rounded-card border border-accent-microplantes bg-surface px-6 py-5 flex flex-col gap-2">
             <h3 className="text-base font-semibold text-ink">{m.lab.capacityHeading}</h3>
             <p className="text-sm text-muted-ink md:text-base">{m.lab.capacityBody}</p>
