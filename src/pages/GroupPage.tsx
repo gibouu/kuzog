@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
 import { ProductPageShell } from '../components/ProductPageShell';
 import { StoryBeat } from '../components/StoryBeat';
 import { RecognitionBeat } from '../components/RecognitionBeat';
@@ -28,49 +27,6 @@ export default function GroupPage() {
         <StoryBeat id="hero" eyebrow={g.hero.eyebrow} title={g.hero.title} accent="group">
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{g.hero.body}</p>
           <p className="text-sm italic text-muted-ink md:text-base md:max-w-3xl">{g.hero.origin}</p>
-        </StoryBeat>
-
-        {/* Activities */}
-        <StoryBeat id="activities" title={g.activitiesHeading} accent="group" bleed>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {g.activities.map((activity) => {
-              const isExternal = Boolean(activity.externalUrl);
-              const cardClasses = "flex h-full flex-col gap-3 rounded-card border border-hairline bg-surface p-8 transition duration-200 ease-out";
-              const interactiveClasses = isExternal
-                ? " hover:-translate-y-0.5 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
-                : "";
-
-              const inner = (
-                <>
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-display-md text-ink">{activity.title}</h3>
-                    {isExternal && <ExternalLink className="h-5 w-5 flex-shrink-0 text-muted-ink" aria-hidden />}
-                  </div>
-                  <p className="text-sm text-muted-ink md:text-base">{activity.detail}</p>
-                </>
-              );
-
-              if (isExternal && activity.externalUrl) {
-                return (
-                  <a
-                    key={activity.title}
-                    href={activity.externalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cardClasses + interactiveClasses}
-                  >
-                    {inner}
-                  </a>
-                );
-              }
-
-              return (
-                <div key={activity.title} className={cardClasses}>
-                  {inner}
-                </div>
-              );
-            })}
-          </div>
         </StoryBeat>
 
         {/* Founders */}

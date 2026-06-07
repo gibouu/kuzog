@@ -130,6 +130,7 @@ export const fr: SiteContent = {
       eyebrow: 'Actualités & reconnaissances',
       title: 'Signaux tiers.',
       items: [
+        { kind: 'incubation', source: 'Jeune Entreprise Innovante (JEI)', detail: 'Reconnue Jeune Entreprise Innovante par l\'État français — statut accordé aux entreprises avec un investissement substantiel en R&D.' },
         { kind: 'award', source: 'Rotary Club de Paris', date: '2026', detail: 'Hydrobio désignée Startup de l\'année — reconnaissance de la nouveauté technique et du potentiel d\'impact de la formulation.' },
         { kind: 'award', source: 'Open Carca 2025', detail: 'KUZOG (la maison-mère d\'Hydrobio) — lauréate du concours entrepreneurial Open Carca 2025.' },
         { kind: 'incubation', source: 'AgroParisTech — FarmInnLab', detail: 'Programme pilote semi-industriel d\'Hydrobio hébergé à l\'incubateur AgroParisTech FarmInnLab.' },
@@ -148,11 +149,11 @@ export const fr: SiteContent = {
     hero: {
       eyebrow: 'Souveraineté végétale',
       title: 'Micropropagation végétale industrielle, conçue en France.',
-      tagline: 'Microplantes reconvertit le site industriel SEBBIN à Boissy-l\'Aillerie en un centre de production multi-espèces — porté par KUZOG France et un partenaire opérationnel costaricien de 35 ans d\'expérience.',
+      tagline: 'Microplantes est le futur plus grand laboratoire de micropropagation végétale de France — issu de la reconversion du site SEBBIN à Boissy-l\'Aillerie, porté par KUZOG France.',
       leadStats: [
-        { value: '6–7,5 M', label: 'Vitroplants par an à maturité' },
-        { value: '370 m²', label: 'Salles blanches ISO 5 prêtes à convertir' },
-        { value: '200+', label: 'Espèces maîtrisées via notre partenaire costaricien' },
+        { value: 'Jusqu\'à ~10 M', label: 'Vitroplants par an à pleine capacité' },
+        { value: '370 m²', label: 'Salles blanches ISO 5 opérationnelles' },
+        { value: '4', label: 'Filières stratégiques' },
       ],
     },
     opportunity: {
@@ -216,18 +217,7 @@ export const fr: SiteContent = {
         { value: '1 307 m²', label: 'Surface foncière' },
       ],
       advantageLine: 'Reconvertir un actif industriel existant — plus rapide, plus économique et moins risqué que de construire ex nihilo.',
-      positioning: 'À pleine capacité, Microplantes sera la plus grande installation française dédiée à la production de plants in vitro.',
-    },
-    partnership: {
-      eyebrow: 'Comment nous collaborons',
-      title: 'Un savoir-faire industriel de 35 ans, appliqué en France.',
-      pillars: [
-        { title: 'Transfert de savoir-faire', detail: 'Protocoles industriels éprouvés sur plus de 200 espèces, transférés à l\'équipe française.' },
-        { title: 'Formation du personnel', detail: 'Programmes de formation théorique et pratique pour porter l\'équipe au niveau industriel dès le démarrage.' },
-        { title: 'Supervision sur site', detail: 'Opérateur senior sur site pour commissionner les salles, superviser les premiers explants et stresser la ligne de production.' },
-        { title: 'Licence d\'exploitation', detail: 'Licence exclusive France + Europe sur des procédés de micropropagation industrielle affinés sur des décennies.' },
-        { title: 'R&D conjointe', detail: 'Pipeline d\'espèces partagé avec protocoles d\'acclimatation co-développés et synergies à l\'export.' },
-      ],
+      positioning: 'À pleine capacité, Microplantes produira environ jusqu\'à 10 millions de vitroplants par an — devenant ainsi le plus grand laboratoire dédié à la micropropagation végétale en France.',
     },
     sustainability: {
       eyebrow: 'Pourquoi cela compte',
@@ -285,22 +275,11 @@ export const fr: SiteContent = {
 
   group: {
     hero: {
-      eyebrow: 'Nos autres activités',
-      title: 'Ce que nous faisons aussi, depuis Paris.',
-      body: 'En parallèle de nos deux opérations phares, KUZOG opère une activité d\'import-export agricole et une pratique de commissionnement agricole — construction d\'installations dans les marchés émergents où le savoir-faire industriel est le goulet d\'étranglement.',
-      origin: 'Fondée en 2024 par un duo père-fils — un ingénieur nanotech et un opérateur formé à Wharton — pour construire des entreprises industrielles à la croisée de l\'ingénierie, du capital et de Paris.',
+      eyebrow: 'À propos de KUZOG France',
+      title: 'KUZOG France — holding à vocation agricole.',
+      body: 'KUZOG France est une holding parisienne à vocation agricole. Nous concevons et exploitons deux entreprises industrielles agricoles : Hydrobio (amendement de sol hybride minéral-biologique + moteur de formulation IA) et Microplantes (laboratoire industriel de micropropagation végétale).',
+      origin: 'Fondée en 2024 par un duo père-fils — un ingénieur nanotech et un opérateur formé à Wharton — pour construire des entreprises industrielles agricoles à la croisée de l\'ingénierie, du capital et de Paris.',
     },
-    activitiesHeading: 'Ce que nous faisons',
-    activities: [
-      {
-        title: 'Import / Export agricole',
-        detail: 'Approvisionnement industriel clé en main et logistique transfrontalière pour les intrants agricoles, les plants et les équipements. Nous gérons sourcing, douanes, navigation réglementaire et livraison — particulièrement dans l\'UE, MENA et Afrique subsaharienne où l\'accès au matériel spécialisé est le goulet d\'étranglement.',
-      },
-      {
-        title: 'Commissionnement agricole',
-        detail: 'Nous construisons des installations agricoles — laboratoires de micropropagation, infrastructures de culture en environnement contrôlé, unités de formulation d\'intrants pour les sols. Sélection et adaptation de procédés industriels étrangers, conception du plan de production, sourcing des équipements, séquençage des travaux, mise en service des lignes — jusqu\'au transfert. Particulièrement pertinent pour les marchés émergents, où le savoir-faire agronomique industriel — et non le capital — est le goulet d\'étranglement.',
-      },
-    ],
     foundersHeading: 'Fondateurs',
     founders: [
       { name: 'Gibril-Gabriel Bachouchi', role: 'Président', bio: 'Ingénieur en nanotechnologie (Université de Waterloo). Expert en salles blanches et protocoles de contamination.' },
@@ -316,8 +295,8 @@ export const fr: SiteContent = {
       ],
     },
     contactCTA: {
-      title: 'Parlons.',
-      description: 'Demandes d\'investissement, conversations de partenariat, missions de conseil — nous répondons sous deux jours ouvrés.',
+      title: 'Parlons à KUZOG.',
+      description: 'Demandes d\'investissement, conversations de partenariat, idées de projets — nous répondons sous deux jours ouvrés.',
       ctaLabel: 'Nous contacter',
     },
   },

@@ -153,11 +153,6 @@ export interface MicroplantesDensityRow {
   multiplier: string;
 }
 
-export interface MicroplantesPartnershipPillar {
-  title: string;
-  detail: string;
-}
-
 export interface MicroplantesContent {
   hero: {
     eyebrow: string;
@@ -195,12 +190,7 @@ export interface MicroplantesContent {
     body: string;
     stats: MicroplantesStat[];
     advantageLine: string;
-    positioning: string;  // NEW — for "Largest in-vitro lab in France at launch"
-  };
-  partnership: {
-    eyebrow: string;
-    title: string;
-    pillars: MicroplantesPartnershipPillar[];
+    positioning: string;
   };
   sustainability: {
     eyebrow: string;
@@ -215,12 +205,6 @@ export interface MicroplantesContent {
   };
 }
 
-export interface GroupActivity {
-  title: string;
-  detail: string;
-  externalUrl?: string;
-}
-
 export interface GroupFounder {
   name: string;
   role: string;
@@ -232,12 +216,10 @@ export interface GroupContent {
     eyebrow: string;
     title: string;
     body: string;
-    origin: string;  // NEW — one line, founding context
+    origin: string;
   };
-  activitiesHeading: string;
-  activities: GroupActivity[];
-  foundersHeading: string;  // NEW
-  founders: GroupFounder[];  // NEW
+  foundersHeading: string;
+  founders: GroupFounder[];
   recognition: RecognitionContent;
   contactCTA: {
     title: string;
