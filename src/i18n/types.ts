@@ -198,11 +198,60 @@ export interface MicroplantesStat {
   source?: string;
 }
 
-export interface MicroplantesDensityRow {
-  method: string;
-  density: string;
-  surface: string;
-  multiplier: string;
+export interface MicroplantesBenefit {
+  title: string;
+  detail: string;
+}
+
+export interface MicroplantesProcessStep {
+  number: number;
+  title: string;
+  body: string;
+}
+
+export interface MicroplantesVariety {
+  name: string;
+  type?: string;
+  details: string;
+}
+
+export interface MicroplantesFiliere {
+  number: string;
+  name: string;
+  latin: string;
+  intro: string;
+  varieties: MicroplantesVariety[];
+}
+
+export interface MicroplantesPlantFormat {
+  format: string;
+  description: string;
+  audience: string;
+}
+
+export interface MicroplantesService {
+  title: string;
+  detail: string;
+}
+
+export interface MicroplantesResearchAxis {
+  title: string;
+  detail: string;
+}
+
+export interface MicroplantesLabSpace {
+  title: string;
+  detail: string;
+}
+
+export interface MicroplantesQualityCommitment {
+  title: string;
+  detail: string;
+}
+
+export interface MicroplantesFaqItem {
+  question: string;
+  answer: string;
 }
 
 export interface MicroplantesContent {
@@ -210,45 +259,63 @@ export interface MicroplantesContent {
     eyebrow: string;
     title: string;
     tagline: string;
+    positioning?: string;
     leadStats: MicroplantesLeadStat[];
   };
-  opportunity: {
+  whyInVitro: {
     eyebrow: string;
     title: string;
     body: string;
-    stats: MicroplantesStat[];
+    benefits: MicroplantesBenefit[];
   };
-  method: {
+  process: {
     eyebrow: string;
     title: string;
     body: string;
-    advantageLine: string;
-    densityHeading: string;
-    densityRows: MicroplantesDensityRow[];
-    densityFootnote: string;
+    steps: MicroplantesProcessStep[];
   };
-  catalogue: {
+  filieres: {
     eyebrow: string;
     title: string;
     body: string;
-    categories: Array<{ name: string; species: string[] }>;
-    suggestionHeading: string;
-    suggestionBody: string;
-    suggestionCta: string;
+    items: MicroplantesFiliere[];
   };
-  site: {
+  formats: {
     eyebrow: string;
     title: string;
     body: string;
-    stats: MicroplantesStat[];
-    advantageLine: string;
-    positioning: string;
+    items: MicroplantesPlantFormat[];
   };
-  sustainability: {
+  services: {
     eyebrow: string;
     title: string;
     body: string;
-    pillars: Array<{ value: string; title: string; detail: string }>;
+    items: MicroplantesService[];
+  };
+  rnd: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    axes: MicroplantesResearchAxis[];
+  };
+  lab: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    spaces: MicroplantesLabSpace[];
+    capacityHeading: string;
+    capacityBody: string;
+  };
+  quality: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    commitments: MicroplantesQualityCommitment[];
+  };
+  faq: {
+    eyebrow: string;
+    title: string;
+    items: MicroplantesFaqItem[];
   };
   contactCTA: {
     title: string;
