@@ -30,7 +30,7 @@ export function RecognitionBeat({ content, accent }: RecognitionBeatProps) {
         {content.items.map((item, idx) => {
           const Icon = KIND_ICON[item.kind];
           const card = (
-            <div className="flex h-full flex-col gap-3 rounded-card border border-hairline bg-surface p-6 transition group-hover:-translate-y-0.5 group-hover:shadow-card">
+            <div className="flex h-full flex-col gap-4 rounded-card border border-hairline bg-surface p-8 md:p-10 transition group-hover:-translate-y-0.5 group-hover:shadow-card">
               <div className="flex items-center justify-between gap-2">
                 <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">
                   <Icon className="h-3.5 w-3.5" aria-hidden />
@@ -39,7 +39,7 @@ export function RecognitionBeat({ content, accent }: RecognitionBeatProps) {
                 {item.date && <span className="text-xs text-muted-ink">{item.date}</span>}
                 {item.href && <ArrowUpRight className="h-4 w-4 text-muted-ink" aria-hidden />}
               </div>
-              <h3 className="text-base font-semibold text-ink md:text-lg">{item.source}</h3>
+              <h3 className="text-lg font-semibold text-ink md:text-xl">{item.source}</h3>
               <p className="text-sm text-muted-ink md:text-base">{item.detail}</p>
             </div>
           );

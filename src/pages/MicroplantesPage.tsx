@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { ProductPageShell } from '../components/ProductPageShell';
 import { StoryBeat } from '../components/StoryBeat';
-import { BigStat } from '../components/BigStat';
-import { StatGrid } from '../components/StatGrid';
 import { ContactCTA } from '../components/ContactCTA';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
@@ -30,11 +28,14 @@ export default function MicroplantesPage() {
         {/* ── 1. Hero ── */}
         <StoryBeat id="hero" eyebrow={m.hero.eyebrow} title={m.hero.title} accent="microplantes">
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.hero.tagline}</p>
-          <StatGrid columns={3}>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {m.hero.leadStats.map((stat) => (
-              <BigStat key={stat.label} value={stat.value} label={stat.label} />
+              <div key={stat.label} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6 md:p-8">
+                <div className="text-[clamp(28px,3vw,44px)] font-semibold leading-tight tracking-tight text-ink">{stat.value}</div>
+                <div className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink md:text-sm">{stat.label}</div>
+              </div>
             ))}
-          </StatGrid>
+          </div>
           {m.hero.positioning && (
             <div className="rounded-card border border-accent-microplantes bg-surface px-6 py-4">
               <p className="text-base font-semibold text-ink md:text-lg">{m.hero.positioning}</p>
