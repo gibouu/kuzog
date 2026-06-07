@@ -6,7 +6,6 @@ import { BigStat } from '../components/BigStat';
 import { StatGrid } from '../components/StatGrid';
 import { Citation } from '../components/Citation';
 import { ContactCTA } from '../components/ContactCTA';
-import { DiagramSlot } from '../components/DiagramSlot';
 import { RecognitionBeat } from '../components/RecognitionBeat';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
@@ -82,12 +81,6 @@ export default function HydrobioPage() {
               </div>
             ))}
           </div>
-          <DiagramSlot
-            id="D-1"
-            title="3-component synergy"
-            prompt="Minimalist Venn diagram, three overlapping circles in sage green tones, labels 'Micronised Clay', 'Micronised Zeolite', 'Mycorrhizal Consortium', centre intersection labelled 'Synergy', monoline strokes, white background, editorial aesthetic."
-            src="/diagrams/D1.png"
-          />
           <p className="text-base font-medium text-ink md:text-lg md:max-w-4xl">{h.solution.synergyLine}</p>
         </StoryBeat>
 
@@ -107,7 +100,7 @@ export default function HydrobioPage() {
           </div>
         </StoryBeat>
 
-        {/* ── 4. HydrobioFormul — flagship AI app section ── */}
+        {/* ── 4. HydrobioFormul — machine-learning formulation engine ── */}
         <StoryBeat id="formul" eyebrow={h.formul.eyebrow} title={h.formul.title} accent="hydrobio" bleed>
           {/* Tagline + intro */}
           <div className="flex flex-col gap-3 md:max-w-3xl">
@@ -138,7 +131,7 @@ export default function HydrobioPage() {
               </div>
               <p className="text-sm text-ink md:text-base">{h.formul.engineBody}</p>
               <div className="mt-auto flex items-center justify-center rounded-card-sm border border-hairline bg-surface px-4 py-6">
-                <span className="text-2xl font-bold tracking-tight text-accent-hydrobio">HydrobioFormul AI</span>
+                <span className="text-2xl font-bold tracking-tight text-accent-hydrobio">HydrobioFormul ML</span>
               </div>
             </div>
 
@@ -170,6 +163,12 @@ export default function HydrobioPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* ML explainer */}
+          <div className="rounded-card border border-hairline bg-surface-elevated p-6 md:p-8">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-ink">{h.formul.mlExplainer.heading}</h4>
+            <p className="mt-3 text-sm text-ink md:text-base">{h.formul.mlExplainer.body}</p>
           </div>
         </StoryBeat>
 
@@ -308,14 +307,35 @@ export default function HydrobioPage() {
               />
             ))}
           </StatGrid>
-          <div className="flex flex-col gap-4 rounded-card-sm border border-hairline bg-surface p-6 sm:flex-row sm:items-start">
-            <div className="flex flex-col gap-1">
-              <span className="text-[clamp(28px,3vw,44px)] font-semibold leading-tight tracking-tight text-ink">
-                {h.impact.sdgLabel}
-              </span>
-              <span className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">{h.impact.sdgValue}</span>
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2 md:max-w-3xl">
+              <h3 className="text-display-md text-ink">{h.impact.sdgHeading}</h3>
+              <p className="text-base text-muted-ink md:text-lg">{h.impact.sdgIntro}</p>
             </div>
-            <p className="text-sm text-muted-ink md:text-base">{h.impact.sdgCaption}</p>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              {h.impact.sdgs.map((sdg) => (
+                <a
+                  key={sdg.number}
+                  href={`https://sdgs.un.org/goals/goal${sdg.number}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-full gap-5 rounded-card border border-hairline bg-surface p-6 transition hover:-translate-y-0.5 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:p-8"
+                >
+                  <img
+                    src={`/sdg/sdg-${sdg.number}.png`}
+                    alt={`UN SDG ${sdg.number} — ${sdg.name}`}
+                    className="h-20 w-20 flex-shrink-0 rounded-[14px] object-cover transition duration-300 grayscale group-hover:grayscale-0 md:h-24 md:w-24"
+                  />
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-display-md text-ink">{sdg.number}</span>
+                      <span className="text-sm font-semibold uppercase tracking-[0.08em] text-muted-ink md:text-base">{sdg.name}</span>
+                    </div>
+                    <p className="text-sm text-muted-ink md:text-base">{sdg.impact}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </StoryBeat>
 

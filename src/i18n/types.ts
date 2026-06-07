@@ -91,6 +91,12 @@ export interface HydrobioFaqItem {
   answer: string;
 }
 
+export interface HydrobioSdgCard {
+  number: 2 | 6 | 13 | 15;
+  name: string;
+  impact: string;
+}
+
 export interface HydrobioContent {
   hero: {
     eyebrow: string;
@@ -127,6 +133,10 @@ export interface HydrobioContent {
     outputs: string[];
     advantagesHeading: string;
     advantages: HydrobioFormulFeature[];
+    mlExplainer: {
+      heading: string;
+      body: string;
+    };
   };
   application: {
     eyebrow: string;
@@ -164,9 +174,9 @@ export interface HydrobioContent {
     eyebrow: string;
     title: string;
     stats: HydrobioImpactStat[];
-    sdgValue: string;
-    sdgLabel: string;
-    sdgCaption: string;
+    sdgHeading: string;
+    sdgIntro: string;
+    sdgs: HydrobioSdgCard[];
   };
   innovation: {
     eyebrow: string;
