@@ -308,7 +308,7 @@ export default function HydrobioPage() {
               />
             ))}
           </StatGrid>
-          <div className="flex items-start gap-4 rounded-card-sm border border-hairline bg-surface p-6">
+          <div className="flex flex-col gap-4 rounded-card-sm border border-hairline bg-surface p-6 sm:flex-row sm:items-start">
             <div className="flex flex-col gap-1">
               <span className="text-[clamp(28px,3vw,44px)] font-semibold leading-tight tracking-tight text-ink">
                 {h.impact.sdgLabel}

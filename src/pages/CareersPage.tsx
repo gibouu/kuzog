@@ -81,7 +81,7 @@ export default function CareersPage() {
                 setCompany(e.target.value as typeof company);
                 setDepartment('all');
               }}
-              className="h-12 rounded-full border border-hairline bg-surface px-5 text-sm text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:text-base"
+              className="h-12 w-full rounded-full border border-hairline bg-surface px-5 text-sm text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:w-auto md:text-base"
             >
               <option value="all">{c.filters.allCompanies}</option>
               <option value="hydrobio">Hydrobio</option>
@@ -90,7 +90,7 @@ export default function CareersPage() {
             <select
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
-              className="h-12 rounded-full border border-hairline bg-surface px-5 text-sm text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:text-base"
+              className="h-12 w-full rounded-full border border-hairline bg-surface px-5 text-sm text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:w-auto md:text-base"
             >
               <option value="all">{c.filters.allDepartments}</option>
               {departments.map((d) => (

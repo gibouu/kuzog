@@ -9,7 +9,7 @@ interface ContactCTAProps {
 
 export function ContactCTA({ title, description, ctaLabel, onContactClick }: ContactCTAProps) {
   return (
-    <div className="flex flex-col items-start gap-6 rounded-card border border-hairline bg-surface-elevated p-10 md:p-12">
+    <div className="flex flex-col items-start gap-6 rounded-card border border-hairline bg-surface-elevated p-7 md:p-10 xl:p-12">
       <div className="flex flex-col gap-4 md:max-w-3xl">
         <h2 className="text-display-md text-ink">{title}</h2>
         <p className="text-base text-muted-ink md:text-lg">{description}</p>

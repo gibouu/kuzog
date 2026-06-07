@@ -267,17 +267,17 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
             <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
           ) : null}
 
-          <div className="flex flex-row flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
             <button
               type="submit"
               disabled={submitting}
-              className="inline-flex h-12 min-w-[140px] items-center justify-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-brand-ink transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:opacity-60"
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-brand-ink transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:opacity-60 sm:w-auto sm:min-w-[140px]"
             >
               {submitting ? content.contactModal.submittingButton : content.contactModal.submitButton}
             </button>
             <a
               href="mailto:management@kuzog.com"
-              className="inline-flex h-12 min-w-[140px] items-center justify-center gap-2 rounded-full border border-border bg-chip px-6 text-sm font-semibold text-ink transition hover:bg-chip-active focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-chip px-6 text-sm font-semibold text-ink transition hover:bg-chip-active focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto sm:min-w-[140px]"
             >
               <Mail className="h-5 w-5" aria-hidden="true" />
               {content.contactModal.emailButton}
