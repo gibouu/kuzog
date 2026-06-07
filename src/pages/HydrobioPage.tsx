@@ -39,11 +39,14 @@ export default function HydrobioPage() {
             </div>
           )}
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{h.hero.tagline}</p>
-          <StatGrid columns={3}>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {h.hero.leadStats.map((stat) => (
-              <BigStat key={stat.label} value={stat.value} label={stat.label} />
+              <div key={stat.label} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6 md:p-8">
+                <div className="text-[clamp(28px,3vw,44px)] font-semibold leading-tight tracking-tight text-ink">{stat.value}</div>
+                <div className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink md:text-sm">{stat.label}</div>
+              </div>
             ))}
-          </StatGrid>
+          </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <button
               type="button"
@@ -257,24 +260,24 @@ export default function HydrobioPage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Crops */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-display-md text-ink">{h.cultures.cropsHeading}</h3>
+              <h3 className="text-2xl text-ink md:text-3xl">{h.cultures.cropsHeading}</h3>
               <ul className="flex flex-col gap-3">
                 {h.cultures.crops.map((crop) => (
-                  <li key={crop.name} className="flex flex-col gap-1 rounded-card-sm border border-hairline bg-surface p-4">
-                    <span className="text-sm font-semibold text-ink">{crop.name}</span>
-                    <span className="text-sm text-muted-ink">{crop.examples}</span>
+                  <li key={crop.name} className="flex flex-col gap-2 rounded-card border border-hairline bg-surface p-6 md:p-8">
+                    <span className="text-base font-semibold text-ink md:text-lg">{crop.name}</span>
+                    <span className="text-sm text-muted-ink md:text-base">{crop.examples}</span>
                   </li>
                 ))}
               </ul>
             </div>
             {/* Soils */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-display-md text-ink">{h.cultures.soilsHeading}</h3>
+              <h3 className="text-2xl text-ink md:text-3xl">{h.cultures.soilsHeading}</h3>
               <ul className="flex flex-col gap-3">
                 {h.cultures.soils.map((soil) => (
-                  <li key={soil.name} className="flex flex-col gap-1 rounded-card-sm border border-hairline bg-surface p-4">
-                    <span className="text-sm font-semibold text-ink">{soil.name}</span>
-                    <span className="text-sm text-muted-ink">{soil.benefit}</span>
+                  <li key={soil.name} className="flex flex-col gap-2 rounded-card border border-hairline bg-surface p-6 md:p-8">
+                    <span className="text-base font-semibold text-ink md:text-lg">{soil.name}</span>
+                    <span className="text-sm text-muted-ink md:text-base">{soil.benefit}</span>
                   </li>
                 ))}
               </ul>
