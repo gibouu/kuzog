@@ -118,30 +118,25 @@ export default function MicroplantesPage() {
         {/* ── 6. Services on demand ── */}
         <StoryBeat id="services" eyebrow={m.services.eyebrow} title={m.services.title} accent="microplantes" bleed>
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.services.body}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {m.services.items.map((svc) => (
-              <div key={svc.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
-                <h3 className="text-base font-semibold text-ink">{svc.title}</h3>
-                <p className="text-sm text-muted-ink md:text-base">{svc.detail}</p>
-              </div>
+          <ExpandableList>
+            {m.services.items.map((service) => (
+              <ExpandableCard key={service.title} title={service.title} accent="microplantes">
+                <p>{service.detail}</p>
+              </ExpandableCard>
             ))}
-          </div>
+          </ExpandableList>
         </StoryBeat>
 
         {/* ── 7. R&D ── */}
         <StoryBeat id="rnd" eyebrow={m.rnd.eyebrow} title={m.rnd.title} accent="microplantes">
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.rnd.body}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <ExpandableList>
             {m.rnd.axes.map((axis) => (
-              <div key={axis.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
-                <div className="flex items-center gap-2">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
-                  <h3 className="text-base font-semibold text-ink">{axis.title}</h3>
-                </div>
-                <p className="text-sm text-muted-ink md:text-base">{axis.detail}</p>
-              </div>
+              <ExpandableCard key={axis.title} title={axis.title} accent="microplantes">
+                <p>{axis.detail}</p>
+              </ExpandableCard>
             ))}
-          </div>
+          </ExpandableList>
         </StoryBeat>
 
         {/* ── 8. Our laboratory ── */}
@@ -164,17 +159,13 @@ export default function MicroplantesPage() {
         {/* ── 9. Quality & traceability ── */}
         <StoryBeat id="quality" eyebrow={m.quality.eyebrow} title={m.quality.title} accent="microplantes">
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.quality.body}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {m.quality.commitments.map((c) => (
-              <div key={c.title} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
-                <div className="flex items-center gap-2">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
-                  <h3 className="text-base font-semibold text-ink">{c.title}</h3>
-                </div>
-                <p className="text-sm text-muted-ink md:text-base">{c.detail}</p>
-              </div>
+          <ExpandableList>
+            {m.quality.commitments.map((commitment) => (
+              <ExpandableCard key={commitment.title} title={commitment.title} accent="microplantes">
+                <p>{commitment.detail}</p>
+              </ExpandableCard>
             ))}
-          </div>
+          </ExpandableList>
         </StoryBeat>
 
         {/* ── 10. FAQ ── */}
