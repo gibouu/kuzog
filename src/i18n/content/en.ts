@@ -22,7 +22,7 @@ export const en: SiteContent = {
       },
       group: {
         name: 'The Group',
-        slogan: 'Investments, commissioning, industrial advisory.',
+        slogan: 'Agricultural import/export and industrial commissioning, from Paris.',
         cta: 'Explore',
         accent: 'group',
       },
@@ -286,35 +286,18 @@ export const en: SiteContent = {
     hero: {
       eyebrow: 'Our other activities',
       title: 'What else we do from Paris.',
-      body: 'Beyond the two flagship operations, KUZOG runs a portfolio of industrial, capital, and advisory ventures.',
+      body: 'Beyond the two flagship operations, KUZOG runs an agricultural import/export business and an agricultural commissioning practice — building facilities in emerging markets where industrial know-how is the bottleneck.',
       origin: 'Founded in 2024 by a father-son duo — a nanotech engineer and a Wharton-trained operator — to build industrial ventures where engineering, capital, and Paris meet.',
     },
     activitiesHeading: 'What we do',
     activities: [
       {
-        title: 'Import / Export',
-        detail: 'Turnkey industrial procurement and cross-border logistics across the EU and MENA. We handle sourcing, customs, regulatory navigation, and delivery for industrial clients who need a partner who actually moves goods.',
+        title: 'Agricultural Import / Export',
+        detail: 'Turnkey procurement and cross-border logistics for agricultural inputs, plants, and equipment. We handle sourcing, customs, regulatory navigation, and delivery — particularly across the EU, MENA, and Sub-Saharan Africa where access to specialised material is the bottleneck.',
       },
       {
-        title: 'Commissioning',
-        detail: 'We build factories. Selecting and adapting foreign process technologies, designing the production plan, sourcing the equipment, sequencing the works, and commissioning the lines — through to handover. Particularly relevant for emerging markets where industrial know-how, not capital, is the bottleneck.',
-      },
-      {
-        title: 'Consulting',
-        detail: 'Strategy and advisory for industrial agronomy and innovation clients, delivered through our Canadian subsidiary. Focused engagements on go-to-market, public-private partnerships, and capital structuring for projects at the intersection of agriculture, deep tech, and capital.',
-        externalUrl: 'https://kuzog.ca',
-      },
-      {
-        title: 'Distressed-Asset Investing',
-        detail: 'Opportunistic acquisitions of industrial sites and businesses with strategic value. We move quickly on liquidations and restructurings where engineering due-diligence is the bottleneck — exactly where most generalist funds hesitate.',
-      },
-      {
-        title: 'Applied AI',
-        detail: 'Internal AI projects and advisory engagements. We build automation, decision systems, and operational tooling into our own ventures first, then offer the playbook to industrial clients who want to do the same.',
-      },
-      {
-        title: 'Investment Fund',
-        detail: 'A KUZOG-anchored vehicle for adjacent ventures at the intersection of agronomy, deep tech, and industrial reconversion. Co-investing alongside operating partners on the kind of opportunities our core operations already surface.',
+        title: 'Agricultural Commissioning',
+        detail: 'We build agricultural facilities — micropropagation laboratories, controlled-environment grow facilities, soil-input formulation plants. Selecting and adapting foreign process technologies, designing the production plan, sourcing equipment, sequencing the works, and commissioning the lines through to handover. Particularly relevant for emerging markets where industrial agronomy know-how, not capital, is the bottleneck.',
       },
     ],
     foundersHeading: 'Founders',
