@@ -335,29 +335,6 @@ export interface MicroplantesContent {
   };
 }
 
-export interface GroupFounder {
-  name: string;
-  role: string;
-  bio: string;
-}
-
-export interface GroupContent {
-  hero: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    origin: string;
-  };
-  foundersHeading: string;
-  founders: GroupFounder[];
-  recognition: RecognitionContent;
-  contactCTA: {
-    title: string;
-    description: string;
-    ctaLabel: string;
-  };
-}
-
 export interface JobPosting {
   id: string;
   company: 'hydrobio' | 'microplantes';
@@ -400,7 +377,6 @@ export interface SiteContent {
   home: HomeContent;
   hydrobio: HydrobioContent;
   microplantes: MicroplantesContent;
-  group: GroupContent;
   careers: CareersContent;
 
   // Footer

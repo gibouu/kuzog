@@ -6,7 +6,6 @@ import App from './App';
 import BlogPage from './pages/BlogPage';
 import HydrobioPage from './pages/HydrobioPage';
 import MicroplantesPage from './pages/MicroplantesPage';
-import GroupPage from './pages/GroupPage';
 import CareersPage from './pages/CareersPage';
 import './index.css';
 
@@ -24,7 +23,6 @@ ReactDOM.createRoot(rootElement).render(
           <Route path="/" element={<App />} />
           <Route path="/hydrobio" element={<HydrobioPage />} />
           <Route path="/microplantes" element={<MicroplantesPage />} />
-          <Route path="/group" element={<GroupPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/careers" element={<CareersPage />} />
         </Routes>
