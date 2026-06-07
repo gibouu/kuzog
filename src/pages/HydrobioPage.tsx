@@ -152,17 +152,16 @@ export default function HydrobioPage() {
             </div>
           </div>
 
-          {/* Why it matters — 5 advantages in 2-3 col grid */}
+          {/* Why it matters — 5 advantages as ExpandableList */}
           <div className="flex flex-col gap-6">
-            <h3 className="text-display-md text-ink">{h.formul.advantagesHeading}</h3>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <h4 className="text-display-md text-ink">{h.formul.advantagesHeading}</h4>
+            <ExpandableList>
               {h.formul.advantages.map((adv) => (
-                <div key={adv.title} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-5">
-                  <h4 className="text-sm font-semibold uppercase tracking-[0.10em] text-accent-hydrobio">{adv.title}</h4>
-                  <p className="text-sm text-muted-ink md:text-base">{adv.detail}</p>
-                </div>
+                <ExpandableCard key={adv.title} title={adv.title} accent="hydrobio">
+                  <p>{adv.detail}</p>
+                </ExpandableCard>
               ))}
-            </div>
+            </ExpandableList>
           </div>
 
           {/* ML explainer */}
@@ -177,44 +176,33 @@ export default function HydrobioPage() {
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{h.application.body}</p>
 
           {/* When / Dose / How */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <div className="flex flex-col gap-3 rounded-card-sm border border-hairline bg-surface p-6">
-              <h3 className="text-base font-semibold text-ink">{h.application.whenHeading}</h3>
-              <p className="text-sm text-muted-ink md:text-base">{h.application.whenBody}</p>
-            </div>
-            <div className="flex flex-col gap-3 rounded-card-sm border border-hairline bg-surface p-6">
-              <h3 className="text-base font-semibold text-ink">{h.application.doseHeading}</h3>
-              <p className="text-sm text-muted-ink md:text-base">{h.application.doseBody}</p>
-            </div>
-            <div className="flex flex-col gap-3 rounded-card-sm border border-hairline bg-surface p-6">
-              <h3 className="text-base font-semibold text-ink">{h.application.howHeading}</h3>
-              <ol className="flex flex-col gap-2">
+          <ExpandableList>
+            <ExpandableCard title={h.application.whenHeading} accent="hydrobio">
+              <p>{h.application.whenBody}</p>
+            </ExpandableCard>
+            <ExpandableCard title={h.application.doseHeading} accent="hydrobio">
+              <p>{h.application.doseBody}</p>
+            </ExpandableCard>
+            <ExpandableCard title={h.application.howHeading} accent="hydrobio">
+              <ul className="flex flex-col gap-2 list-disc pl-4">
                 {h.application.howSteps.map((step, i) => (
-                  <li key={step} className="flex items-start gap-2 text-sm text-muted-ink md:text-base">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-surface-elevated text-xs font-semibold text-ink">
-                      {i + 1}
-                    </span>
-                    {step}
-                  </li>
+                  <li key={i}>{step}</li>
                 ))}
-              </ol>
-            </div>
-          </div>
+              </ul>
+            </ExpandableCard>
+          </ExpandableList>
 
           {/* On-site formulation */}
-          <div className="flex flex-col gap-6 rounded-card border border-hairline bg-surface-elevated p-6 md:p-8">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-display-md text-ink">{h.application.onSiteHeading}</h3>
-              <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{h.application.onSiteBody}</p>
-            </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="flex flex-col gap-4">
+            <h4 className="text-display-md text-ink">{h.application.onSiteHeading}</h4>
+            <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{h.application.onSiteBody}</p>
+            <ExpandableList>
               {h.application.onSitePillars.map((pillar) => (
-                <div key={pillar.title} className="flex flex-col gap-2 rounded-card-sm border border-hairline bg-surface p-5">
-                  <h4 className="text-sm font-semibold text-ink md:text-base">{pillar.title}</h4>
-                  <p className="text-sm text-muted-ink md:text-base">{pillar.detail}</p>
-                </div>
+                <ExpandableCard key={pillar.title} title={pillar.title} accent="hydrobio">
+                  <p>{pillar.detail}</p>
+                </ExpandableCard>
               ))}
-            </div>
+            </ExpandableList>
           </div>
         </StoryBeat>
 
