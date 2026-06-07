@@ -43,35 +43,10 @@ export interface HydrobioLeadStat {
   label: string;
 }
 
-export interface HydrobioProblemStat {
-  value: string;
-  label: string;
-  caption?: string;
-  source?: string;
-}
-
 export interface HydrobioSolutionComponent {
   name: string;
   role: string;
   bullets: string[];
-}
-
-export interface HydrobioRoadmapStep {
-  phase: string;
-  label: string;
-  detail?: string;
-}
-
-export interface HydrobioTeamMember {
-  name: string;
-  role: string;
-  bio: string;
-  highlights: string[];
-}
-
-export interface HydrobioIpCard {
-  title: string;
-  detail: string;
 }
 
 export interface HydrobioImpactStat {
@@ -79,6 +54,41 @@ export interface HydrobioImpactStat {
   label: string;
   caption: string;
   source?: string;
+}
+
+export interface HydrobioJourneyStep {
+  number: number;
+  title: string;
+  body: string;
+}
+
+export interface HydrobioFormulFeature {
+  title: string;
+  detail: string;
+}
+
+export interface HydrobioRoiRow {
+  crop: string;
+  irrigation: string;
+  fertilizer: string;
+  yieldGain: string;
+  total: string;
+  payback: string;
+}
+
+export interface HydrobioCropFamily {
+  name: string;
+  examples: string;
+}
+
+export interface HydrobioSoilType {
+  name: string;
+  benefit: string;
+}
+
+export interface HydrobioFaqItem {
+  question: string;
+  answer: string;
 }
 
 export interface HydrobioContent {
@@ -91,32 +101,64 @@ export interface HydrobioContent {
     scienceCta: string;
     leadStats: HydrobioLeadStat[];
   };
-  problem: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    stats: HydrobioProblemStat[];
-  };
   solution: {
     eyebrow: string;
     title: string;
+    intro: string;
     components: HydrobioSolutionComponent[];
     synergyLine: string;
+  };
+  journey: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    steps: HydrobioJourneyStep[];
+  };
+  formul: {
+    eyebrow: string;
+    title: string;
+    tagline: string;
+    body: string;
+    inputsHeading: string;
+    inputs: string[];
+    engineHeading: string;
+    engineBody: string;
+    outputsHeading: string;
+    outputs: string[];
+    advantagesHeading: string;
+    advantages: HydrobioFormulFeature[];
+  };
+  application: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    whenHeading: string;
+    whenBody: string;
+    doseHeading: string;
+    doseBody: string;
+    howHeading: string;
+    howSteps: string[];
+    onSiteHeading: string;
+    onSiteBody: string;
+    onSitePillars: HydrobioFormulFeature[];
   };
   results: {
     eyebrow: string;
     title: string;
     stats: HydrobioImpactStat[];
     footnote: string;
-    roadmapHeading: string;
-    roadmapSteps: HydrobioRoadmapStep[];
+    roiHeading: string;
+    roiCaption: string;
+    roiRows: HydrobioRoiRow[];
   };
-  team: {
+  cultures: {
     eyebrow: string;
     title: string;
-    members: HydrobioTeamMember[];
-    ipHeading: string;
-    ipCards: HydrobioIpCard[];
+    body: string;
+    cropsHeading: string;
+    crops: HydrobioCropFamily[];
+    soilsHeading: string;
+    soils: HydrobioSoilType[];
   };
   impact: {
     eyebrow: string;
@@ -125,6 +167,16 @@ export interface HydrobioContent {
     sdgValue: string;
     sdgLabel: string;
     sdgCaption: string;
+  };
+  innovation: {
+    eyebrow: string;
+    title: string;
+    items: HydrobioFormulFeature[];
+  };
+  faq: {
+    eyebrow: string;
+    title: string;
+    items: HydrobioFaqItem[];
   };
   recognition: RecognitionContent;
   contactCTA: {
