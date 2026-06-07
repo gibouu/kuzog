@@ -16,7 +16,7 @@ export function ProductCard({ name, slogan, cta, accent, href }: ProductCardProp
   return (
     <Link
       to={href}
-      className="group flex h-full flex-col justify-between gap-10 rounded-card border border-hairline bg-surface p-10 shadow-card transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:p-12"
+      className="group flex h-full flex-col justify-between gap-10 rounded-card border border-hairline bg-surface p-7 shadow-card transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface sm:p-10 md:p-12"
     >
       <div className="flex flex-col gap-6">
         <span className={`inline-block h-2 w-2 rounded-full ${ACCENT_DOT[accent]}`} aria-hidden />
