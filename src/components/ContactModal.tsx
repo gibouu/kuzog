@@ -252,16 +252,18 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
             </label>
           </div>
 
-          <div className="flex justify-center">
-            <HCaptcha
-              ref={captchaRef}
-              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-              reCaptchaCompat={false}
-              onVerify={(token) => setCaptchaToken(token)}
-              onExpire={() => setCaptchaToken(null)}
-              onError={() => setCaptchaToken(null)}
-            />
-          </div>
+          {open && (
+            <div className="flex justify-center">
+              <HCaptcha
+                ref={captchaRef}
+                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                reCaptchaCompat={false}
+                onVerify={(token) => setCaptchaToken(token)}
+                onExpire={() => setCaptchaToken(null)}
+                onError={() => setCaptchaToken(null)}
+              />
+            </div>
+          )}
 
           {error ? (
             <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>

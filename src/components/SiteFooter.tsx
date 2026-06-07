@@ -5,12 +5,6 @@ type FooterProps = {
   onShowPolicy?: () => void;
 };
 
-const ABOUT_LABEL: Record<string, string> = {
-  en: 'About KUZOG France',
-  fr: 'À propos de KUZOG France',
-  ar: 'حول KUZOG France',
-};
-
 const CAREERS_LABEL: Record<string, string> = {
   en: 'Careers',
   fr: 'Carrières',
@@ -19,7 +13,6 @@ const CAREERS_LABEL: Record<string, string> = {
 
 export function SiteFooter({ onShowPolicy }: FooterProps) {
   const { language } = useLanguage();
-  const aboutLabel = ABOUT_LABEL[language] ?? ABOUT_LABEL.en;
   const careersLabel = CAREERS_LABEL[language] ?? CAREERS_LABEL.en;
 
   return (
@@ -30,12 +23,6 @@ export function SiteFooter({ onShowPolicy }: FooterProps) {
           <span className="ml-3 text-muted-ink">© 2025 KUZOG France. Paris</span>
         </div>
         <div className="flex flex-row flex-wrap items-center justify-center gap-3 md:justify-end">
-          <Link
-            to="/group"
-            className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-ink transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-          >
-            {aboutLabel}
-          </Link>
           <Link
             to="/careers"
             className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-ink transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
