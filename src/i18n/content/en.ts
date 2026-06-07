@@ -48,9 +48,23 @@ export const en: SiteContent = {
       title: 'A hybrid mineral-biological amendment — not just a fertiliser.',
       intro: 'HYDROBIO does more than deliver nutrients: it restores the soil\'s capacity to hold water, exchange nutrients, and host microbial life. It acts on all three dimensions of soil fertility — physical, chemical, and biological — in a single product. Three complementary components, one living mineral matrix.',
       components: [
-        { name: 'Micronised clay', role: 'Colloidal fraction', bullets: ['Specific surface area ×200 — maximal water retention', 'Homogeneous soil dispersion'] },
-        { name: 'Micronised zeolite', role: 'Nutrient reservoir', bullets: ['High cation-exchange capacity', 'Progressive nutrient release'] },
-        { name: 'Mycorrhizal consortium', role: 'Biological activator', bullets: ['Faster root colonisation, better water and nutrient uptake', 'Drought-stress tolerance, restored soil biodiversity'] },
+        {
+          name: 'Clay-based micronised matrix',
+          role: 'Mineral substrate',
+          bullets: [
+            'Specific surface area ×200 — maximal water retention',
+            'High cation-exchange capacity, progressive nutrient release',
+            'Homogeneous soil dispersion, structural scaffold for the biology',
+          ],
+        },
+        {
+          name: 'Mycorrhizal consortium',
+          role: 'Biological activator',
+          bullets: [
+            'Faster root colonisation, better water and nutrient uptake',
+            'Drought-stress tolerance, restored soil biodiversity',
+          ],
+        },
       ],
       synergyLine: 'The minerals act as a physical scaffold for the mycorrhizae — root colonisation is faster, the effect extends to 3-5 years. A living mineral matrix, not just a mix.',
     },
@@ -61,7 +75,7 @@ export const en: SiteContent = {
       steps: [
         { number: 1, title: 'Soil analysis', body: 'A field sample reveals texture, pH, cation-exchange capacity, organic matter, biological state, water-holding capacity, and degradation level.' },
         { number: 2, title: 'Crop & objectives', body: 'We identify the target crop, the climate context (rainfall, water stress, irrigation), and your objectives: save water, boost yields, restore degraded soil.' },
-        { number: 3, title: 'HydrobioFormul (ML)', body: 'Our proprietary machine-learning application calculates the exact composition (clay/zeolite/mycorrhiza ratios) and the per-hectare dose, tailored to your soil and your crop.' },
+        { number: 3, title: 'HydrobioFormul (ML)', body: 'Our proprietary machine-learning application calculates the exact composition (mineral-matrix and mycorrhiza ratios) and the per-hectare dose, tailored to your soil and your crop.' },
         { number: 4, title: 'On-site formulation & application', body: 'The amendment is formulated on site according to the recipe and applied in a simple spreading + light incorporation step. One application covers 3 to 5 years.' },
       ],
     },
@@ -80,7 +94,7 @@ export const en: SiteContent = {
       engineBody: 'An agronomic model coupled with a supervised machine-learning predictor, trained on pedoclimatic data and HYDROBIO trial results. It simulates the soil\'s response and determines the optimal combination of the three components.',
       outputsHeading: 'Outputs',
       outputs: [
-        'Exact composition — clay/zeolite/mycorrhiza ratios',
+        'Exact composition — mineral-matrix and mycorrhiza ratios',
         'Per-hectare dose and application schedule',
         'Simulated gains — water retention, yield, ROI estimate',
         'Production-ready formulation sheet, fully traced',
@@ -161,7 +175,7 @@ export const en: SiteContent = {
       stats: [
         { value: '> 0.5 t/ha', label: 'Carbon sequestered per cycle', caption: 'Mycorrhizal networks stabilise soil organic matter across cycles.', source: 'Rillig & Mummey 2006 · Zhu & Miller 2003 · IPCC AR6 AFOLU 2022' },
         { value: '×3', label: 'Soil biodiversity restored', caption: 'Microbial activity rebounds, reversing decades of monoculture damage.', source: 'Smith & Read 2008 · Barea et al. 2005' },
-        { value: '−25%', label: 'Nitrate leaching prevented', caption: 'High-CEC zeolite holds nitrogen in the root zone.', source: 'Huang & Petrovic 1994 · Kubo et al. 2010' },
+        { value: '−25%', label: 'Nitrate leaching prevented', caption: 'The high-CEC mineral matrix holds nitrogen in the root zone.', source: 'Huang & Petrovic 1994 · Kubo et al. 2010' },
         { value: '∞', label: 'Degraded soils made productive', caption: 'Arid, sandy or poor soils restored without excavation or replacement.', source: 'FAO/ITPS 2015 · Nair et al. 2011' },
       ],
       sdgHeading: 'Aligned with the UN Sustainable Development Goals',
@@ -175,7 +189,7 @@ export const en: SiteContent = {
         {
           number: 6,
           name: 'Clean Water',
-          impact: '+47% water retention reduces irrigation needs. The high-CEC zeolite holds nitrogen in the root zone, cutting nitrate leaching by an estimated 25% — groundwater stays cleaner.',
+          impact: '+47% water retention reduces irrigation needs. The high-CEC mineral matrix holds nitrogen in the root zone, cutting nitrate leaching by an estimated 25% — groundwater stays cleaner.',
         },
         {
           number: 13,
@@ -203,7 +217,7 @@ export const en: SiteContent = {
       eyebrow: 'FAQ',
       title: 'Common questions, direct answers.',
       items: [
-        { question: 'What is HYDROBIO?', answer: 'A hybrid amendment combining micronised minerals (clay, zeolite) and a living mycorrhizal consortium — acting on the structure, nutrition, and biological life of the soil all at once.' },
+        { question: 'What is HYDROBIO?', answer: 'A hybrid amendment combining a clay-based micronised mineral matrix and a living mycorrhizal consortium — acting on the structure, nutrition, and biological life of the soil all at once.' },
         { question: 'Is it a fertiliser?', answer: 'No. HYDROBIO restores the soil\'s ability to retain water and nutrients and to feed the plant, which reduces the need for fertilisers and irrigation.' },
         { question: 'What is HydrobioFormul?', answer: 'Our machine-learning application that calculates the exact composition and dose from your soil analysis and target crop, and simulates expected gains.' },
         { question: 'Do I need to get my soil analysed?', answer: 'Yes — it\'s step 1. The analysis lets HydrobioFormul personalise the formulation. We support you with sampling.' },
@@ -321,6 +335,7 @@ export const en: SiteContent = {
       eyebrow: 'Plant formats',
       title: 'From in-vitro plantlets to ready-to-plant material.',
       body: 'We adapt the delivery format to your organisation — whether you\'re a nursery equipped for acclimatation or a grower looking for ready-to-plant stock.',
+      audienceLabel: 'For',
       items: [
         { format: 'Non-rooted vitroplant (stage 2)', description: 'Micro-shoots in flasks, for you to root and acclimate in-house. Most economical and flexible format.', audience: 'Nurseries equipped with lab/greenhouse' },
         { format: 'Rooted vitroplant (stage 3)', description: 'Plant rooted in vitro, ready for acclimatation. Secure establishment.', audience: 'Nurseries & growers' },
@@ -794,7 +809,7 @@ export const en: SiteContent = {
         location: 'France — multi-site',
         mission: 'Run our on-site formulation operation — mobile units that produce HYDROBIO batches at or near pilot farms, just before application.',
         responsibilities: [
-          'Operate the mobile formulation unit (clay/zeolite micronisation, mycorrhizal inoculation)',
+          'Operate the mobile formulation unit (mineral-matrix micronisation, mycorrhizal inoculation)',
           'Execute quality control on each batch (granulometry, viability)',
           'Coordinate logistics with the agronomy team and the farm',
           'Train field operators and ensure HSE compliance',
