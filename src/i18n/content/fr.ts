@@ -48,9 +48,23 @@ export const fr: SiteContent = {
       title: 'Un amendement hybride minéral-biologique — pas seulement un engrais.',
       intro: 'HYDROBIO ne se contente pas d\'apporter des nutriments : il restaure la capacité du sol à retenir l\'eau, échanger les nutriments et héberger la vie microbienne. Il agit sur les trois dimensions de la fertilité du sol — physique, chimique et biologique — en un seul produit. Trois composants complémentaires, une matrice minérale vivante.',
       components: [
-        { name: 'Argile micronisée', role: 'Fraction colloïdale', bullets: ['Surface spécifique ×200 — rétention d\'eau maximale', 'Dispersion homogène dans le sol'] },
-        { name: 'Zéolite micronisée', role: 'Réservoir nutritif', bullets: ['Capacité d\'échange cationique élevée', 'Libération progressive des nutriments'] },
-        { name: 'Consortium mycorhizien', role: 'Activateur biologique', bullets: ['Colonisation racinaire plus rapide, meilleure absorption d\'eau et de nutriments', 'Tolérance au stress hydrique, biodiversité du sol restaurée'] },
+        {
+          name: 'Matrice micronisée à base d\'argile',
+          role: 'Substrat minéral',
+          bullets: [
+            'Surface spécifique ×200 — rétention d\'eau maximale',
+            'Capacité d\'échange cationique élevée, libération progressive des nutriments',
+            'Dispersion homogène dans le sol, support physique pour la biologie',
+          ],
+        },
+        {
+          name: 'Consortium mycorhizien',
+          role: 'Activateur biologique',
+          bullets: [
+            'Colonisation racinaire plus rapide, meilleure absorption de l\'eau et des nutriments',
+            'Tolérance au stress hydrique, biodiversité du sol restaurée',
+          ],
+        },
       ],
       synergyLine: 'Les minéraux servent d\'échafaudage physique aux mycorhizes — la colonisation racinaire est plus rapide, l\'effet s\'étend sur 3 à 5 ans. Une matrice minérale vivante, pas seulement un mélange.',
     },
@@ -61,7 +75,7 @@ export const fr: SiteContent = {
       steps: [
         { number: 1, title: 'Analyse du sol', body: 'Un prélèvement de terrain révèle texture, pH, capacité d\'échange cationique, matière organique, état biologique, capacité de rétention en eau et niveau de dégradation.' },
         { number: 2, title: 'Culture & objectifs', body: 'Nous identifions la culture cible, le contexte climatique (pluviométrie, stress hydrique, irrigation) et vos objectifs : économiser l\'eau, booster les rendements, restaurer un sol dégradé.' },
-        { number: 3, title: 'HydrobioFormul (ML)', body: 'Notre application machine learning propriétaire calcule la composition exacte (ratios argile/zéolite/mycorhize) et la dose à l\'hectare, adaptées à votre sol et votre culture.' },
+        { number: 3, title: 'HydrobioFormul (ML)', body: 'Notre application machine learning propriétaire calcule la composition exacte (ratios matrice minérale et mycorhize) et la dose à l\'hectare, adaptées à votre sol et votre culture.' },
         { number: 4, title: 'Formulation sur site & application', body: 'L\'amendement est formulé sur site selon la recette et appliqué en un simple épandage + légère incorporation. Une seule application couvre 3 à 5 ans.' },
       ],
     },
@@ -80,7 +94,7 @@ export const fr: SiteContent = {
       engineBody: 'Un modèle agronomique couplé à un prédicteur de machine learning supervisé, entraîné sur les données pédoclimatiques et les résultats d\'essais HYDROBIO. Il simule la réponse du sol et détermine la combinaison optimale des trois composants.',
       outputsHeading: 'Sorties',
       outputs: [
-        'Composition exacte — ratios argile/zéolite/mycorhize',
+        'Composition exacte — ratios matrice minérale et mycorhize',
         'Dose à l\'hectare et calendrier d\'application',
         'Gains simulés — rétention d\'eau, rendement, estimation ROI',
         'Fiche de formulation prête à la production, entièrement tracée',
@@ -161,7 +175,7 @@ export const fr: SiteContent = {
       stats: [
         { value: '> 0,5 t/ha', label: 'Carbone séquestré par cycle', caption: 'Les réseaux mycorhiziens stabilisent la matière organique du sol sur plusieurs cycles.', source: 'Rillig & Mummey 2006 · Zhu & Miller 2003 · IPCC AR6 AFOLU 2022' },
         { value: '×3', label: 'Biodiversité du sol restaurée', caption: 'L\'activité microbienne rebondit, inversant des décennies de dommages liés à la monoculture.', source: 'Smith & Read 2008 · Barea et al. 2005' },
-        { value: '−25%', label: 'Lessivage des nitrates évité', caption: 'La zéolite à CEC élevée retient l\'azote dans la zone racinaire.', source: 'Huang & Petrovic 1994 · Kubo et al. 2010' },
+        { value: '−25%', label: 'Lessivage des nitrates évité', caption: 'La matrice minérale à CEC élevée retient l\'azote dans la zone racinaire.', source: 'Huang & Petrovic 1994 · Kubo et al. 2010' },
         { value: '∞', label: 'Sols dégradés rendus productifs', caption: 'Sols arides, sableux ou pauvres restaurés sans excavation ni remplacement.', source: 'FAO/ITPS 2015 · Nair et al. 2011' },
       ],
       sdgHeading: 'Alignement avec les Objectifs de Développement Durable de l\'ONU',
@@ -175,7 +189,7 @@ export const fr: SiteContent = {
         {
           number: 6,
           name: 'Eau propre et assainissement',
-          impact: '+47 % de rétention d\'eau réduit les besoins en irrigation. La zéolite à CEC élevée retient l\'azote dans la zone racinaire, diminuant le lessivage des nitrates d\'environ 25 % — les eaux souterraines restent plus propres.',
+          impact: '+47 % de rétention d\'eau réduit les besoins en irrigation. La matrice minérale à CEC élevée retient l\'azote dans la zone racinaire, diminuant le lessivage des nitrates d\'environ 25 % — les eaux souterraines restent plus propres.',
         },
         {
           number: 13,
@@ -203,7 +217,7 @@ export const fr: SiteContent = {
       eyebrow: 'FAQ',
       title: 'Questions fréquentes, réponses directes.',
       items: [
-        { question: 'Qu\'est-ce qu\'HYDROBIO ?', answer: 'Un amendement hybride qui combine des minéraux micronisés (argile, zéolite) et un consortium mycorhizien vivant — agissant à la fois sur la structure, la nutrition et la vie biologique du sol.' },
+        { question: 'Qu\'est-ce qu\'HYDROBIO ?', answer: 'Un amendement hybride qui combine une matrice minérale micronisée à base d\'argile et un consortium mycorhizien vivant — agissant à la fois sur la structure, la nutrition et la vie biologique du sol.' },
         { question: 'Est-ce un engrais ?', answer: 'Non. HYDROBIO restaure la capacité du sol à retenir l\'eau et les nutriments et à nourrir la plante, ce qui réduit le besoin en engrais et en irrigation.' },
         { question: 'Qu\'est-ce qu\'HydrobioFormul ?', answer: 'Notre application de machine learning qui calcule la composition exacte et la dose à partir de votre analyse de sol et de votre culture cible, et simule les gains attendus.' },
         { question: 'Dois-je faire analyser mon sol ?', answer: 'Oui — c\'est l\'étape 1. L\'analyse permet à HydrobioFormul de personnaliser la formulation. Nous vous accompagnons pour le prélèvement.' },
@@ -322,6 +336,7 @@ export const fr: SiteContent = {
       eyebrow: 'Formats de plants',
       title: 'Du vitroplant au plant prêt à planter.',
       body: 'Nous adaptons le format de livraison à votre organisation — que vous soyez une pépinière équipée pour l\'acclimatation ou un producteur cherchant du matériel prêt à planter.',
+      audienceLabel: 'Pour',
       items: [
         { format: 'Vitroplant non enraciné (stade 2)', description: 'Micro-pousses en flacons, à enraciner et acclimater en interne. Format le plus économique et flexible.', audience: 'Pépinières équipées labo/serre' },
         { format: 'Vitroplant enraciné (stade 3)', description: 'Plant enraciné in vitro, prêt à l\'acclimatation. Reprise sécurisée.', audience: 'Pépinières & producteurs' },
@@ -787,7 +802,7 @@ export const fr: SiteContent = {
         location: 'France — multi-sites',
         mission: 'Piloter notre opération de formulation sur site — des unités mobiles qui produisent les lots HYDROBIO à proximité des fermes pilotes, juste avant l\'application.',
         responsibilities: [
-          'Exploiter l\'unité de formulation mobile (micronisation argile/zéolite, inoculation mycorhizienne)',
+          'Exploiter l\'unité de formulation mobile (micronisation matrice minérale, inoculation mycorhizienne)',
           'Réaliser le contrôle qualité sur chaque lot (granulométrie, viabilité)',
           'Coordonner la logistique avec l\'équipe agronomique et la ferme',
           'Former les opérateurs terrain et assurer la conformité HSE',

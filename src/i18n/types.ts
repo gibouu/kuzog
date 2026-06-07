@@ -294,6 +294,7 @@ export interface MicroplantesContent {
     eyebrow: string;
     title: string;
     body: string;
+    audienceLabel: string;
     items: MicroplantesPlantFormat[];
   };
   services: {

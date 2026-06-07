@@ -101,18 +101,22 @@ export default function MicroplantesPage() {
         {/* ── 5. Plant formats ── */}
         <StoryBeat id="formats" eyebrow={m.formats.eyebrow} title={m.formats.title} accent="microplantes">
           <p className="text-base text-muted-ink md:text-lg md:max-w-3xl">{m.formats.body}</p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <ExpandableList>
             {m.formats.items.map((fmt) => (
-              <div key={fmt.format} className="flex flex-col gap-3 rounded-card border border-hairline bg-surface p-6">
-                <div className="flex items-center gap-2">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent-microplantes" aria-hidden />
-                  <h3 className="text-base font-semibold text-ink">{fmt.format}</h3>
+              <ExpandableCard
+                key={fmt.format}
+                title={fmt.format}
+                accent="microplantes"
+              >
+                <div className="flex flex-col gap-2">
+                  <p className="text-sm text-ink md:text-base">{fmt.description}</p>
+                  <p className="text-xs uppercase tracking-[0.12em] text-muted-ink md:text-sm">
+                    {m.formats.audienceLabel}: {fmt.audience}
+                  </p>
                 </div>
-                <p className="text-sm text-muted-ink md:text-base">{fmt.description}</p>
-                <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">{fmt.audience}</p>
-              </div>
+              </ExpandableCard>
             ))}
-          </div>
+          </ExpandableList>
         </StoryBeat>
 
         {/* ── 6. Services on demand ── */}
