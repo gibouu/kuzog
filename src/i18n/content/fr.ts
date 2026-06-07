@@ -22,7 +22,7 @@ export const fr: SiteContent = {
       },
       group: {
         name: 'Le Groupe',
-        slogan: 'Investissements, commissionnement industriel, conseil.',
+        slogan: 'Import-export agricole et commissionnement industriel, depuis Paris.',
         cta: 'Explorer',
         accent: 'group',
       },
@@ -287,35 +287,18 @@ export const fr: SiteContent = {
     hero: {
       eyebrow: 'Nos autres activités',
       title: 'Ce que nous faisons aussi, depuis Paris.',
-      body: 'En parallèle de nos deux opérations phares, KUZOG opère un portefeuille de ventures industriels, capitalistiques et de conseil.',
+      body: 'En parallèle de nos deux opérations phares, KUZOG opère une activité d\'import-export agricole et une pratique de commissionnement agricole — construction d\'installations dans les marchés émergents où le savoir-faire industriel est le goulet d\'étranglement.',
       origin: 'Fondée en 2024 par un duo père-fils — un ingénieur nanotech et un opérateur formé à Wharton — pour construire des entreprises industrielles à la croisée de l\'ingénierie, du capital et de Paris.',
     },
     activitiesHeading: 'Ce que nous faisons',
     activities: [
       {
-        title: 'Import / Export',
-        detail: 'Approvisionnement industriel clé en main et logistique transfrontalière dans l\'UE et MENA. Nous gérons sourcing, douanes, navigation réglementaire et livraison pour des clients industriels qui ont besoin d\'un partenaire qui déplace réellement les marchandises.',
+        title: 'Import / Export agricole',
+        detail: 'Approvisionnement industriel clé en main et logistique transfrontalière pour les intrants agricoles, les plants et les équipements. Nous gérons sourcing, douanes, navigation réglementaire et livraison — particulièrement dans l\'UE, MENA et Afrique subsaharienne où l\'accès au matériel spécialisé est le goulet d\'étranglement.',
       },
       {
-        title: 'Commissionnement industriel',
-        detail: 'Nous construisons des usines. Sélection et adaptation de procédés industriels étrangers, conception du plan de production, sourcing des équipements, séquençage des travaux, mise en service des lignes — jusqu\'au transfert. Particulièrement pertinent pour les marchés émergents, où le savoir-faire industriel — et non le capital — est le goulet d\'étranglement.',
-      },
-      {
-        title: 'Conseil',
-        detail: 'Stratégie et conseil aux clients de l\'agronomie industrielle et de l\'innovation, délivré par notre filiale canadienne. Missions focalisées sur le go-to-market, les partenariats publics-privés et la structuration de capital pour des projets à la croisée de l\'agriculture, de la deep tech et du capital.',
-        externalUrl: 'https://kuzog.ca',
-      },
-      {
-        title: 'Investissement en actifs distressed',
-        detail: 'Acquisitions opportunistes de sites industriels et entreprises à valeur stratégique. Nous savons agir vite sur des liquidations et restructurations où la due-diligence technique est le goulet d\'étranglement — précisément là où la plupart des fonds généralistes hésitent.',
-      },
-      {
-        title: 'IA appliquée',
-        detail: 'Projets internes d\'IA et missions de conseil. Nous intégrons d\'abord l\'automatisation et les systèmes de décision dans nos propres ventures, puis proposons le playbook aux clients industriels qui veulent faire de même.',
-      },
-      {
-        title: 'Fonds d\'investissement',
-        detail: 'Véhicule ancré chez KUZOG pour les ventures adjacentes à la croisée de l\'agronomie, de la deep tech et de la reconversion industrielle. Co-investissement aux côtés de partenaires opérateurs sur les opportunités que nos opérations cœur font émerger.',
+        title: 'Commissionnement agricole',
+        detail: 'Nous construisons des installations agricoles — laboratoires de micropropagation, infrastructures de culture en environnement contrôlé, unités de formulation d\'intrants pour les sols. Sélection et adaptation de procédés industriels étrangers, conception du plan de production, sourcing des équipements, séquençage des travaux, mise en service des lignes — jusqu\'au transfert. Particulièrement pertinent pour les marchés émergents, où le savoir-faire agronomique industriel — et non le capital — est le goulet d\'étranglement.',
       },
     ],
     foundersHeading: 'Fondateurs',
