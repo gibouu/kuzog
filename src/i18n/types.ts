@@ -509,19 +509,20 @@ export interface FiguresContent {
     caption: string;
     inLab: string;
     outGrowers: string;
-    motherPlant: string;
-    sample: string;
-    multiply: string;
+    hood: string;
+    growthRoom: string;
+    rooting: string;
     greenhouse: string;
     growers: string;
   };
   virusFree: {
     tag: string;
     title: string;
-    fieldStock: string;
-    carriesViruses: string;
-    meristemTip: string;
-    cleanestCells: string;
+    caption: string;
+    shootTip: string;
+    virusesLag: string;
+    apicalDome: string;
+    exciseTip: string;
     uniform: string;
   };
   // Hydrobio
@@ -538,6 +539,7 @@ export interface FiguresContent {
     title: string;
     caption: string;
     root: string;
+    holdsLabel: string;
     waterBadge: string;
   };
   porous: {
