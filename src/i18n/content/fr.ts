@@ -427,6 +427,13 @@ export const fr: SiteContent = {
     contact: 'Contact',
   },
 
+  notFound: {
+    eyebrow: 'Page introuvable',
+    title: 'Cette page a fait fausse route',
+    message: "La page que vous cherchez n'existe pas ou a été déplacée. Revenons sur le bon chemin.",
+    backHome: "Retour à l'accueil",
+  },
+
   contactModal: {
     title: 'Faisons avancer votre projet',
     subtitle: 'Partagez quelques détails et notre équipe répondra dans un délai d\'un jour ouvrable.',

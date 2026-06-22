@@ -392,6 +392,14 @@ export interface SiteContent {
     contact: string;
   };
 
+  // 404 / unknown route
+  notFound: {
+    eyebrow: string;
+    title: string;
+    message: string;
+    backHome: string;
+  };
+
   // Contact Modal
   contactModal: {
     title: string;

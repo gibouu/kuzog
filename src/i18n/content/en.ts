@@ -426,6 +426,13 @@ export const en: SiteContent = {
     contact: 'Contact',
   },
 
+  notFound: {
+    eyebrow: 'Page not found',
+    title: 'This page took a wrong turn',
+    message: "The page you're looking for doesn't exist or has moved. Let's get you back on track.",
+    backHome: 'Back to Home',
+  },
+
   contactModal: {
     title: "Let's get your project moving",
     subtitle: 'Share a few details and our team will respond within one business day.',

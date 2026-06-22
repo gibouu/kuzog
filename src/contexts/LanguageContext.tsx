@@ -21,7 +21,10 @@ function getStoredLanguage(): Language {
 
   try {
     const stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    return (stored && ['en', 'fr', 'ar'].includes(stored) ? stored : DEFAULT_LANGUAGE) as Language;
+    // Validate against SUPPORTED_LANGUAGES (the single source of truth) so adding
+    // a locale there is enough — no separate literal list to keep in sync.
+    const isSupported = SUPPORTED_LANGUAGES.some((language) => language.code === stored);
+    return (isSupported ? (stored as Language) : DEFAULT_LANGUAGE);
   } catch {
     return DEFAULT_LANGUAGE;
   }
