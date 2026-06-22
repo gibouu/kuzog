@@ -50,3 +50,27 @@
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
   }
 }
+
+/* Styling for the first-party ethics-policy HTML fragment injected into PolicyModal.
+   Tailwind's preflight strips heading/list defaults, so restore readable structure. */
+@layer components {
+  .policy-prose h2 {
+    @apply mt-8 text-lg font-semibold text-ink md:text-xl;
+  }
+
+  .policy-prose h3 {
+    @apply mt-6 text-base font-semibold text-ink;
+  }
+
+  .policy-prose p {
+    @apply mt-3;
+  }
+
+  .policy-prose ul {
+    @apply mt-2 list-disc space-y-1 pl-6;
+  }
+
+  .policy-prose strong {
+    @apply font-semibold text-ink;
+  }
+}
