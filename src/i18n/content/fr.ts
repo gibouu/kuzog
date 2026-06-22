@@ -457,13 +457,6 @@ export const fr: SiteContent = {
     backHome: "Retour à l'accueil",
   },
 
-  notFound: {
-    eyebrow: 'Page introuvable',
-    title: 'Cette page a fait fausse route',
-    message: "La page que vous cherchez n'existe pas ou a été déplacée. Revenons sur le bon chemin.",
-    backHome: "Retour à l'accueil",
-  },
-
   contactModal: {
     eyebrow: 'Contact',
     closeLabel: 'Fermer la fenêtre de contact',
