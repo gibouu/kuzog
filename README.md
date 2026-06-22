@@ -27,4 +27,11 @@ CI (`.github/workflows/deploy.yml`) runs lint, test, and build on every push to 
 
 Update copy inside the relevant section blocks in `src/App.tsx`. The scrollspy listens to sections with IDs `hero`, `industries`, and `services`; to anchor additional sections, extend the observer configuration at the top of `App.tsx`.
 
-To edit the ethics policy, modify the text inside `components/PolicyModal.tsx`. If you also want to update the standalone static page, adjust `public/compliance-ethics/index.html`.
+### Ethics policy — single source of truth
+
+The ethics code lives in **one** file: `src/content/ethics-policy.html` (the `<article>` body as semantic HTML). Both surfaces read it:
+
+- `components/PolicyModal.tsx` imports it (`?raw`) and renders it in the in-app modal.
+- `public/compliance-ethics/index.html` (the standalone page) is **generated** from it by `scripts/generate-compliance-page.mjs`, which runs automatically on `npm run build` (via `prebuild`).
+
+To update the policy: edit `src/content/ethics-policy.html` only, then run `npm run build` (or `node scripts/generate-compliance-page.mjs`) to regenerate the static page. Do **not** hand-edit `public/compliance-ethics/index.html` — it carries a "generated file" banner. `npm run check:compliance` (and the test suite) fail if the two ever drift.
