@@ -456,13 +456,6 @@ export const en: SiteContent = {
     backHome: 'Back to Home',
   },
 
-  notFound: {
-    eyebrow: 'Page not found',
-    title: 'This page took a wrong turn',
-    message: "The page you're looking for doesn't exist or has moved. Let's get you back on track.",
-    backHome: 'Back to Home',
-  },
-
   contactModal: {
     eyebrow: 'Contact',
     closeLabel: 'Close contact modal',

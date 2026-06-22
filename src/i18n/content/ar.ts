@@ -258,13 +258,6 @@ export const ar: SiteContent = {
     backHome: 'العودة إلى الرئيسية',
   },
 
-  notFound: {
-    eyebrow: 'الصفحة غير موجودة',
-    title: 'هذه الصفحة سلكت طريقًا خاطئًا',
-    message: 'الصفحة التي تبحث عنها غير موجودة أو تم نقلها. لنعد بك إلى المسار الصحيح.',
-    backHome: 'العودة إلى الرئيسية',
-  },
-
   contactModal: {
     eyebrow: 'اتصل',
     closeLabel: 'إغلاق نافذة الاتصال',
