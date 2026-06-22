@@ -2,12 +2,19 @@
 
 ## Development
 
+Requires **Node >= 20.19.0** (Vite 7 engine floor; see `.nvmrc` / `engines` in `package.json`).
+With `nvm`, run `nvm use` to pick up the pinned version.
+
 ```bash
 npm install
 npm run dev
 ```
 
-Build for production with `npm run build`.
+- `npm run lint` — type-check (`tsc --noEmit`).
+- `npm test` — run the Vitest + React Testing Library suite.
+- `npm run build` — production build.
+
+CI (`.github/workflows/deploy.yml`) runs lint, test, and build on every push to `main` before deploying.
 
 ## Key Components
 
