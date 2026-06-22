@@ -955,9 +955,10 @@ export const en: SiteContent = {
       tag: 'Figure 4 · Component ③',
       title: 'Living fungi extend the roots',
       caption: "The third component adds living fungi. Their fine threads reach far beyond the root's own zone, pulling in distant water and nutrients — and bringing the soil back to life.",
-      soilSurface: 'soil surface',
-      rootReach: "root's own reach",
-      reachLabel: 'roots reach far more soil, and water',
+      root: 'Root',
+      rootHairs: 'Root hairs',
+      fungi: 'Mycorrhizal fungi',
+      reachLabel: 'Living fungi reach far beyond the root — for water and nutrients',
     },
   },
 };
