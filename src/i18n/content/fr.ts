@@ -956,9 +956,10 @@ export const fr: SiteContent = {
       tag: 'Figure 4 · Composant ③',
       title: 'Des champignons vivants prolongent les racines',
       caption: "Le troisième composant apporte des champignons vivants. Leurs fins filaments dépassent largement la zone de la racine, captant l'eau et les nutriments éloignés — et redonnant vie au sol.",
-      soilSurface: 'surface du sol',
-      rootReach: 'portée de la racine seule',
-      reachLabel: "les racines atteignent bien plus de sol, et d'eau",
+      root: 'Racine',
+      rootHairs: 'Poils absorbants',
+      fungi: 'Champignons mycorhiziens',
+      reachLabel: "Les champignons vont bien au-delà de la racine — eau et nutriments",
     },
   },
 };

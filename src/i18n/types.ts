@@ -552,8 +552,9 @@ export interface FiguresContent {
     tag: string;
     title: string;
     caption: string;
-    soilSurface: string;
-    rootReach: string;
+    root: string;
+    rootHairs: string;
+    fungi: string;
     reachLabel: string;
   };
 }
