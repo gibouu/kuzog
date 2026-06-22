@@ -7,6 +7,7 @@ export const FIG = {
   hair: '#e6e3db',
   mp: 'var(--accent-microplantes)',
   mpSoft: '#eaf1e6',
+  mpDeep: '#3f6a32',
   hy: 'var(--accent-hydrobio)',
   hySoft: '#eef1ee',
   water: '#5b8bb0',
@@ -14,5 +15,10 @@ export const FIG = {
   warn: '#c2553f',
   warnSoft: '#f6e5e0',
   soil: '#8a6d4f',
+  soilSoft: '#e7dccb',
   conv: '#b9bdb5',
+  rootFill: '#f4efe1',
+  rootEdge: '#d8cdb0',
+  hairTan: '#c7bda0',
+  cell: '#ece5d2',
 } as const;

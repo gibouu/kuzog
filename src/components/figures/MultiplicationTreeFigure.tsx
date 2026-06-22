@@ -2,56 +2,62 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { FigureCard } from './FigureCard';
 import { FIG } from './figureColors';
 
+const TRAY_SPROUTS = [70, 86, 102, 118, 134, 150, 166, 182, 198, 214, 230, 246];
+
 export function MultiplicationTreeFigure() {
   const { content } = useLanguage();
   const f = content.figures.multiplication;
-  const gen3Dots = [72, 86, 100, 114, 128, 142, 156, 170, 184, 198, 212, 226, 240];
-  const gen3Row2 = [79, 107, 135, 163, 191, 219];
   return (
     <FigureCard tag={f.tag} title={f.title} caption={f.caption}>
       <svg viewBox="0 0 460 280" role="img" aria-label={f.title} className="h-auto w-full">
-        <text className="fig-lab-sm" x="16" y="74">{`${f.gen} 1`}</text>
-        <text className="fig-lab-sm" x="16" y="140">{`${f.gen} 2`}</text>
-        <text className="fig-lab-sm" x="16" y="206">{`${f.gen} 3`}</text>
-        <line x1="268" y1="40" x2="268" y2="246" stroke={FIG.hair} strokeWidth="1.5" strokeDasharray="4 5" />
-        <text className="fig-lab-b" x="162" y="32" textAnchor="middle" fill={FIG.mp}>{f.micropropagation}</text>
+        <text className="fig-lab-sm" x="14" y="74">{`${f.gen} 1`}</text>
+        <text className="fig-lab-sm" x="14" y="140">{`${f.gen} 2`}</text>
+        <text className="fig-lab-sm" x="14" y="208">{`${f.gen} 3`}</text>
+        <line x1="268" y1="40" x2="268" y2="250" stroke={FIG.hair} strokeWidth="1.5" strokeDasharray="4 5" />
+        <text className="fig-lab-b" x="160" y="32" textAnchor="middle" fill={FIG.mp}>{f.micropropagation}</text>
         <text className="fig-lab-b" x="364" y="32" textAnchor="middle" fill={FIG.muted}>{f.conventional}</text>
 
-        {/* micropropagation edges */}
-        <g stroke={FIG.mp} fill="none">
-          <g strokeWidth="1.6" opacity="0.75">
-            <path d="M162 76 L92 128" /><path d="M162 76 L138 128" /><path d="M162 76 L186 128" /><path d="M162 76 L232 128" />
-          </g>
-          <g strokeWidth="1.3" opacity="0.5">
-            <path d="M92 134 L92 186" /><path d="M138 134 L138 186" /><path d="M186 134 L186 186" /><path d="M232 134 L232 186" />
-          </g>
+        <g stroke={FIG.mp} fill="none" opacity="0.6">
+          <path d="M160 84 L96 124" /><path d="M160 84 L138 124" /><path d="M160 84 L186 124" /><path d="M160 84 L228 124" />
         </g>
-        <rect x="58" y="186" width="200" height="30" rx="15" fill={FIG.mpSoft} />
-        <g fill={FIG.mp}>
-          {gen3Dots.map((x, i) => (
-            <circle key={`a${x}`} cx={x} cy={i % 2 === 0 ? 197 : 205} r="2.6" />
-          ))}
-          {gen3Row2.map((x) => (
-            <circle key={`b${x}`} cx={x} cy="208" r="2.6" />
+        {/* Gen 1 vessel + shoot */}
+        <g transform="translate(146,52)">
+          <path d="M0 20 h28 v6 a14 14 0 0 1 -28 0 z" fill={FIG.mpSoft} stroke={FIG.mp} strokeWidth="1.2" />
+          <g stroke={FIG.mp} strokeWidth="1.6" fill="none" strokeLinecap="round"><path d="M14 20 V8" /><path d="M14 12 l-6 -5 M14 14 l6 -4" /></g>
+        </g>
+        {/* Gen 2 shoot clumps */}
+        <g stroke={FIG.mp} strokeWidth="1.6" fill="none" strokeLinecap="round">
+          {[96, 138, 186, 228].map((x) => (
+            <g key={x} transform={`translate(${x},120)`}><path d="M0 12 V2" /><path d="M0 6 l-5 -4 M0 8 l5 -3" /></g>
           ))}
         </g>
-        <circle cx="162" cy="76" r="6" fill={FIG.mp} />
-        <g fill={FIG.mp}><circle cx="92" cy="131" r="5" /><circle cx="138" cy="131" r="5" /><circle cx="186" cy="131" r="5" /><circle cx="232" cy="131" r="5" /></g>
+        <g stroke={FIG.mp} fill="none" opacity="0.45" strokeWidth="1.2">
+          <path d="M96 134 L96 182" /><path d="M138 134 L138 182" /><path d="M186 134 L186 182" /><path d="M228 134 L228 182" />
+        </g>
+        {/* Gen 3 tray of sprouts */}
+        <rect x="58" y="182" width="200" height="34" rx="8" fill={FIG.mpSoft} stroke={FIG.mp} strokeWidth="1" />
+        <g stroke={FIG.mp} strokeWidth="1.2" strokeLinecap="round">
+          {TRAY_SPROUTS.map((x) => (
+            <path key={x} d={`M${x} 210 v-12 M${x} 202 l-4 -4 M${x} 204 l4 -3`} />
+          ))}
+        </g>
         <text className="fig-lab-b" x="244" y="80" fill={FIG.mp}>1</text>
         <text className="fig-lab-b" x="244" y="135" fill={FIG.mp}>4</text>
-        <text className="fig-lab-b" x="160" y="236" textAnchor="middle" fill={FIG.mp}>{f.thousands}</text>
+        <text className="fig-lab-b" x="158" y="232" textAnchor="middle" fill={FIG.mp}>16 → thousands</text>
 
         {/* conventional */}
         <g stroke={FIG.conv} fill="none" strokeWidth="1.6">
-          <path d="M364 76 L340 128" /><path d="M364 76 L388 128" />
+          <path d="M364 80 L340 128" /><path d="M364 80 L388 128" />
           <path d="M340 134 L328 184" /><path d="M340 134 L352 184" /><path d="M388 134 L376 184" /><path d="M388 134 L400 184" />
         </g>
-        <circle cx="364" cy="76" r="6" fill={FIG.conv} />
-        <g fill={FIG.conv}><circle cx="340" cy="131" r="5" /><circle cx="388" cy="131" r="5" /></g>
-        <g fill={FIG.conv}><circle cx="328" cy="188" r="4.5" /><circle cx="352" cy="188" r="4.5" /><circle cx="376" cy="188" r="4.5" /><circle cx="400" cy="188" r="4.5" /></g>
-        <text className="fig-lab-sm" x="420" y="80">1</text>
+        <g stroke={FIG.conv} strokeWidth="1.4" strokeLinecap="round" fill="none">
+          <path d="M364 80 v-10 M364 74 l-4 -4 M364 76 l4 -3" />
+          <path d="M340 132 v-9 M388 132 v-9" />
+          <path d="M328 188 v-8 M352 188 v-8 M376 188 v-8 M400 188 v-8" />
+        </g>
+        <text className="fig-lab-sm" x="420" y="82">1</text>
         <text className="fig-lab-sm" x="420" y="135">2</text>
-        <text className="fig-lab-sm" x="364" y="236" textAnchor="middle">4</text>
+        <text className="fig-lab-sm" x="364" y="206" textAnchor="middle">4</text>
       </svg>
     </FigureCard>
   );
