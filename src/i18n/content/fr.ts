@@ -108,6 +108,7 @@ export const fr: SiteContent = {
         { title: 'Simplicité', detail: 'Vous saisissez les données, le modèle fait le reste.' },
         { title: 'Apprentissage continu', detail: 'Le modèle s\'améliore à chaque nouvel essai et résultat de terrain.' },
       ],
+      mlBadge: 'HydrobioFormul ML',
       mlExplainer: {
         heading: 'Pourquoi machine learning et pas \'IA\' générique ?',
         body: 'HydrobioFormul est un type spécifique d\'IA — du machine learning supervisé. Le moteur ne génère pas de texte ni ne raisonne dans l\'abstrait. Il apprend des motifs numériques à partir d\'analyses de sol réelles, de données climatiques et de résultats d\'essais terrain, puis prédit la formulation la plus susceptible de performer sur votre parcelle. Chaque nouvel essai améliore le modèle. C\'est une technique précise, pas une étiquette marketing.',
@@ -147,6 +148,14 @@ export const fr: SiteContent = {
       footnote: 'Essais contrôlés, à confirmer en essais de terrain indépendants.',
       roiHeading: 'ROI par culture',
       roiCaption: 'Gains totaux par hectare et par an, et délai de retour sur investissement. Sources : Agreste, ARVALIS, CTIFL, FranceAgriMer, Euronext.',
+      roiColumns: {
+        crop: 'Culture',
+        irrigation: 'Irrigation économisée',
+        fertilizer: 'Engrais économisé',
+        yieldGain: 'Gain de rendement',
+        total: 'Total / ha / an',
+        payback: 'Retour sur investissement',
+      },
       roiRows: [
         { crop: 'Fraise', irrigation: '420 €', fertilizer: '90 €', yieldGain: '+6 t/ha → 7 200 €', total: '7 710 € / ha / an', payback: '< 4 mois' },
         { crop: 'Pomme', irrigation: '280 €', fertilizer: '68 €', yieldGain: '+5,3 t/ha → 2 888 €', total: '3 236 € / ha / an', payback: '~8 mois' },

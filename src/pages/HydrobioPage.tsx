@@ -134,7 +134,7 @@ export default function HydrobioPage() {
               </div>
               <p className="text-sm text-ink md:text-base">{h.formul.engineBody}</p>
               <div className="mt-auto flex items-center justify-center rounded-card-sm border border-hairline bg-surface px-4 py-6">
-                <span className="text-2xl font-bold tracking-tight text-accent-hydrobio">HydrobioFormul ML</span>
+                <span className="text-2xl font-bold tracking-tight text-accent-hydrobio">{h.formul.mlBadge}</span>
               </div>
             </div>
 
@@ -226,12 +226,12 @@ export default function HydrobioPage() {
               <table className="w-full min-w-[640px] text-sm md:text-base">
                 <thead>
                   <tr className="border-b border-hairline bg-surface-elevated">
-                    <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">Crop</th>
-                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">Irrigation saved</th>
-                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">Fertiliser saved</th>
-                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">Yield gain</th>
-                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">Total / ha / yr</th>
-                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">Payback</th>
+                    <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">{h.results.roiColumns.crop}</th>
+                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">{h.results.roiColumns.irrigation}</th>
+                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">{h.results.roiColumns.fertilizer}</th>
+                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">{h.results.roiColumns.yieldGain}</th>
+                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">{h.results.roiColumns.total}</th>
+                    <th className="px-5 py-3 text-right text-xs font-semibold uppercase tracking-[0.12em] text-muted-ink">{h.results.roiColumns.payback}</th>
                   </tr>
                 </thead>
                 <tbody>
