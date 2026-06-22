@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ProductPageShell } from '../components/ProductPageShell';
 import { StoryBeat } from '../components/StoryBeat';
+import { MultiplicationTreeFigure, NotGmoFigure, LabJourneyFigure, VirusFreeFigure } from '../components/figures';
 import { ContactCTA } from '../components/ContactCTA';
 import { ContactModal } from '../components/ContactModal';
 import { Toast } from '../components/Toast';
@@ -66,6 +67,12 @@ export default function MicroplantesPage() {
                 <p className="text-sm text-muted-ink md:text-base">{step.body}</p>
               </div>
             ))}
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <MultiplicationTreeFigure />
+            <NotGmoFigure />
+            <LabJourneyFigure />
+            <VirusFreeFigure />
           </div>
         </StoryBeat>
 

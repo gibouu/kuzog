@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { ProductPageShell } from '../components/ProductPageShell';
 import { StoryBeat } from '../components/StoryBeat';
+import { SurfaceAreaFigure, HoldsWaterFigure, PorousFigure, MycorrhizaeFigure } from '../components/figures';
 import { BigStat } from '../components/BigStat';
 import { StatGrid } from '../components/StatGrid';
 import { Citation } from '../components/Citation';
@@ -85,6 +86,12 @@ export default function HydrobioPage() {
             ))}
           </div>
           <p className="text-base font-medium text-ink md:text-lg md:max-w-4xl">{h.solution.synergyLine}</p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <SurfaceAreaFigure />
+            <HoldsWaterFigure />
+            <PorousFigure />
+            <MycorrhizaeFigure />
+          </div>
         </StoryBeat>
 
         {/* ── 3. Journey — 4 numbered steps ── */}

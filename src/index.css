@@ -74,3 +74,8 @@
     @apply font-semibold text-ink;
   }
 }
+
+/* Text labels inside the product-figure SVGs. */
+.fig-lab { font-size: 13px; fill: var(--ink); }
+.fig-lab-sm { font-size: 11px; fill: var(--muted-ink); }
+.fig-lab-b { font-size: 13px; font-weight: 650; fill: var(--ink); }

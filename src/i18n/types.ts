@@ -475,4 +475,85 @@ export interface SiteContent {
     successMessage: string;
   };
 
+  // Product figures (inline-SVG diagrams)
+  figures: FiguresContent;
+}
+
+export interface FiguresContent {
+  // Microplantes
+  multiplication: {
+    tag: string;
+    title: string;
+    caption: string;
+    gen: string; // "GEN" prefix for generation rows
+    micropropagation: string;
+    conventional: string;
+    thousands: string; // "16 → thousands"
+  };
+  notGmo: {
+    tag: string;
+    title: string;
+    caption: string;
+    gmo: string;
+    dnaAltered: string;
+    foreignGene: string;
+    micropropagation: string;
+    mother: string;
+    genome: string;
+    unchanged: string;
+    wholePlantCopied: string;
+  };
+  labJourney: {
+    tag: string;
+    title: string;
+    caption: string;
+    inLab: string;
+    outGrowers: string;
+    motherPlant: string;
+    sample: string;
+    multiply: string;
+    greenhouse: string;
+    growers: string;
+  };
+  virusFree: {
+    tag: string;
+    title: string;
+    fieldStock: string;
+    carriesViruses: string;
+    meristemTip: string;
+    cleanestCells: string;
+    uniform: string;
+  };
+  // Hydrobio
+  surfaceArea: {
+    tag: string;
+    title: string;
+    caption: string;
+    grain: string;
+    micronised: string;
+    surfaceArea: string;
+  };
+  holdsWater: {
+    tag: string;
+    title: string;
+    caption: string;
+    root: string;
+    waterBadge: string;
+  };
+  porous: {
+    tag: string;
+    title: string;
+    caption: string;
+    water: string;
+    nutrients: string;
+    porousLabel: string;
+  };
+  mycorrhizae: {
+    tag: string;
+    title: string;
+    caption: string;
+    soilSurface: string;
+    rootReach: string;
+    reachLabel: string;
+  };
 }
