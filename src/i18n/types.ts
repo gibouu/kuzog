@@ -133,6 +133,7 @@ export interface HydrobioContent {
     outputs: string[];
     advantagesHeading: string;
     advantages: HydrobioFormulFeature[];
+    mlBadge: string;
     mlExplainer: {
       heading: string;
       body: string;
@@ -159,6 +160,14 @@ export interface HydrobioContent {
     footnote: string;
     roiHeading: string;
     roiCaption: string;
+    roiColumns: {
+      crop: string;
+      irrigation: string;
+      fertilizer: string;
+      yieldGain: string;
+      total: string;
+      payback: string;
+    };
     roiRows: HydrobioRoiRow[];
   };
   cultures: {

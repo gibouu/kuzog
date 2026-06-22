@@ -108,6 +108,7 @@ export const en: SiteContent = {
         { title: 'Simplicity', detail: 'You enter the data, the model does the rest.' },
         { title: 'Continuous learning', detail: 'The model improves with every new trial and field result.' },
       ],
+      mlBadge: 'HydrobioFormul ML',
       mlExplainer: {
         heading: 'Why machine learning, not generic AI?',
         body: 'HydrobioFormul is a specific kind of AI — supervised machine learning. The engine doesn\'t generate text or reason in the abstract. It learns numerical patterns from real soil analyses, climate data, and field trial outcomes, then predicts the formulation most likely to perform on your parcel. Each new trial improves the model. That\'s a precise technique, not a marketing label.',
@@ -147,6 +148,14 @@ export const en: SiteContent = {
       footnote: 'Controlled trials, to be confirmed in independent field trials.',
       roiHeading: 'ROI by crop',
       roiCaption: 'Total per-hectare-per-year gains and payback period. Sources: Agreste, ARVALIS, CTIFL, FranceAgriMer, Euronext.',
+      roiColumns: {
+        crop: 'Crop',
+        irrigation: 'Irrigation saved',
+        fertilizer: 'Fertiliser saved',
+        yieldGain: 'Yield gain',
+        total: 'Total / ha / yr',
+        payback: 'Payback',
+      },
       roiRows: [
         { crop: 'Strawberry', irrigation: '€420', fertilizer: '€90', yieldGain: '+6 t/ha → €7,200', total: '€7,710 / ha / yr', payback: '< 4 months' },
         { crop: 'Apple', irrigation: '€280', fertilizer: '€68', yieldGain: '+5.3 t/ha → €2,888', total: '€3,236 / ha / yr', payback: '~8 months' },
