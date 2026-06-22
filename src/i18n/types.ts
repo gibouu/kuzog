@@ -360,6 +360,17 @@ export interface CareersContent {
   };
   empty: string;
   applyCta: string;
+  // {count} is interpolated; provide singular ("one") and plural ("other") forms.
+  results: {
+    one: string;
+    other: string;
+  };
+  companyLabels: {
+    hydrobio: string;
+    microplantes: string;
+  };
+  responsibilitiesHeading: string;
+  profileHeading: string;
   spontaneousHeading: string;
   spontaneousBody: string;
   spontaneousCta: string;
@@ -371,6 +382,7 @@ export interface SiteContent {
   header: {
     logoText: string;
     contactButton: string;
+    selectLanguage: string;
   };
 
   // Home
@@ -384,12 +396,37 @@ export interface SiteContent {
     copyright: string;
     privacyLink: string;
     ethicsLink: string;
+    careersLink: string;
   };
 
   // Navigation
   navigation: {
     home: string;
     contact: string;
+    blog: string;
+  };
+
+  // Blog (placeholder page)
+  blog: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    backHome: string;
+  };
+
+  // Recognition card kind labels (shared across product pages)
+  recognitionKinds: {
+    award: string;
+    press: string;
+    grant: string;
+    partnership: string;
+    incubation: string;
+  };
+
+  // Ethics policy modal
+  policyModal: {
+    title: string;
+    closeLabel: string;
   };
 
   // 404 / unknown route
@@ -402,6 +439,8 @@ export interface SiteContent {
 
   // Contact Modal
   contactModal: {
+    eyebrow: string;
+    closeLabel: string;
     title: string;
     subtitle: string;
     nameLabel: string;

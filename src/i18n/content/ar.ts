@@ -4,6 +4,7 @@ export const ar: SiteContent = {
   header: {
     logoText: 'KUZOG',
     contactButton: 'اتصل بنا',
+    selectLanguage: 'اختر اللغة',
   },
 
   home: {
@@ -218,14 +219,36 @@ export const ar: SiteContent = {
   },
 
   footer: {
-    copyright: '© 2025 كوزوج. جميع الحقوق محفوظة.',
+    copyright: '© 2025 كوزوج فرنسا · باريس',
     privacyLink: 'سياسة الخصوصية',
     ethicsLink: 'قانون الأخلاقيات',
+    careersLink: 'وظائف',
   },
 
   navigation: {
     home: 'الرئيسية',
     contact: 'اتصل',
+    blog: 'المدونة',
+  },
+
+  blog: {
+    eyebrow: 'رؤى كوزوج',
+    title: 'قريبًا',
+    body: 'نُعدّ محتوى ثريًا حول التجارة الدولية والزراعة المستدامة والعمليات العابرة للحدود. ترقّبوا وجهات نظر عملية من الميدان.',
+    backHome: 'العودة إلى الرئيسية',
+  },
+
+  recognitionKinds: {
+    award: 'جائزة',
+    press: 'صحافة',
+    grant: 'منحة',
+    partnership: 'شراكة',
+    incubation: 'احتضان',
+  },
+
+  policyModal: {
+    title: 'قانون الأخلاقيات لكوزوج',
+    closeLabel: 'إغلاق قانون الأخلاقيات',
   },
 
   notFound: {
@@ -236,6 +259,8 @@ export const ar: SiteContent = {
   },
 
   contactModal: {
+    eyebrow: 'اتصل',
+    closeLabel: 'إغلاق نافذة الاتصال',
     title: 'لنحرك مشروعك',
     subtitle: 'شارك بعض التفاصيل وسيستجيب فريقنا خلال يوم عمل واحد.',
     nameLabel: 'الاسم الكامل',
@@ -441,6 +466,16 @@ export const ar: SiteContent = {
     },
     empty: 'لا توجد وظائف تتطابق مع الفلاتر. حاول تعديل بحثك.',
     applyCta: 'تقدّم',
+    results: {
+      one: 'وظيفة واحدة ({count})',
+      other: '{count} وظائف',
+    },
+    companyLabels: {
+      hydrobio: 'Hydrobio',
+      microplantes: 'Microplantes',
+    },
+    responsibilitiesHeading: 'المسؤوليات',
+    profileHeading: 'الملف المطلوب',
     spontaneousHeading: 'لم تجد الدور المناسب؟',
     spontaneousBody: 'نقبل الترشيحات التلقائية. أخبرنا بما يمكنك تقديمه وسنجد ما يناسبك.',
     spontaneousCta: 'إرسال ترشّح تلقائي',

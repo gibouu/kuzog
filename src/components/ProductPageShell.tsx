@@ -1,9 +1,10 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home as HomeIcon } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { LanguageSelector } from './LanguageSelector';
 import { SiteFooter } from './SiteFooter';
+import { PolicyModal } from './PolicyModal';
 import { BottomBar } from './BottomBar';
 
 interface ProductPageShellProps {
@@ -21,11 +22,13 @@ const ACCENT_BAR: Record<ProductPageShellProps['accent'], string> = {
 
 export function ProductPageShell({ accent, eyebrow, title, children }: ProductPageShellProps) {
   const { content } = useLanguage();
+  const [isPolicyOpen, setIsPolicyOpen] = useState(false);
   const navItems = [
     { key: 'home', label: content.navigation.home, icon: HomeIcon, href: '/' },
   ];
   return (
     <div className="flex min-h-screen flex-col">
+      <PolicyModal open={isPolicyOpen} onClose={() => setIsPolicyOpen(false)} />
       <BottomBar items={navItems} />
       <header className="px-6 pt-10">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3">
@@ -62,7 +65,7 @@ export function ProductPageShell({ accent, eyebrow, title, children }: ProductPa
           </section>
         )}
       </main>
-      <SiteFooter onShowPolicy={() => {}} />
+      <SiteFooter onShowPolicy={() => setIsPolicyOpen(true)} />
     </div>
   );
 }

@@ -84,8 +84,8 @@ export default function CareersPage() {
               className="h-12 w-full rounded-full border border-hairline bg-surface px-5 text-sm text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface md:w-auto md:text-base"
             >
               <option value="all">{c.filters.allCompanies}</option>
-              <option value="hydrobio">Hydrobio</option>
-              <option value="microplantes">Microplantes</option>
+              <option value="hydrobio">{c.companyLabels.hydrobio}</option>
+              <option value="microplantes">{c.companyLabels.microplantes}</option>
             </select>
             <select
               value={department}
@@ -103,7 +103,10 @@ export default function CareersPage() {
 
           {/* Results count */}
           <p className="text-sm text-muted-ink">
-            {filteredJobs.length} {filteredJobs.length === 1 ? 'opening' : 'openings'}
+            {(filteredJobs.length === 1 ? c.results.one : c.results.other).replace(
+              '{count}',
+              String(filteredJobs.length)
+            )}
           </p>
 
           {/* Job list */}
@@ -117,7 +120,7 @@ export default function CareersPage() {
                 <ExpandableCard
                   key={job.id}
                   title={job.title}
-                  teaser={`${job.company === 'hydrobio' ? 'Hydrobio' : 'Microplantes'} · ${job.department} · ${job.location}`}
+                  teaser={`${job.company === 'hydrobio' ? c.companyLabels.hydrobio : c.companyLabels.microplantes} · ${job.department} · ${job.location}`}
                   accent={job.company === 'hydrobio' ? 'hydrobio' : 'microplantes'}
                 >
                   <div className="flex flex-col gap-4">
@@ -134,7 +137,7 @@ export default function CareersPage() {
                     <p className="text-sm text-ink md:text-base">{job.mission}</p>
                     <div>
                       <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-ink">
-                        Responsibilities
+                        {c.responsibilitiesHeading}
                       </h4>
                       <ul className="mt-2 flex flex-col gap-1.5 text-sm text-muted-ink md:text-base">
                         {job.responsibilities.map((r, i) => (
@@ -147,7 +150,7 @@ export default function CareersPage() {
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted-ink">
-                        Profile
+                        {c.profileHeading}
                       </h4>
                       <ul className="mt-2 flex flex-col gap-1.5 text-sm text-muted-ink md:text-base">
                         {job.profile.map((p, i) => (
