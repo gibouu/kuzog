@@ -16,13 +16,15 @@ function renderAt(path: string) {
 }
 
 describe('route fallback', () => {
-  it('renders the branded NotFound page for an unknown path', () => {
+  it('renders the branded NotFound page for an unknown path', async () => {
     renderAt('/does-not-exist');
-    expect(screen.getByRole('heading', { name: en.notFound.title })).toBeInTheDocument();
+    // NotFoundPage is code-split (React.lazy), so it resolves asynchronously
+    // behind the Suspense fallback.
+    expect(await screen.findByRole('heading', { name: en.notFound.title })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: en.notFound.backHome })).toHaveAttribute('href', '/');
   });
 
-  it('still renders a known route', () => {
+  it('still renders a known (eager) route without the NotFound page', () => {
     renderAt('/');
     expect(screen.queryByText(en.notFound.title)).not.toBeInTheDocument();
   });
