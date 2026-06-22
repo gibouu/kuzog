@@ -18,19 +18,19 @@ export default function BlogPage() {
   const navItems = [
     {
       key: 'home',
-      label: 'KUZOG',
+      label: content.header.logoText,
       icon: HomeIcon,
       href: '/'
     },
     {
       key: 'contact',
-      label: 'Contact',
+      label: content.navigation.contact,
       icon: Mail,
       onSelect: () => setIsContactOpen(true)
     },
     {
       key: 'blog',
-      label: 'Blog',
+      label: content.navigation.blog,
       icon: BookOpen,
       onSelect: () => window.scrollTo({ top: 0, behavior: 'smooth' })
     }
@@ -69,13 +69,13 @@ export default function BlogPage() {
           <section className="rounded-[42px] border border-white/45 bg-white/60 px-6 py-16 shadow-[0_40px_90px_rgba(31,41,51,0.18)] backdrop-blur-2xl md:px-12 md:py-24">
             <div className="space-y-6 text-center text-ink">
               <div className="inline-flex items-center rounded-full bg-white/70 px-4 py-1.5 text-sm font-semibold text-[var(--pill-text)] shadow-inner">
-                KUZOG Insights
+                {content.blog.eyebrow}
               </div>
               <h1 className="text-5xl font-semibold tracking-tight md:text-6xl">
-                Coming Soon
+                {content.blog.title}
               </h1>
               <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-ink md:text-lg">
-                We're preparing insightful content on international trade, sustainable agriculture, and cross-border operations. Stay tuned for practical perspectives from the field.
+                {content.blog.body}
               </p>
               <div className="flex flex-col items-center gap-3 pt-4 sm:flex-row sm:justify-center">
                 <button
@@ -89,7 +89,7 @@ export default function BlogPage() {
                   to="/"
                   className="inline-flex h-12 min-w-[160px] items-center justify-center rounded-full border border-white/60 bg-white/70 px-6 text-sm font-semibold text-ink shadow-sm transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-44"
                 >
-                  Back to Home
+                  {content.blog.backHome}
                 </Link>
               </div>
             </div>

@@ -5,7 +5,7 @@ import { SUPPORTED_LANGUAGES } from '../i18n/languages';
 import { Language } from '../i18n/types';
 
 export function LanguageSelector() {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, content } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -35,7 +35,7 @@ export function LanguageSelector() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="inline-flex h-11 items-center justify-center gap-1.5 rounded-full border border-white/60 bg-white/70 px-4 text-xs font-semibold text-ink shadow-sm transition hover:bg-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:h-12 sm:text-sm"
-        aria-label="Select language"
+        aria-label={content.header.selectLanguage}
         aria-expanded={isOpen}
       >
         <span className="uppercase">{currentLang?.code}</span>

@@ -4,6 +4,7 @@ export const en: SiteContent = {
   header: {
     logoText: 'KUZOG',
     contactButton: 'Contact us',
+    selectLanguage: 'Select language',
   },
 
   home: {
@@ -416,14 +417,43 @@ export const en: SiteContent = {
   },
 
   footer: {
-    copyright: '© 2025 KUZOG. All rights reserved.',
+    copyright: '© 2025 KUZOG France · Paris',
     privacyLink: 'Privacy Policy',
     ethicsLink: 'Ethics Code',
+    careersLink: 'Careers',
   },
 
   navigation: {
     home: 'Home',
     contact: 'Contact',
+    blog: 'Blog',
+  },
+
+  blog: {
+    eyebrow: 'KUZOG Insights',
+    title: 'Coming Soon',
+    body: "We're preparing insightful content on international trade, sustainable agriculture, and cross-border operations. Stay tuned for practical perspectives from the field.",
+    backHome: 'Back to Home',
+  },
+
+  recognitionKinds: {
+    award: 'Award',
+    press: 'Press',
+    grant: 'Grant',
+    partnership: 'Partnership',
+    incubation: 'Incubation',
+  },
+
+  policyModal: {
+    title: 'KUZOG Ethics Code',
+    closeLabel: 'Close ethics code',
+  },
+
+  notFound: {
+    eyebrow: 'Page not found',
+    title: 'This page took a wrong turn',
+    message: "The page you're looking for doesn't exist or has moved. Let's get you back on track.",
+    backHome: 'Back to Home',
   },
 
   notFound: {
@@ -434,6 +464,8 @@ export const en: SiteContent = {
   },
 
   contactModal: {
+    eyebrow: 'Contact',
+    closeLabel: 'Close contact modal',
     title: "Let's get your project moving",
     subtitle: 'Share a few details and our team will respond within one business day.',
     nameLabel: 'Full name',
@@ -472,6 +504,16 @@ export const en: SiteContent = {
     },
     empty: 'No openings match your filters. Try adjusting your search.',
     applyCta: 'Apply',
+    results: {
+      one: '{count} opening',
+      other: '{count} openings',
+    },
+    companyLabels: {
+      hydrobio: 'Hydrobio',
+      microplantes: 'Microplantes',
+    },
+    responsibilitiesHeading: 'Responsibilities',
+    profileHeading: 'Profile',
     spontaneousHeading: 'Don\'t see the right role?',
     spontaneousBody: 'We accept spontaneous applications. Tell us what you\'d bring and we\'ll find a fit.',
     spontaneousCta: 'Send a spontaneous application',

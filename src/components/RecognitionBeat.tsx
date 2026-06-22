@@ -1,6 +1,7 @@
 import { Award, Newspaper, Coins, Handshake, Sparkles, ArrowUpRight } from 'lucide-react';
 import { StoryBeat } from './StoryBeat';
 import { RecognitionContent, RecognitionItem } from '../i18n/types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const KIND_ICON: Record<RecognitionItem['kind'], typeof Award> = {
   award: Award,
@@ -10,20 +11,14 @@ const KIND_ICON: Record<RecognitionItem['kind'], typeof Award> = {
   incubation: Sparkles,
 };
 
-const KIND_LABEL: Record<RecognitionItem['kind'], string> = {
-  award: 'Award',
-  press: 'Press',
-  grant: 'Grant',
-  partnership: 'Partnership',
-  incubation: 'Incubation',
-};
-
 interface RecognitionBeatProps {
   content: RecognitionContent;
   accent: 'hydrobio' | 'microplantes' | 'group';
 }
 
 export function RecognitionBeat({ content, accent }: RecognitionBeatProps) {
+  const { content: siteContent } = useLanguage();
+  const kindLabels = siteContent.recognitionKinds;
   return (
     <StoryBeat id="recognition" eyebrow={content.eyebrow} title={content.title} accent={accent}>
       <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -34,7 +29,7 @@ export function RecognitionBeat({ content, accent }: RecognitionBeatProps) {
               <div className="flex items-center justify-between gap-2">
                 <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-ink">
                   <Icon className="h-3.5 w-3.5" aria-hidden />
-                  {KIND_LABEL[item.kind]}
+                  {kindLabels[item.kind]}
                 </span>
                 {item.date && <span className="text-xs text-muted-ink">{item.date}</span>}
                 {item.href && <ArrowUpRight className="h-4 w-4 text-muted-ink" aria-hidden />}

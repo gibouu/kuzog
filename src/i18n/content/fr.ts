@@ -4,6 +4,7 @@ export const fr: SiteContent = {
   header: {
     logoText: 'KUZOG',
     contactButton: 'Contactez-nous',
+    selectLanguage: 'Choisir la langue',
   },
 
   home: {
@@ -417,14 +418,43 @@ export const fr: SiteContent = {
   },
 
   footer: {
-    copyright: '© 2025 KUZOG. Tous droits réservés.',
+    copyright: '© 2025 KUZOG France · Paris',
     privacyLink: 'Politique de confidentialité',
     ethicsLink: 'Code d\'éthique',
+    careersLink: 'Carrières',
   },
 
   navigation: {
     home: 'Accueil',
     contact: 'Contact',
+    blog: 'Blog',
+  },
+
+  blog: {
+    eyebrow: 'KUZOG Insights',
+    title: 'Bientôt disponible',
+    body: "Nous préparons des contenus pertinents sur le commerce international, l'agriculture durable et les opérations transfrontalières. Restez à l'écoute pour des perspectives concrètes issues du terrain.",
+    backHome: "Retour à l'accueil",
+  },
+
+  recognitionKinds: {
+    award: 'Prix',
+    press: 'Presse',
+    grant: 'Subvention',
+    partnership: 'Partenariat',
+    incubation: 'Incubation',
+  },
+
+  policyModal: {
+    title: "Code d'éthique KUZOG",
+    closeLabel: "Fermer le code d'éthique",
+  },
+
+  notFound: {
+    eyebrow: 'Page introuvable',
+    title: 'Cette page a fait fausse route',
+    message: "La page que vous cherchez n'existe pas ou a été déplacée. Revenons sur le bon chemin.",
+    backHome: "Retour à l'accueil",
   },
 
   notFound: {
@@ -435,6 +465,8 @@ export const fr: SiteContent = {
   },
 
   contactModal: {
+    eyebrow: 'Contact',
+    closeLabel: 'Fermer la fenêtre de contact',
     title: 'Faisons avancer votre projet',
     subtitle: 'Partagez quelques détails et notre équipe répondra dans un délai d\'un jour ouvrable.',
     nameLabel: 'Nom complet',
@@ -473,6 +505,16 @@ export const fr: SiteContent = {
     },
     empty: 'Aucun poste ne correspond à vos filtres. Essayez d\'ajuster votre recherche.',
     applyCta: 'Postuler',
+    results: {
+      one: '{count} poste',
+      other: '{count} postes',
+    },
+    companyLabels: {
+      hydrobio: 'Hydrobio',
+      microplantes: 'Microplantes',
+    },
+    responsibilitiesHeading: 'Responsabilités',
+    profileHeading: 'Profil',
     spontaneousHeading: 'Vous ne trouvez pas le bon poste ?',
     spontaneousBody: 'Nous acceptons les candidatures spontanées. Dites-nous ce que vous apporteriez et nous trouverons un bon match.',
     spontaneousCta: 'Envoyer une candidature spontanée',

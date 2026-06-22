@@ -156,27 +156,27 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
       )}
       onClick={handleOverlayClick}
     >
+      {/* Render the dialog (and its focusable controls) only while open, so closed
+          modal contents never sit in the tab order or the accessibility tree. */}
+      {open && (
       <div
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-modal-title"
-        className={clsx(
-          'relative w-full max-w-xl transform overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-2xl transition-all duration-200 md:p-8',
-          open ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        )}
+        className="relative w-full max-w-xl transform overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-2xl md:p-8"
       >
         <button
           type="button"
           onClick={onClose}
           className="absolute right-4 top-4 rounded-full p-2 text-muted-ink transition hover:bg-chip focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-          aria-label="Close contact modal"
+          aria-label={content.contactModal.closeLabel}
         >
           <X className="h-5 w-5" aria-hidden="true" />
         </button>
 
         <div className="pr-10 text-neutral-900">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-ink">Contact</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-ink">{content.contactModal.eyebrow}</p>
           <h2 id="contact-modal-title" className="mt-2 text-2xl font-semibold text-ink">
             {content.contactModal.title}
           </h2>
@@ -252,18 +252,16 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
             </label>
           </div>
 
-          {open && (
-            <div className="flex justify-center">
-              <HCaptcha
-                ref={captchaRef}
-                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                reCaptchaCompat={false}
-                onVerify={(token) => setCaptchaToken(token)}
-                onExpire={() => setCaptchaToken(null)}
-                onError={() => setCaptchaToken(null)}
-              />
-            </div>
-          )}
+          <div className="flex justify-center">
+            <HCaptcha
+              ref={captchaRef}
+              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+              reCaptchaCompat={false}
+              onVerify={(token) => setCaptchaToken(token)}
+              onExpire={() => setCaptchaToken(null)}
+              onError={() => setCaptchaToken(null)}
+            />
+          </div>
 
           {error ? (
             <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
@@ -287,6 +285,7 @@ export function ContactModal({ open, onClose, onSuccess, topic }: ContactModalPr
           </div>
         </form>
       </div>
+      )}
     </div>
   );
 }
